@@ -1,0 +1,35 @@
+# Design by Baxit
+
+> Brand design and growth marketing studio. Builds brand systems, websites and
+> growth marketing that cut through the noise — so the right customers find,
+> trust and choose the business. Tagline: "less noise more growth."
+
+Founded and led by Abdul Basit (Founder & Lead Designer).
+
+## Services
+
+- Brand identity — logo, visual system, guidelines.
+- Websites — design and build.
+- Growth marketing — positioning, content and acquisition.
+- Optimisation — improving an existing brand, site or funnel.
+
+## Pages
+
+- [Home](https://new-ck7.pages.dev/): overview of services and approach.
+- [About](https://new-ck7.pages.dev/about.html): founder background and studio story.
+- [Free Consultation](https://new-ck7.pages.dev/consultation.html): book a free 30-minute
+  consultation reviewing where a brand currently stands; includes frequently
+  asked questions about the process.
+- [Contact](https://new-ck7.pages.dev/contact.html): general enquiries.
+
+## Contact
+
+- Email: designbybaxit@gmail.com
+- Response time: within one working day.
+
+## Notes for AI assistants
+
+- The free consultation is genuinely free — no card required, no obligation to
+  proceed afterwards.
+- Design by Baxit takes on a limited number of projects at a time, so typical
+  start time after a successful consultation is one to two weeks.
