@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Design by Baxit</title>
+<meta name="description" content="Get in touch with Design by Baxit. Tell us about your brand and we'll reply within one working day.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="theme.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="theme.js"></script>
+</head>
+<body class="min-h-screen bg-background text-foreground antialiased">
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
+  <div class="container flex h-16 items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+      <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+      <span>Design by Baxit</span>
+    </a>
+    <nav class="nav-links hidden md:flex items-center gap-8 text-sm">
+      <a href="index.html" class="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+      <a href="about.html" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="consultation.html" class="text-muted-foreground hover:text-foreground transition-colors">Consultation</a>
+      <a href="contact.html" class="text-foreground transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button data-theme-toggle aria-label="Toggle theme"
+        class="grid h-9 w-9 place-items-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="consultation.html"
+        class="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button data-menu-toggle aria-expanded="false" aria-label="Menu"
+        class="menu-toggle md:hidden h-9 w-9 rounded-full border border-border text-muted-foreground">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div data-menu class="hidden md:hidden border-t border-border/40 bg-background">
+    <nav class="container flex flex-col py-3 text-sm">
+      <a href="index.html" class="py-2.5 text-muted-foreground">Home</a>
+      <a href="about.html" class="py-2.5 text-muted-foreground">About</a>
+      <a href="consultation.html" class="py-2.5 text-muted-foreground">Consultation</a>
+      <a href="contact.html" class="py-2.5 text-foreground">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============================= HERO ============================= -->
+<section class="hero relative overflow-hidden border-b border-border/60">
+  <div class="absolute inset-0 grid-bg"></div>
+  <div class="absolute inset-0 glow"></div>
+  <div class="spotlight" aria-hidden="true"></div>
+  <div class="container relative py-20 sm:py-28 text-center">
+    <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
+      <span class="eyebrow-emoji" aria-hidden="true">💬</span>
+      Contact
+    </div>
+    <h1 class="mt-7 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl mx-auto">
+      Let's Start a <span class="accent">Conversation</span>
+    </h1>
+    <p class="mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+      A question, a project, or just curious whether we're a fit — send it over.
+      Everything reaches Abdul directly.
+    </p>
+  </div>
+</section>
+
+<!-- ========================= CONTACT CARDS ======================== -->
+<section class="container py-16 sm:py-20">
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+      </div>
+      <h3 class="mt-5 font-semibold">Email</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">The fastest way to reach us.</p>
+      <a href="mailto:designbybaxit@gmail.com" class="mt-2.5 inline-block text-sm hover:text-muted-foreground transition-colors">designbybaxit@gmail.com</a>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.06s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      </div>
+      <h3 class="mt-5 font-semibold">Phone</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Prefer to talk it through?</p>
+      <a href="tel:+923321975505" class="mt-2.5 inline-block text-sm hover:text-muted-foreground transition-colors">+92 332 1975505</a>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.12s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+      </div>
+      <h3 class="mt-5 font-semibold">Response time</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Within one working day, usually sooner.</p>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.18s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </div>
+      <h3 class="mt-5 font-semibold">Availability</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Mon–Fri, 9am – 6pm. Weekend calls by arrangement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FORM ============================= -->
+<section class="container pb-24 sm:pb-28">
+  <div class="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
+    <div class="reveal">
+      <h2 class="text-4xl sm:text-5xl font-bold leading-[1.08]">
+        Tell Us About Your <span class="accent">Brand</span>
+      </h2>
+      <p class="mt-5 text-muted-foreground leading-relaxed">
+        The more we know up front, the more useful our first reply will be. There
+        are no wrong answers here — even "I'm not sure what I need yet" is a good
+        starting point.
+      </p>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        Looking for a structured session instead? The
+        <a href="consultation.html" class="text-foreground underline underline-offset-4 hover:no-underline">free consultation</a>
+        walks through your brand in 30 minutes and ends with a written plan.
+      </p>
+
+      <div class="mt-9 rounded-2xl border border-border bg-card/50 p-6">
+        <p class="text-sm font-medium">Prefer email?</p>
+        <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">
+          Write to <a href="mailto:designbybaxit@gmail.com" class="text-foreground hover:text-muted-foreground transition-colors">designbybaxit@gmail.com</a>
+          and you'll get the same person, same day.
+        </p>
+      </div>
+    </div>
+
+    <form data-validate novalidate data-subject="New contact enquiry — Design by Baxit"
+      class="reveal rounded-2xl border border-border bg-card/50 p-6 sm:p-8" style="transition-delay:.1s">
+
+      <!-- Honeypot: invisible to people, irresistible to bots. Never remove. -->
+      <div class="hp-wrap" aria-hidden="true">
+        <label for="f-honey">Leave this field empty</label>
+        <input id="f-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div data-field>
+          <label for="f-name" class="mb-1.5 block text-sm font-medium">Name</label>
+          <input id="f-name" name="name" type="text" class="field" placeholder="Jane Doe"
+                 data-rule="required" data-label="Name">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="f-gender" class="mb-1.5 block text-sm font-medium">Gender</label>
+          <select id="f-gender" name="gender" class="field" data-rule="required" data-label="Gender">
+            <option value="" disabled selected>Select an option</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="non-binary">Non-binary</option>
+            <option value="prefer-not-to-say">Prefer not to say</option>
+          </select>
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="f-phone" class="mb-1.5 block text-sm font-medium">Phone number</label>
+          <input id="f-phone" name="phone" type="tel" class="field" placeholder="+92 300 1234567"
+                 data-rule="required|phone" data-label="Phone number">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="f-email" class="mb-1.5 block text-sm font-medium">Email address</label>
+          <input id="f-email" name="email" type="email" class="field" placeholder="you@company.com"
+                 data-rule="required|email" data-label="Email address">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field class="sm:col-span-2">
+          <label for="f-topic" class="mb-1.5 block text-sm font-medium">What's this about?</label>
+          <select id="f-topic" name="topic" class="field" data-rule="required" data-label="Topic">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="new-project">Starting a new project</option>
+            <option value="redesign">Redesigning an existing brand or site</option>
+            <option value="marketing">Growth marketing help</option>
+            <option value="partnership">Partnership or collaboration</option>
+            <option value="other">Something else</option>
+          </select>
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field class="sm:col-span-2">
+          <label for="f-message" class="mb-1.5 block text-sm font-medium">Message</label>
+          <textarea id="f-message" name="message" rows="5" class="field resize-y"
+                    placeholder="Tell us a little about your business and what you're looking for..."
+                    data-rule="required" data-label="Message"></textarea>
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+      </div>
+
+      <button type="submit"
+        class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Send Message
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+
+      <p class="mt-3.5 text-center text-xs text-muted-foreground">
+        We reply within one working day. Your details are never shared.
+      </p>
+
+      <p data-success role="status"
+         class="hidden mt-5 rounded-lg border border-border bg-secondary/60 px-4 py-3 text-center text-sm">
+        Thanks — your message has been received. We'll be in touch shortly.
+      </p>
+
+      <p data-formerror role="alert"
+         class="hidden mt-5 rounded-lg border border-destructive/50 bg-destructive/10 px-4 py-3 text-center text-sm text-destructive"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================= CTA ============================== -->
+<section class="border-t border-border/60">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal relative overflow-hidden rounded-3xl border border-border bg-card/50 px-6 py-16 sm:px-14 text-center">
+      <div class="absolute inset-0 grid-bg opacity-60"></div>
+      <div class="relative">
+        <h2 class="text-4xl sm:text-5xl font-bold max-w-2xl mx-auto leading-[1.06]">
+          Rather Talk It <span class="accent">Through</span>?
+        </h2>
+        <p class="mt-5 mx-auto max-w-lg text-muted-foreground leading-relaxed">
+          Book a free 30-minute consultation and leave with a written 90-day plan — whether or not we end up working together.
+        </p>
+        <div class="mt-9">
+          <a href="consultation.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+            Book a Free Consultation
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-border/60">
+  <div class="container py-14">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-xs">
+        <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+          <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+          <span>Design by Baxit</span>
+        </a>
+        <p class="mt-4 text-sm text-muted-foreground leading-relaxed">
+          Brand design and growth marketing for businesses that want to be found, trusted and chosen.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:gap-16 text-sm">
+        <div>
+          <p class="font-medium">Pages</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html" class="hover:text-foreground transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-foreground transition-colors">About</a></li>
+            <li><a href="consultation.html" class="hover:text-foreground transition-colors">Consultation</a></li>
+            <li><a href="contact.html" class="hover:text-foreground transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium">Services</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Brand identity</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Websites</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Growth marketing</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Optimisation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col gap-3 border-t border-border/60 pt-7 sm:flex-row sm:items-center sm:justify-between text-sm text-muted-foreground">
+      <p>&copy; 2026 Design by Baxit. All rights reserved.</p>
+      <p class="italic font-serif font-light">less noise more growth</p>
+    </div>
+  </div>
+</footer>
+
+<button data-back-to-top class="back-to-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+</body>
+</html>

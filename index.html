@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design by Baxit — Brand design &amp; growth marketing</title>
+<meta name="description" content="Design by Baxit builds brand systems, websites and growth marketing that cut through the noise — so the right customers find you, trust you and reach out.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="theme.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="theme.js"></script>
+</head>
+<body class="min-h-screen bg-background text-foreground antialiased">
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
+  <div class="container flex h-16 items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+      <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+      <span>Design by Baxit</span>
+    </a>
+
+    <nav class="nav-links hidden md:flex items-center gap-8 text-sm">
+      <a href="index.html" class="text-foreground transition-colors">Home</a>
+      <a href="about.html" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="consultation.html" class="text-muted-foreground hover:text-foreground transition-colors">Consultation</a>
+      <a href="contact.html" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <button data-theme-toggle aria-label="Toggle theme"
+        class="grid h-9 w-9 place-items-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="consultation.html"
+        class="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button data-menu-toggle aria-expanded="false" aria-label="Menu"
+        class="menu-toggle md:hidden h-9 w-9 rounded-full border border-border text-muted-foreground">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div data-menu class="hidden md:hidden border-t border-border/40 bg-background">
+    <nav class="container flex flex-col py-3 text-sm">
+      <a href="index.html" class="py-2.5 text-foreground">Home</a>
+      <a href="about.html" class="py-2.5 text-muted-foreground">About</a>
+      <a href="consultation.html" class="py-2.5 text-muted-foreground">Consultation</a>
+      <a href="contact.html" class="py-2.5 text-muted-foreground">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============================= HERO ============================= -->
+<section class="hero relative overflow-hidden">
+  <div class="absolute inset-0 grid-bg"></div>
+  <div class="absolute inset-0 glow"></div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="container relative py-24 sm:py-32 lg:py-40 text-center">
+    <div class="reveal is-visible mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
+      <span class="eyebrow-emoji" aria-hidden="true">🚀</span>
+      Brand &amp; growth studio — led by Abdul Basit
+    </div>
+
+    <h1 class="mt-7 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl mx-auto">
+      Design That Turns Attention Into <span class="accent">Customers</span>
+    </h1>
+
+    <p class="mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+      We build brand systems, websites and marketing that fit how your business
+      actually works — so the right people find you, trust you, and reach out.
+    </p>
+
+    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="consultation.html"
+        class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Book a Free Consultation
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services"
+        class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium hover:bg-secondary transition-colors">
+        What We Do
+      </a>
+    </div>
+
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+      <span class="inline-flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Brand-first approach
+      </span>
+      <span class="inline-flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Built to convert
+      </span>
+      <span class="inline-flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        8+ years experience
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATS ============================= -->
+<section class="border-y border-border/60">
+  <div class="container grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-border/60">
+    <div class="reveal p-7 text-center">
+      <div class="text-3xl font-bold">8+</div>
+      <div class="mt-1.5 text-sm text-muted-foreground">Years building for business</div>
+    </div>
+    <div class="reveal p-7 text-center" style="transition-delay:.08s">
+      <div class="text-3xl font-bold">End&#8209;to&#8209;End</div>
+      <div class="mt-1.5 text-sm text-muted-foreground">Brand through to launch</div>
+    </div>
+    <div class="reveal p-7 text-center" style="transition-delay:.16s">
+      <div class="text-3xl font-bold">Growth&#8209;First</div>
+      <div class="mt-1.5 text-sm text-muted-foreground">Every decision measured</div>
+    </div>
+    <div class="reveal p-7 text-center" style="transition-delay:.24s">
+      <div class="text-3xl font-bold">1:1</div>
+      <div class="mt-1.5 text-sm text-muted-foreground">Direct founder access</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== SERVICES =========================== -->
+<section id="services" class="container py-24 sm:py-28">
+  <div class="reveal mx-auto max-w-2xl text-center">
+    <p class="text-sm font-medium text-muted-foreground">What we do</p>
+    <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Everything Your Brand Needs to <span class="accent">Grow</span></h2>
+    <p class="mt-4 text-muted-foreground leading-relaxed">
+      One studio for the whole journey — from how your brand looks to how it brings in customers.
+    </p>
+  </div>
+
+  <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- 1 -->
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-foreground">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="20" r="2.5"/><path d="M12 2a10 10 0 1 0 0 20"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Brand Identity</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        Logo, colour, type and voice built into one system your team can actually use — consistent everywhere your brand shows up.
+      </p>
+    </div>
+    <!-- 2 -->
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors" style="transition-delay:.06s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-foreground">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Website Design &amp; Build</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        Fast, responsive sites designed around one job: turning a visitor into an enquiry. No bloat, no templates.
+      </p>
+    </div>
+    <!-- 3 -->
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors" style="transition-delay:.12s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-foreground">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Growth Marketing</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        Campaigns, funnels and messaging aimed at the customers worth having — measured against revenue, not vanity metrics.
+      </p>
+    </div>
+    <!-- 4 -->
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-foreground">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Conversion Optimisation</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        We find where people drop off, fix the friction, and make it effortless for a customer to reach you.
+      </p>
+    </div>
+    <!-- 5 -->
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors" style="transition-delay:.06s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-foreground">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Content &amp; Social Systems</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        Templates, tone and a repeatable publishing rhythm so staying visible online stops being a guessing game.
+      </p>
+    </div>
+    <!-- 6 -->
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors" style="transition-delay:.12s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-foreground">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Ongoing Support</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        Launch is the start, not the finish. We stay on to iterate, maintain and keep the results moving in the right direction.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= HOW IT WORKS ========================= -->
+<section class="border-t border-border/60 bg-secondary/20">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-muted-foreground">How it works</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Three Steps to <span class="accent">Momentum</span></h2>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        A simple process with no jargon and no surprises — you always know what's happening and why.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7">
+        <span class="text-sm font-mono text-muted-foreground">01</span>
+        <h3 class="mt-4 text-lg font-semibold">Discover</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+          We start with your goals, your customers and your preferences. Everything we design later traces back to what you tell us here.
+        </p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.08s">
+        <span class="text-sm font-mono text-muted-foreground">02</span>
+        <h3 class="mt-4 text-lg font-semibold">Design &amp; Build</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+          Identity, website and messaging come together as one system — reviewed with you at every stage, never dropped on you at the end.
+        </p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.16s">
+        <span class="text-sm font-mono text-muted-foreground">03</span>
+        <h3 class="mt-4 text-lg font-semibold">Grow</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+          We launch, watch how real customers behave, and keep refining. Growth is the deliverable — not the deck.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== DIFFERENCE ========================== -->
+<section class="container py-24 sm:py-28">
+  <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+    <div class="reveal">
+      <p class="text-sm font-medium text-muted-foreground">Why Design by Baxit</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold leading-[1.08]">
+        Less Noise. <span class="accent">More</span> Growth.
+      </h2>
+      <p class="mt-5 text-muted-foreground leading-relaxed">
+        Most businesses don't have a design problem or a marketing problem — they have a
+        clarity problem. Too many messages, too many channels, nothing pulling in the
+        same direction.
+      </p>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        We strip it back to what your brand stands for, then build everything around
+        that. The result is a business that's easier to understand, easier to trust,
+        and far easier to buy from.
+      </p>
+      <a href="about.html" class="mt-7 inline-flex items-center gap-2 text-sm font-medium hover:text-muted-foreground transition-colors">
+        More about the studio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="reveal grid gap-4 sm:grid-cols-2" style="transition-delay:.1s">
+      <div class="rounded-2xl border border-border bg-card/50 p-6">
+        <h3 class="font-semibold">Built around you</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Your preferences shape the work — not a house style we reuse on every client.</p>
+      </div>
+      <div class="rounded-2xl border border-border bg-card/50 p-6 sm:mt-8">
+        <h3 class="font-semibold">Designed to be found</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Search, social and site work as one, so new customers actually discover you.</p>
+      </div>
+      <div class="rounded-2xl border border-border bg-card/50 p-6">
+        <h3 class="font-semibold">Easy to reach</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Clear calls to action and short paths to contact, on every device.</p>
+      </div>
+      <div class="rounded-2xl border border-border bg-card/50 p-6 sm:mt-8">
+        <h3 class="font-semibold">Honest reporting</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Plain-language updates on what worked, what didn't, and what changes next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CTA ============================== -->
+<section class="border-t border-border/60">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal relative overflow-hidden rounded-3xl border border-border bg-card/50 px-6 py-16 sm:px-14 text-center">
+      <div class="absolute inset-0 grid-bg opacity-60"></div>
+      <div class="relative">
+        <h2 class="text-4xl sm:text-5xl font-bold max-w-2xl mx-auto leading-[1.06]">
+          Ready to Be the Brand People <span class="accent">Choose</span>?
+        </h2>
+        <p class="mt-5 mx-auto max-w-lg text-muted-foreground leading-relaxed">
+          Book a free consultation. We'll look at where you are now and map the fastest
+          honest route to growth — no pressure, no obligation.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="consultation.html"
+            class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+            Book a Free Consultation
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html"
+            class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium hover:bg-secondary transition-colors">
+            Send a Message
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-border/60">
+  <div class="container py-14">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-xs">
+        <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+          <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+          <span>Design by Baxit</span>
+        </a>
+        <p class="mt-4 text-sm text-muted-foreground leading-relaxed">
+          Brand design and growth marketing for businesses that want to be found, trusted and chosen.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:gap-16 text-sm">
+        <div>
+          <p class="font-medium">Pages</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html" class="hover:text-foreground transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-foreground transition-colors">About</a></li>
+            <li><a href="consultation.html" class="hover:text-foreground transition-colors">Consultation</a></li>
+            <li><a href="contact.html" class="hover:text-foreground transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium">Services</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="#services" class="hover:text-foreground transition-colors">Brand identity</a></li>
+            <li><a href="#services" class="hover:text-foreground transition-colors">Websites</a></li>
+            <li><a href="#services" class="hover:text-foreground transition-colors">Growth marketing</a></li>
+            <li><a href="#services" class="hover:text-foreground transition-colors">Optimisation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col gap-3 border-t border-border/60 pt-7 sm:flex-row sm:items-center sm:justify-between text-sm text-muted-foreground">
+      <p>&copy; 2026 Design by Baxit. All rights reserved.</p>
+      <p class="italic font-serif font-light">less noise more growth</p>
+    </div>
+  </div>
+</footer>
+
+<button data-back-to-top class="back-to-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+</body>
+</html>

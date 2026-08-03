@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Consultation — Design by Baxit</title>
+<meta name="description" content="Book a free 30-minute consultation with Design by Baxit. We'll review where your brand stands and map the fastest honest route to growth.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="theme.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="theme.js"></script>
+</head>
+<body class="min-h-screen bg-background text-foreground antialiased">
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
+  <div class="container flex h-16 items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+      <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+      <span>Design by Baxit</span>
+    </a>
+    <nav class="nav-links hidden md:flex items-center gap-8 text-sm">
+      <a href="index.html" class="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+      <a href="about.html" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="consultation.html" class="text-foreground transition-colors">Consultation</a>
+      <a href="contact.html" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button data-theme-toggle aria-label="Toggle theme"
+        class="grid h-9 w-9 place-items-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="#book"
+        class="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button data-menu-toggle aria-expanded="false" aria-label="Menu"
+        class="menu-toggle md:hidden h-9 w-9 rounded-full border border-border text-muted-foreground">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div data-menu class="hidden md:hidden border-t border-border/40 bg-background">
+    <nav class="container flex flex-col py-3 text-sm">
+      <a href="index.html" class="py-2.5 text-muted-foreground">Home</a>
+      <a href="about.html" class="py-2.5 text-muted-foreground">About</a>
+      <a href="consultation.html" class="py-2.5 text-foreground">Consultation</a>
+      <a href="contact.html" class="py-2.5 text-muted-foreground">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============================= HERO ============================= -->
+<section class="hero relative overflow-hidden border-b border-border/60">
+  <div class="absolute inset-0 grid-bg"></div>
+  <div class="absolute inset-0 glow"></div>
+  <div class="spotlight" aria-hidden="true"></div>
+  <div class="container relative py-20 sm:py-28 text-center">
+    <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
+      <span class="eyebrow-emoji" aria-hidden="true">📅</span>
+      Free · 30 minutes · No obligation
+    </div>
+    <h1 class="mt-7 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl mx-auto">
+      Let's Map Your Route to <span class="accent">Growth</span>
+    </h1>
+    <p class="mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+      A straight conversation about where your brand stands today, what's holding
+      back enquiries, and the shortest honest path to fixing it.
+    </p>
+    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="#book" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Request Your Session
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#what-you-get" class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium hover:bg-secondary transition-colors">
+        What's Included
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WHAT YOU GET ========================= -->
+<section id="what-you-get" class="container py-24 sm:py-28">
+  <div class="reveal mx-auto max-w-2xl text-center">
+    <p class="text-sm font-medium text-muted-foreground">What's included</p>
+    <h2 class="mt-3 text-4xl sm:text-5xl font-bold">You Leave With a <span class="accent">Plan</span></h2>
+    <p class="mt-4 text-muted-foreground leading-relaxed">
+      Not a sales pitch. Whether or not we work together, you walk away knowing what to fix first.
+    </p>
+  </div>
+
+  <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Brand audit</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        An honest read on how your brand currently lands — what's working, what's confusing a potential customer.
+      </p>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.06s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Growth opportunities</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        The two or three changes most likely to move enquiries in the next 90 days, ranked by effort versus payoff.
+      </p>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.12s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 15h6M9 11h3"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Clear scope &amp; costs</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        If a project makes sense, you get realistic timelines and pricing up front — no vague estimates that shift later.
+      </p>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Customer clarity</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        We pin down exactly who you should be talking to — and who you can stop trying to win.
+      </p>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.06s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">A 90-day outline</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        A simple sequence you can act on immediately — with us, with your team, or on your own.
+      </p>
+    </div>
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.12s">
+      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h3 class="mt-5 text-lg font-semibold">Zero pressure</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+        If we're not the right fit, we'll say so and point you somewhere better. That's the whole policy.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== THE SESSION ========================= -->
+<section class="border-t border-border/60 bg-secondary/20">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-muted-foreground">How it runs</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Thirty Minutes, Well <span class="accent">Spent</span></h2>
+    </div>
+    <div class="mt-14 grid gap-5 md:grid-cols-4">
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7">
+        <span class="text-sm font-mono text-muted-foreground">01</span>
+        <h3 class="mt-4 font-semibold">You share context</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Your business, your customers, and what's frustrating you right now. 10 minutes.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.06s">
+        <span class="text-sm font-mono text-muted-foreground">02</span>
+        <h3 class="mt-4 font-semibold">We review live</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">We go through your site and channels together and name the friction. 10 minutes.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.12s">
+        <span class="text-sm font-mono text-muted-foreground">03</span>
+        <h3 class="mt-4 font-semibold">We prioritise</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Highest-impact fixes first, with a rough sense of effort and timing. 10 minutes.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.18s">
+        <span class="text-sm font-mono text-muted-foreground">04</span>
+        <h3 class="mt-4 font-semibold">You get it in writing</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">A short written summary lands in your inbox within two working days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FORM ============================= -->
+<section id="book" class="container py-24 sm:py-28">
+  <div class="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
+    <div class="reveal">
+      <p class="text-sm font-medium text-muted-foreground">Book your session</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold leading-[1.08]">
+        Request a Free <span class="accent">Consultation</span>
+      </h2>
+      <p class="mt-5 text-muted-foreground leading-relaxed">
+        Fill this in and we'll come back within one working day with two or three
+        times that suit. The more detail you give, the more useful the session.
+      </p>
+
+      <div class="mt-9 space-y-4">
+        <div class="flex items-start gap-3.5">
+          <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-border bg-secondary/50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium">Reply within 1 working day</p>
+            <p class="text-sm text-muted-foreground">Usually much sooner.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5">
+          <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-border bg-secondary/50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium">Your details stay private</p>
+            <p class="text-sm text-muted-foreground">No lists, no sharing, no follow-up spam.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5">
+          <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-border bg-secondary/50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium">You speak to Abdul directly</p>
+            <p class="text-sm text-muted-foreground">Not a salesperson or an account manager.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form data-validate novalidate data-subject="New consultation request — Design by Baxit"
+      class="reveal rounded-2xl border border-border bg-card/50 p-6 sm:p-8" style="transition-delay:.1s">
+
+      <!-- Honeypot: invisible to people, irresistible to bots. Never remove. -->
+      <div class="hp-wrap" aria-hidden="true">
+        <label for="c-honey">Leave this field empty</label>
+        <input id="c-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div data-field>
+          <label for="c-name" class="mb-1.5 block text-sm font-medium">Full name</label>
+          <input id="c-name" name="name" type="text" class="field" placeholder="Jane Doe"
+                 data-rule="required" data-label="Name">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="c-business" class="mb-1.5 block text-sm font-medium">Business name</label>
+          <input id="c-business" name="business" type="text" class="field" placeholder="Acme Ltd"
+                 data-rule="required" data-label="Business name">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="c-email" class="mb-1.5 block text-sm font-medium">Email address</label>
+          <input id="c-email" name="email" type="email" class="field" placeholder="you@company.com"
+                 data-rule="required|email" data-label="Email address">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="c-phone" class="mb-1.5 block text-sm font-medium">Phone number</label>
+          <input id="c-phone" name="phone" type="tel" class="field" placeholder="+92 300 1234567"
+                 data-rule="required|phone" data-label="Phone number">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="c-service" class="mb-1.5 block text-sm font-medium">What do you need?</label>
+          <select id="c-service" name="service" class="field" data-rule="required" data-label="Service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="brand">Brand identity</option>
+            <option value="website">Website design &amp; build</option>
+            <option value="growth">Growth marketing</option>
+            <option value="conversion">Conversion optimisation</option>
+            <option value="content">Content &amp; social systems</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="c-budget" class="mb-1.5 block text-sm font-medium">Budget range</label>
+          <select id="c-budget" name="budget" class="field" data-rule="required" data-label="Budget">
+            <option value="" disabled selected>Select a range</option>
+            <option value="under-1k">Under $1,000</option>
+            <option value="1k-3k">$1,000 – $3,000</option>
+            <option value="3k-7k">$3,000 – $7,000</option>
+            <option value="7k-plus">$7,000+</option>
+            <option value="discuss">Prefer to discuss</option>
+          </select>
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field class="sm:col-span-2">
+          <label for="c-when" class="mb-1.5 block text-sm font-medium">
+            Preferred time <span class="font-normal text-muted-foreground">(optional)</span>
+          </label>
+          <select id="c-when" name="when" class="field">
+            <option value="" disabled selected>Any time works</option>
+            <option value="morning">Weekday mornings</option>
+            <option value="afternoon">Weekday afternoons</option>
+            <option value="evening">Weekday evenings</option>
+            <option value="weekend">Weekends</option>
+          </select>
+        </div>
+        <div data-field class="sm:col-span-2">
+          <label for="c-goals" class="mb-1.5 block text-sm font-medium">What are you hoping to achieve?</label>
+          <textarea id="c-goals" name="goals" rows="4" class="field resize-y"
+                    placeholder="Tell us about your business and what growth would look like for you..."
+                    data-rule="required" data-label="Goals"></textarea>
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+      </div>
+
+      <button type="submit"
+        class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Request Free Consultation
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+
+      <p class="mt-3.5 text-center text-xs text-muted-foreground">
+        No obligation. We'll never share your details.
+      </p>
+
+      <p data-success role="status"
+         class="hidden mt-5 rounded-lg border border-border bg-secondary/60 px-4 py-3 text-center text-sm">
+        Thanks — your request is in. We'll be in touch within one working day.
+      </p>
+
+      <p data-formerror role="alert"
+         class="hidden mt-5 rounded-lg border border-destructive/50 bg-destructive/10 px-4 py-3 text-center text-sm text-destructive"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================== -->
+<section class="border-t border-border/60">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-muted-foreground">FAQ</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Before You <span class="accent">Book</span></h2>
+    </div>
+    <div class="mx-auto mt-12 max-w-3xl space-y-3">
+      <details class="reveal group rounded-2xl border border-border bg-card/50 p-6">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium list-none">
+          Is the consultation really free?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-3.5 text-sm text-muted-foreground leading-relaxed">
+          Yes — completely. No card, no hidden trial. We'd rather spend 30 minutes finding out whether we're a fit than sell you something that isn't.
+        </p>
+      </details>
+      <details class="reveal group rounded-2xl border border-border bg-card/50 p-6">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium list-none">
+          Do I need to prepare anything?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-3.5 text-sm text-muted-foreground leading-relaxed">
+          Nothing formal. If you have a website, social accounts or any analytics access, having them handy makes the review sharper — but it's not required.
+        </p>
+      </details>
+      <details class="reveal group rounded-2xl border border-border bg-card/50 p-6">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium list-none">
+          What if my business is brand new?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-3.5 text-sm text-muted-foreground leading-relaxed">
+          Even better. Getting positioning and identity right before you spend on marketing saves a lot of money later. Early-stage sessions focus on foundations.
+        </p>
+      </details>
+      <details class="reveal group rounded-2xl border border-border bg-card/50 p-6">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium list-none">
+          Will you pressure me into a project?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-3.5 text-sm text-muted-foreground leading-relaxed">
+          No. You'll get the summary either way, and you're free to act on it yourself or with another team. We only propose work when we genuinely think we're the best option.
+        </p>
+      </details>
+      <details class="reveal group rounded-2xl border border-border bg-card/50 p-6">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium list-none">
+          How soon can we start if it goes well?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-3.5 text-sm text-muted-foreground leading-relaxed">
+          Typically within one to two weeks, depending on current commitments. We take on a limited number of projects at a time so each gets proper attention.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-border/60">
+  <div class="container py-14">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-xs">
+        <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+          <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+          <span>Design by Baxit</span>
+        </a>
+        <p class="mt-4 text-sm text-muted-foreground leading-relaxed">
+          Brand design and growth marketing for businesses that want to be found, trusted and chosen.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:gap-16 text-sm">
+        <div>
+          <p class="font-medium">Pages</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html" class="hover:text-foreground transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-foreground transition-colors">About</a></li>
+            <li><a href="consultation.html" class="hover:text-foreground transition-colors">Consultation</a></li>
+            <li><a href="contact.html" class="hover:text-foreground transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium">Services</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Brand identity</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Websites</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Growth marketing</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Optimisation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col gap-3 border-t border-border/60 pt-7 sm:flex-row sm:items-center sm:justify-between text-sm text-muted-foreground">
+      <p>&copy; 2026 Design by Baxit. All rights reserved.</p>
+      <p class="italic font-serif font-light">less noise more growth</p>
+    </div>
+  </div>
+</footer>
+
+<button data-back-to-top class="back-to-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+</body>
+</html>

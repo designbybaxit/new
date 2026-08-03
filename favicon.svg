@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Design by Baxit">
+  <!-- Inverts with the browser's colour scheme so the mark stays legible
+       against both a light and a dark tab bar. Letters are sized to nearly
+       fill the tile, which is what keeps "AB" readable down at 16px. -->
+  <style>
+    .chip { fill: #171717; }
+    .mark { fill: #FAFAFA; }
+    @media (prefers-color-scheme: dark) {
+      .chip { fill: #E8E8E8; }
+      .mark { fill: #141414; }
+    }
+  </style>
+  <rect class="chip" width="32" height="32" rx="6.5"/>
+  <text class="mark" x="16" y="22.4" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="16.5" font-weight="700" letter-spacing="-1.1">AB</text>
+</svg>

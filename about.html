@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Design by Baxit</title>
+<meta name="description" content="Design by Baxit is founded by Abdul Basit, who has eight years of experience building websites and solutions for businesses.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="theme.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="theme.js"></script>
+</head>
+<body class="min-h-screen bg-background text-foreground antialiased">
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
+  <div class="container flex h-16 items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+      <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+      <span>Design by Baxit</span>
+    </a>
+    <nav class="nav-links hidden md:flex items-center gap-8 text-sm">
+      <a href="index.html" class="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+      <a href="about.html" class="text-foreground transition-colors">About</a>
+      <a href="consultation.html" class="text-muted-foreground hover:text-foreground transition-colors">Consultation</a>
+      <a href="contact.html" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button data-theme-toggle aria-label="Toggle theme"
+        class="grid h-9 w-9 place-items-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="consultation.html"
+        class="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button data-menu-toggle aria-expanded="false" aria-label="Menu"
+        class="menu-toggle md:hidden h-9 w-9 rounded-full border border-border text-muted-foreground">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div data-menu class="hidden md:hidden border-t border-border/40 bg-background">
+    <nav class="container flex flex-col py-3 text-sm">
+      <a href="index.html" class="py-2.5 text-muted-foreground">Home</a>
+      <a href="about.html" class="py-2.5 text-foreground">About</a>
+      <a href="consultation.html" class="py-2.5 text-muted-foreground">Consultation</a>
+      <a href="contact.html" class="py-2.5 text-muted-foreground">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============================= HERO ============================= -->
+<section class="hero relative overflow-hidden border-b border-border/60">
+  <div class="absolute inset-0 grid-bg"></div>
+  <div class="absolute inset-0 glow"></div>
+  <div class="spotlight" aria-hidden="true"></div>
+  <div class="container relative py-20 sm:py-28 text-center">
+    <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
+      <span class="eyebrow-emoji" aria-hidden="true">👋</span>
+      About the studio
+    </div>
+    <h1 class="mt-7 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl mx-auto">
+      A Designer Who Thinks Like a <span class="accent">Marketer</span>
+    </h1>
+    <p class="mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+      Design by Baxit exists for one reason — to make good businesses easy to find,
+      easy to trust and easy to buy from.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ FOUNDER =========================== -->
+<section class="container py-24 sm:py-28">
+  <div class="grid gap-12 lg:grid-cols-[380px_1fr] lg:gap-16 items-start">
+    <div class="reveal">
+      <div class="relative overflow-hidden rounded-2xl border border-border bg-card/50">
+        <img src="abdul-basit.jpg" alt="Abdul Basit, founder of Design by Baxit"
+             class="w-full aspect-[4/5] object-cover">
+      </div>
+      <div class="mt-5 rounded-2xl border border-border bg-card/50 p-5">
+        <p class="font-semibold">Abdul Basit</p>
+        <p class="mt-0.5 text-sm text-muted-foreground">Founder &amp; Lead Designer</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-border bg-secondary/50 px-2.5 py-1 text-muted-foreground">Brand identity</span>
+          <span class="rounded-full border border-border bg-secondary/50 px-2.5 py-1 text-muted-foreground">Web design</span>
+          <span class="rounded-full border border-border bg-secondary/50 px-2.5 py-1 text-muted-foreground">Growth</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:.1s">
+      <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+        Founded by <span class="accent">Abdul Basit</span>
+      </h2>
+      <p class="mt-6 text-muted-foreground leading-relaxed">
+        Design by Baxit is founded by <span class="text-foreground font-medium">Abdul Basit</span>, who has
+        <span class="text-foreground font-medium">eight years of experience</span> building websites and
+        solutions for businesses. Over those years he's worked with founders, local
+        service providers and growing teams — and noticed the same pattern almost
+        every time.
+      </p>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        The businesses that struggled online rarely lacked effort. They lacked
+        focus. Their website said one thing, their social said another, and nothing
+        told a customer why they should choose them. Effort was going out, but
+        nothing was compounding.
+      </p>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        So the studio was built around a different starting point: your brand's own
+        preferences. How you want to be seen, who you actually want to serve, and
+        what makes buying from you the obvious call. Everything after that — the
+        identity, the site, the campaigns — is built to serve that single answer.
+      </p>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        That's where <span class="italic font-serif font-light text-foreground">less noise, more growth</span>
+        comes from. Fewer scattered tactics. More of the work that actually brings
+        customers to your door.
+      </p>
+
+      <div class="mt-9 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-2xl border border-border bg-card/50 p-5">
+          <div class="text-2xl font-bold">8+</div>
+          <p class="mt-1 text-sm text-muted-foreground">Years of experience</p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card/50 p-5">
+          <div class="text-2xl font-bold">1:1</div>
+          <p class="mt-1 text-sm text-muted-foreground">Direct founder access</p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card/50 p-5">
+          <div class="text-2xl font-bold">Full&nbsp;Stack</div>
+          <p class="mt-1 text-sm text-muted-foreground">Brand to build to growth</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VALUES ============================ -->
+<section class="border-t border-border/60 bg-secondary/20">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-muted-foreground">What we stand for</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Principles That Shape Every <span class="accent">Project</span></h2>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        Four rules we don't bend, whatever the size of the brief.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-6">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        </div>
+        <h3 class="mt-5 font-semibold">Clarity over clutter</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">If a customer has to work it out, we haven't finished the job.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.06s">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 9l7 .5-5.5 4.5L18 21l-6-3.5L6 21l1.5-7L2 9.5 9 9Z"/></svg>
+        </div>
+        <h3 class="mt-5 font-semibold">Design with intent</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Every choice answers a question about your customer, not our taste.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.12s">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </div>
+        <h3 class="mt-5 font-semibold">Growth you can measure</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Enquiries, bookings and revenue — not likes and impressions.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.18s">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+        <h3 class="mt-5 font-semibold">Partnership, not projects</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">We stay past launch, because that's when the real learning starts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== APPROACH =========================== -->
+<section class="container py-24 sm:py-28">
+  <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+    <div class="reveal">
+      <p class="text-sm font-medium text-muted-foreground">Our approach</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold leading-[1.08]">
+        Built Around Your <span class="accent">Preferences</span>
+      </h2>
+      <p class="mt-5 text-muted-foreground leading-relaxed">
+        Plenty of studios arrive with a house style and fit you into it. We do the
+        opposite. The first conversation is about what you like, what you don't, who
+        you're trying to reach and what winning looks like for you.
+      </p>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        Those answers become the brief. It's why no two projects here look alike —
+        and why the work still feels like <em>you</em> a year after launch.
+      </p>
+      <a href="consultation.html" class="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Start with a free consultation
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="reveal space-y-4" style="transition-delay:.1s">
+      <div class="rounded-2xl border border-border bg-card/50 p-6">
+        <div class="flex items-start gap-4">
+          <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-secondary text-sm font-mono">01</span>
+          <div>
+            <h3 class="font-semibold">We listen first</h3>
+            <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Goals, customers, preferences and constraints — before a single pixel moves.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-border bg-card/50 p-6">
+        <div class="flex items-start gap-4">
+          <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-secondary text-sm font-mono">02</span>
+          <div>
+            <h3 class="font-semibold">We build one system</h3>
+            <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Brand, site and messaging designed together so they reinforce each other.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-border bg-card/50 p-6">
+        <div class="flex items-start gap-4">
+          <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-secondary text-sm font-mono">03</span>
+          <div>
+            <h3 class="font-semibold">We refine with real data</h3>
+            <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Once customers meet the work, we adjust based on what they actually do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CTA ============================== -->
+<section class="border-t border-border/60">
+  <div class="container py-24 sm:py-28">
+    <div class="reveal relative overflow-hidden rounded-3xl border border-border bg-card/50 px-6 py-16 sm:px-14 text-center">
+      <div class="absolute inset-0 grid-bg opacity-60"></div>
+      <div class="relative">
+        <h2 class="text-4xl sm:text-5xl font-bold max-w-2xl mx-auto leading-[1.06]">
+          Let's Build Something Worth <span class="accent">Choosing</span>
+        </h2>
+        <p class="mt-5 mx-auto max-w-lg text-muted-foreground leading-relaxed">
+          Tell us where your business is heading. We'll tell you honestly whether we're the right studio to get you there.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="consultation.html" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+            Book a Free Consultation
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium hover:bg-secondary transition-colors">
+            Send a Message
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="border-t border-border/60">
+  <div class="container py-14">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-xs">
+        <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+          <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
+          <span>Design by Baxit</span>
+        </a>
+        <p class="mt-4 text-sm text-muted-foreground leading-relaxed">
+          Brand design and growth marketing for businesses that want to be found, trusted and chosen.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:gap-16 text-sm">
+        <div>
+          <p class="font-medium">Pages</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html" class="hover:text-foreground transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-foreground transition-colors">About</a></li>
+            <li><a href="consultation.html" class="hover:text-foreground transition-colors">Consultation</a></li>
+            <li><a href="contact.html" class="hover:text-foreground transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium">Services</p>
+          <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Brand identity</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Websites</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Growth marketing</a></li>
+            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Optimisation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col gap-3 border-t border-border/60 pt-7 sm:flex-row sm:items-center sm:justify-between text-sm text-muted-foreground">
+      <p>&copy; 2026 Design by Baxit. All rights reserved.</p>
+      <p class="italic font-serif font-light">less noise more growth</p>
+    </div>
+  </div>
+</footer>
+
+<button data-back-to-top class="back-to-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+</body>
+</html>

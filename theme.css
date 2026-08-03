@@ -1,0 +1,333 @@
+/* ============================================================
+   Design by Baxit — theme tokens
+   Neutral (0% saturation) scale modelled on the tweakcn palette
+   ============================================================ */
+
+:root {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 14.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 89.8%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63%;
+  --accent: 0 0% 25%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 72% 51%;
+  --border: 0 0% 15.5%;
+  --input: 0 0% 20.4%;
+  --ring: 0 0% 45.2%;
+  --radius: 0.625rem;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.light {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 63%;
+}
+
+* { border-color: hsl(var(--border)); }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- The signature accent: serif italic inside a bold sans heading ---- */
+.accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+}
+
+h1, h2, h3 { letter-spacing: -0.025em; }
+
+/* ---- Hero grid + glow ---- */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.55) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 40%, #000 30%, transparent 100%);
+          mask-image: radial-gradient(ellipse 75% 60% at 50% 40%, #000 30%, transparent 100%);
+}
+
+.glow {
+  background: radial-gradient(ellipse 55% 45% at 50% 45%, hsl(var(--foreground) / 0.09), transparent 70%);
+}
+
+/* ---- Scroll reveal ----
+   Hiding is scoped to .js so the page is fully readable if scripts
+   never run. .is-visible always wins. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---- Form controls ---- */
+.field {
+  width: 100%;
+  border-radius: var(--radius);
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--input));
+  color: hsl(var(--foreground));
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field::placeholder { color: hsl(var(--muted-foreground)); }
+.field:focus {
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.25);
+}
+.field.invalid {
+  border-color: hsl(var(--destructive));
+  box-shadow: 0 0 0 3px hsl(var(--destructive) / 0.2);
+}
+
+select.field {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23a1a1a1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
+}
+
+/* Native dropdown lists don't inherit the page theme reliably */
+select.field option { background-color: hsl(var(--popover)); color: hsl(var(--popover-foreground)); }
+
+/* ---- Honeypot ----
+   Moved off-screen rather than display:none — some bots skip fields
+   that are explicitly hidden, but happily fill this one. It is also
+   removed from the tab order and from the accessibility tree, so no
+   real visitor can reach it by keyboard or screen reader. */
+.hp-wrap {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ---- Submit button busy state ---- */
+button.is-busy {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ---- Eyebrow pill emoji ----
+   Pinned to the emoji font stack so the glyph renders identically
+   regardless of what the surrounding text font would do with it, and
+   nudged onto the cap-height so it sits level with the label. */
+.eyebrow-emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1;
+  transform: translateY(-0.5px);
+}
+
+/* ============================================================
+   Site chrome — nav, header, menu button, back-to-top
+
+   Motion here is transform/opacity driven. The one exception is the
+   header's scrolled state, which transitions border and shadow: that
+   fires twice (crossing the threshold each way), not per frame.
+   ============================================================ */
+
+/* ---- Nav underline sweep ----
+   scaleX rather than width, so it composites instead of forcing
+   layout on every frame of the transition. */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-links a:hover::after { transform: scaleX(1); }
+}
+
+/* ---- Header settles once you leave the hero ---- */
+.site-header {
+  transition: border-color 350ms ease, box-shadow 350ms ease;
+}
+.site-header.is-scrolled {
+  border-color: hsl(var(--border));
+  box-shadow: 0 8px 24px -14px rgb(0 0 0 / 0.55);
+}
+
+/* ---- Menu button morphs to a close icon ---- */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.menu-toggle span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  border-radius: 1px;
+  background: currentColor;
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms ease;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ---- Back to top ---- */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--muted-foreground));
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 300ms ease,
+              transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 300ms,
+              color 200ms ease,
+              background-color 200ms ease;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: hsl(var(--secondary));
+  color: hsl(var(--foreground));
+}
+
+/* Press feedback, sitewide */
+.back-to-top:active,
+.menu-toggle:active,
+button[type="submit"]:active:not(.is-busy) { transform: translateY(1px); }
+.back-to-top:active { transform: translateY(1px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a::after,
+  .menu-toggle span,
+  .back-to-top { transition: none; }
+}
+
+/* ============================================================
+   Hero interaction layer
+
+   Deliberately restrained: everything here animates transform or
+   opacity only, so the compositor does the work — no layout and no
+   per-frame repaint. Pointer effects are gated behind a real mouse
+   (touch devices get nothing to avoid sticky :hover states) and the
+   whole layer is disabled under prefers-reduced-motion.
+   ============================================================ */
+
+.hero { position: relative; }
+
+/* Soft light that tracks the cursor. A fixed-size element moved with
+   translate3d — never a re-rendered gradient. */
+.hero .spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 640px;
+  margin: -320px 0 0 -320px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transform: translate3d(-1200px, -1200px, 0);
+  background: radial-gradient(circle closest-side, hsl(var(--foreground) / 0.10), transparent);
+  transition: opacity 600ms ease;
+}
+.hero.is-live .spotlight {
+  opacity: 1;
+  will-change: transform;
+}
+
+/* The grid drifts a few pixels against the cursor for depth. The long
+   easing means it trails the pointer rather than snapping to it. */
+.hero .grid-bg {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero.is-live .grid-bg { will-change: transform; }
+
+/* Headline words lift one at a time — precise rather than showy. */
+.hero-word {
+  display: inline-block;
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* CTA arrow nudge */
+.hero a > svg {
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-word:hover { transform: translateY(-4px); }
+  .hero a:hover > svg { transform: translateX(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .spotlight { display: none; }
+  .hero .grid-bg { transition: none; transform: none !important; }
+  .hero-word,
+  .hero a > svg { transition: none; }
+  .hero-word:hover { transform: none; }
+}
