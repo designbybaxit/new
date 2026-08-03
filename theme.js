@@ -436,7 +436,9 @@ function setupForm(form) {
     })
       .then(function (res) {
         return res.json().catch(function () { return {}; }).then(function (data) {
-          if (!res.ok) throw new Error(data.message || 'Request failed');
+          if (!res.ok || data.success === false || data.success === 'false') {
+            throw new Error(data.message || 'Request failed');
+          }
           return data;
         });
       })
