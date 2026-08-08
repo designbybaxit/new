@@ -23,11 +23,8 @@
 <meta name="twitter:image" content="https://designbybaxit.com/og-image.png">
 
 <link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="build.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="theme.js" defer></script>
-<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
-<script src="build.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -276,121 +273,41 @@
   </div>
 </section>
 
-<!-- ========================= HOW WE BUILD ========================== -->
+<!-- ========================= HOW IT WORKS ========================= -->
 <section class="border-t border-border/60 bg-secondary/20">
-  <div class="reveal container pt-24 sm:pt-28 pb-10 text-center">
-    <p class="text-sm font-medium text-muted-foreground">How we build</p>
-    <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Five Steps From Idea to <span class="accent">Live</span></h2>
-    <p class="mt-4 mx-auto max-w-xl text-muted-foreground leading-relaxed">
-      Scroll to watch exactly how a Design by Baxit website comes together, phase by phase.
-    </p>
-  </div>
-
-  <section class="build" id="build">
-    <div class="build__sticky">
-      <div class="build__rail"><span class="build__railFill" id="buildProgress"></span></div>
-
-      <div class="build__header">
-        <span class="build__phasePill" id="buildPhasePill">01 / 05 — Consultation</span>
-      </div>
-
-      <div class="build__inner">
-        <div class="build__copy">
-          <article class="phasePanel" data-idx="0">
-            <p class="phasePanel__eyebrow">Phase 01</p>
-            <h3 class="phasePanel__title">Consultation</h3>
-            <p class="phasePanel__body">A free 30-minute call where we learn about your business, your customers and what actually needs to change — no assumptions, no generic templates.</p>
-          </article>
-          <article class="phasePanel" data-idx="1">
-            <p class="phasePanel__eyebrow">Phase 02</p>
-            <h3 class="phasePanel__title">Discovery &amp; Strategy</h3>
-            <p class="phasePanel__body">Before a single pixel gets designed, we research your market, competitors and positioning — so the site is built on evidence, not guesses.</p>
-          </article>
-          <article class="phasePanel" data-idx="2">
-            <p class="phasePanel__eyebrow">Phase 03</p>
-            <h3 class="phasePanel__title">Design</h3>
-            <p class="phasePanel__body">Brand identity and page layouts come together as one system, reviewed with you at every stage — never dropped on you at the end.</p>
-          </article>
-          <article class="phasePanel" data-idx="3">
-            <p class="phasePanel__eyebrow">Phase 04</p>
-            <h3 class="phasePanel__title">Build</h3>
-            <p class="phasePanel__body">The site gets built and tested across every device, with your real content wired in from day one — not filler text standing in for the real thing.</p>
-          </article>
-          <article class="phasePanel" data-idx="4">
-            <p class="phasePanel__eyebrow">Phase 05</p>
-            <h3 class="phasePanel__title">Launch &amp; Grow</h3>
-            <p class="phasePanel__body">We launch across desktop, tablet and mobile, then keep watching, refining and optimising. Growth is the deliverable — not the handover.</p>
-            <a href="consultation.html" class="phasePanel__link">
-              Book the first step
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </article>
-        </div>
-
-        <div class="build__stage">
-          <svg id="buildScene" viewBox="0 0 620 420" aria-hidden="true">
-            <!-- Phase 5: device fan-out (drawn behind the main frame) -->
-            <g id="deviceFan">
-              <rect id="mobile" class="ink fillBg" x="538" y="302" width="56" height="100" rx="10" stroke-width="2" opacity="0"></rect>
-              <rect id="tablet" class="ink fillBg" x="498" y="256" width="104" height="142" rx="12" stroke-width="2" opacity="0"></rect>
-            </g>
-
-            <!-- Main browser frame + chrome -->
-            <circle class="buildDot fillMuted" cx="86" cy="76" r="4" opacity="0"></circle>
-            <circle class="buildDot fillMuted" cx="102" cy="76" r="4" opacity="0"></circle>
-            <circle class="buildDot fillMuted" cx="118" cy="76" r="4" opacity="0"></circle>
-            <rect id="addressbar" class="ink" x="150" y="66" width="330" height="20" rx="10" fill="none" stroke-width="1.5"></rect>
-            <g id="cursorWrap" opacity="0">
-              <rect class="fillFg cursorBlink" x="164" y="71" width="2" height="10"></rect>
-            </g>
-            <path id="codeBracket" class="ink" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M496 68 L488 76 L496 84 M504 68 L512 76 L504 84"></path>
-            <rect id="frame" class="ink" x="60" y="50" width="500" height="320" rx="14" fill="none" stroke-width="2"></rect>
-            <line id="chromeDivider" class="ink" x1="60" y1="98" x2="560" y2="98" stroke-width="1.5"></line>
-
-            <!-- Phase 2/3/4: wireframe blocks that fill in and snap to grid -->
-            <g id="blocksGroup">
-              <g id="blocksWire">
-                <rect id="wHeader" class="ink" x="80" y="116" width="480" height="34" rx="6" fill="none" stroke-width="1.5"></rect>
-                <rect id="wHero" class="ink" x="80" y="164" width="480" height="86" rx="6" fill="none" stroke-width="1.5"></rect>
-                <rect id="wCard1" class="ink" x="80" y="264" width="150" height="86" rx="6" fill="none" stroke-width="1.5"></rect>
-                <rect id="wCard2" class="ink" x="244" y="264" width="150" height="86" rx="6" fill="none" stroke-width="1.5"></rect>
-                <rect id="wCard3" class="ink" x="408" y="264" width="152" height="86" rx="6" fill="none" stroke-width="1.5"></rect>
-              </g>
-              <g id="blocksFill">
-                <rect id="fHeader" class="fillBlock" x="80" y="116" width="480" height="34" rx="6" fill-opacity="0"></rect>
-                <rect id="fHero" class="fillBlock" x="80" y="164" width="480" height="86" rx="6" fill-opacity="0"></rect>
-                <rect id="fCard1" class="fillBlock" x="80" y="264" width="150" height="86" rx="6" fill-opacity="0"></rect>
-                <rect id="fCard2" class="fillBlock" x="244" y="264" width="150" height="86" rx="6" fill-opacity="0"></rect>
-                <rect id="fCard3" class="fillBlock" x="408" y="264" width="152" height="86" rx="6" fill-opacity="0"></rect>
-
-                <rect class="textline fillMuted" x="100" y="188" width="220" height="8" rx="4" opacity="0"></rect>
-                <rect class="textline fillMuted" x="100" y="204" width="160" height="8" rx="4" opacity="0"></rect>
-                <rect class="textline fillFg" x="100" y="224" width="90" height="14" rx="7" opacity="0"></rect>
-
-                <rect class="textline fillMuted" x="96" y="296" width="90" height="7" rx="3.5" opacity="0"></rect>
-                <rect class="textline fillMuted" x="96" y="312" width="70" height="7" rx="3.5" opacity="0"></rect>
-                <rect class="textline fillMuted" x="260" y="296" width="90" height="7" rx="3.5" opacity="0"></rect>
-                <rect class="textline fillMuted" x="260" y="312" width="70" height="7" rx="3.5" opacity="0"></rect>
-                <rect class="textline fillMuted" x="424" y="296" width="90" height="7" rx="3.5" opacity="0"></rect>
-                <rect class="textline fillMuted" x="424" y="312" width="70" height="7" rx="3.5" opacity="0"></rect>
-              </g>
-              <g id="buildGuides">
-                <line id="gGuide1" class="inkMuted" x1="236" y1="106" x2="236" y2="360" stroke-width="1"></line>
-                <line id="gGuide2" class="inkMuted" x1="400" y1="106" x2="400" y2="360" stroke-width="1"></line>
-              </g>
-            </g>
-
-            <!-- Phase 5: growth readout -->
-            <path id="sparkline" class="ink" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M420 38 L446 26 L468 32 L494 14 L520 20 L548 8"></path>
-            <circle id="pulseGlow" class="fillFg" cx="548" cy="8" r="10" opacity="0"></circle>
-            <circle id="pulse" class="fillFg" cx="548" cy="8" r="4" opacity="0"></circle>
-          </svg>
-        </div>
-      </div>
-
-      <div class="build__cue" id="buildCue">Scroll to see Phase 2</div>
+  <div class="container py-24 sm:py-28">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-muted-foreground">How it works</p>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-bold">Three Steps to <span class="accent">Momentum</span></h2>
+      <p class="mt-4 text-muted-foreground leading-relaxed">
+        A simple process with no jargon and no surprises — you always know what's happening and why.
+      </p>
     </div>
-  </section>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7">
+        <span class="text-sm font-mono text-muted-foreground">01</span>
+        <h3 class="mt-4 text-lg font-semibold">Discover</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+          We start with your goals, your customers and your preferences. Everything we design later traces back to what you tell us here.
+        </p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.08s">
+        <span class="text-sm font-mono text-muted-foreground">02</span>
+        <h3 class="mt-4 text-lg font-semibold">Design &amp; Build</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+          Identity, website and messaging come together as one system — reviewed with you at every stage, never dropped on you at the end.
+        </p>
+      </div>
+      <div class="reveal rounded-2xl border border-border bg-card/50 p-7" style="transition-delay:.16s">
+        <span class="text-sm font-mono text-muted-foreground">03</span>
+        <h3 class="mt-4 text-lg font-semibold">Grow</h3>
+        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">
+          We launch, watch how real customers behave, and keep refining. Growth is the deliverable — not the deck.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ========================== DIFFERENCE ========================== -->
