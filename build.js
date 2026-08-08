@@ -19,12 +19,6 @@
 
   if (reduced) return; /* static CSS fallback handles this — no pinning, no scrubbing */
 
-  /* theme.css sets html { scroll-behavior: smooth } site-wide for anchor links.
-     That fights Lenis's own scroll control on this page — both try to own the
-     scroll position, which is what produces a stutter-then-snap feel. Disable
-     the native behavior here only; other pages are unaffected. */
-  document.documentElement.style.scrollBehavior = 'auto';
-
   /* ---- inertial scroll ---- */
   var lenis = null;
   if (window.Lenis) {
