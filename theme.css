@@ -279,34 +279,23 @@ button[type="submit"]:active:not(.is-busy) { transform: translateY(1px); }
 
 .hero { position: relative; }
 
-/* Soft light that tracks the cursor. A fixed-size element moved with
-   translate3d — never a re-rendered gradient. */
-.hero .spotlight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 640px;
-  height: 640px;
-  margin: -320px 0 0 -320px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
+/* Grid-cell glow: a brighter copy of the grid pattern, masked to a soft
+   circle that follows the cursor via --mx/--my (set in theme.js), so only
+   the lines near the pointer light up. mask position updates are cheap —
+   compositor-friendly, no layout, no per-frame gradient rebuild. */
+.hero .grid-glow {
+  background-image:
+    linear-gradient(to right, hsl(var(--foreground) / 0.9) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--foreground) / 0.9) 1px, transparent 1px);
+  background-size: 56px 56px;
   opacity: 0;
-  transform: translate3d(-1200px, -1200px, 0);
-  background: radial-gradient(circle closest-side, hsl(var(--foreground) / 0.10), transparent);
-  transition: opacity 600ms ease;
+  -webkit-mask-image: radial-gradient(circle 220px at var(--mx, 50%) var(--my, 50%), #000 0%, transparent 100%);
+          mask-image: radial-gradient(circle 220px at var(--mx, 50%) var(--my, 50%), #000 0%, transparent 100%);
+  transition: opacity 400ms ease;
 }
-.hero.is-live .spotlight {
+.hero.is-live .grid-glow {
   opacity: 1;
-  will-change: transform;
 }
-
-/* The grid drifts a few pixels against the cursor for depth. The long
-   easing means it trails the pointer rather than snapping to it. */
-.hero .grid-bg {
-  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-.hero.is-live .grid-bg { will-change: transform; }
 
 /* Headline words lift one at a time — precise rather than showy. */
 .hero-word {
@@ -325,8 +314,7 @@ button[type="submit"]:active:not(.is-busy) { transform: translateY(1px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero .spotlight { display: none; }
-  .hero .grid-bg { transition: none; transform: none !important; }
+  .hero .grid-glow { display: none; }
   .hero-word,
   .hero a > svg { transition: none; }
   .hero-word:hover { transform: none; }

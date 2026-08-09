@@ -127,8 +127,8 @@ function initChrome() {
 /* ============================================================
    Hero interaction
 
-   Splits the headline into hoverable words and drives the cursor
-   spotlight. The pointer handler does no layout reads — the hero's
+   Splits the headline into hoverable words and drives the grid-glow
+   that follows the cursor. The pointer handler does no layout reads — the hero's
    geometry is measured once on enter and invalidated on resize or
    scroll — and writes are batched into a single rAF frame.
    ============================================================ */
@@ -175,23 +175,20 @@ function initHero() {
        layer is skipped entirely on touch and reduced-motion. */
     if (reduced || !finePointer) return;
 
-    var spot = hero.querySelector('.spotlight');
-    if (!spot || hero.dataset.heroBound) return;
+    var glow = hero.querySelector('.grid-glow');
+    if (!glow || hero.dataset.heroBound) return;
     hero.dataset.heroBound = '1';
 
-    var grid = hero.querySelector('.grid-bg');
     var rect = null;
     var x = 0, y = 0;
     var queued = false;
 
+    /* Grid-cell glow: the mask circle recenters on --mx/--my each frame,
+       revealing a brighter copy of the grid pattern near the cursor. */
     function draw() {
       queued = false;
-      spot.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
-      if (grid && rect) {
-        var dx = (x / rect.width - 0.5) * -10;
-        var dy = (y / rect.height - 0.5) * -10;
-        grid.style.transform = 'translate3d(' + dx.toFixed(2) + 'px,' + dy.toFixed(2) + 'px,0)';
-      }
+      hero.style.setProperty('--mx', x + 'px');
+      hero.style.setProperty('--my', y + 'px');
     }
 
     hero.addEventListener('pointerenter', function (e) {
@@ -213,7 +210,6 @@ function initHero() {
 
     hero.addEventListener('pointerleave', function () {
       hero.classList.remove('is-live');
-      if (grid) grid.style.transform = '';
     });
 
     /* Cached geometry goes stale when the page moves under the cursor. */
