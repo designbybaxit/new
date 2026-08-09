@@ -27,3 +27,18 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 }
+
+/* Tailwind's default .container only sets width/max-width per breakpoint —
+   it does NOT center itself or add side padding unless configured. The old
+   CDN script applied center:true + 1.5rem padding + a single 1200px cap by
+   default; replicate that exactly so layout doesn't shift. */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .container { max-width: 1200px; }
+}
