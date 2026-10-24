@@ -1,41 +1,58 @@
 # Design by Baxit — Website
 
-Marketing site for **Design by Baxit**, a brand design and growth marketing studio
-founded by Abdul Basit.
+Marketing site for **Design by Baxit** (spelled B-A-X-I-T), the studio of
+**Abdul Basit**, a web developer with 8+ years building sites on Elementor and
+WordPress, Shopify, Squarespace, and Wix.
 
-Four static pages, no build step, no framework. Open the folder on any web server
-and it runs.
+The studio serves international clients, mainly in the United States. Three
+service lines: web development, graphic design, and small-business automation.
+A complete package can run from a logo, through a website, to a simple
+automation. Quotes are agreed on WhatsApp.
 
-**Tagline:** *less noise, more growth*
+Static HTML, no build step required to serve the site, no framework. Open the
+folder on any web server and it runs.
 
 ---
 
 ## Pages
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Home — hero, stats, six services, three-step process, CTA |
-| `about.html` | Founder story, studio principles, approach |
-| `consultation.html` | Free consultation — what's included, how the session runs, booking form, FAQ |
-| `contact.html` | Contact details and enquiry form |
+| File | Public URL | Purpose |
+|------|------------|---------|
+| `index.html` | `/` | Home — services, packages (starting prices in USD), how a project starts |
+| `about.html` | `/about` | Abdul Basit, platforms, how the work is approached |
+| `consultation.html` | `/consultation` | Free quote — WhatsApp first, short email form as backup, FAQ |
+| `contact.html` | `/contact` | WhatsApp, email, hours (PKT, flexible for US meetings), backup form |
+| `404.html` | (Cloudflare Pages) | Not-found page. Not listed in the sitemap |
+
+There is no portfolio page. Do not add one until Abdul supplies real work.
+
+Internal links use the `.html` file names so a local static server can resolve
+them. Canonical URLs, Open Graph URLs, structured data, and `sitemap.xml` use
+the clean paths Cloudflare Pages serves (no `.html`).
 
 ## Shared assets
 
 | File | Purpose |
 |------|---------|
-| `theme.css` | Design tokens, component styles, all motion |
-| `theme.js` | Tailwind token bridge, theme toggle, scroll reveal, hero interaction, form handling |
+| `tailwind.css` | Precompiled Tailwind plus the contents of `theme.css`. This is what pages load |
+| `tailwind-input.css` | Source for that compile. Re-run the CLI if you add classes or edit `theme.css` |
+| `theme.css` | Design tokens, component styles, motion, WhatsApp button |
+| `theme.js` | Theme toggle, scroll reveal, hero interaction, form handling, anti-spam |
 | `favicon.svg` | AB monogram — also the header and footer mark |
 | `abdul-basit.jpg` | Founder photo used on the About page |
+| `og-image.png` | Social share image |
+| `sitemap.xml` | Clean URLs, `lastmod` updated with content changes |
+| `llms.txt` | Plain-language summary for answer engines |
+| `_headers` | Cloudflare Pages cache rules |
 
 ---
 
 ## Design system
 
 A neutral, zero-saturation palette in the shadcn/ui token style, exposed as CSS
-custom properties in `theme.css` and bridged into Tailwind utilities in `theme.js`.
-That means `bg-background`, `text-muted-foreground`, `border-border` and friends all
-work as normal Tailwind classes.
+custom properties in `theme.css` and compiled into Tailwind utilities in
+`tailwind.css`. That means `bg-background`, `text-muted-foreground`,
+`border-border` and friends all work as normal Tailwind classes.
 
 | Token | Dark (default) | Light |
 |-------|----------------|-------|
@@ -54,8 +71,16 @@ signature move: a *serif italic* accent word inside each headline (`.accent`).
 persisted to `localStorage` under `dbb-theme` and applied before first paint so
 there's no flash.
 
-Tailwind is loaded from the CDN, which is fine for a site this size. If it ever
-grows, switch to a build step so unused utilities are stripped.
+Tailwind is **not** loaded from a CDN. `tailwind.css` is committed. If you add
+a class that is not already in that file, recompile and commit the output
+(Tailwind CLI v4.3.3, matching the banner in `tailwind.css`):
+
+```bash
+npx --yes @tailwindcss/cli@4.3.3 -i tailwind-input.css -o tailwind.css --minify
+```
+
+There is still no build step in production. Cloudflare Pages publishes the
+files as they are.
 
 ---
 
@@ -64,10 +89,8 @@ grows, switch to a build step so unused utilities are stripped.
 Every animation moves only `transform` or `opacity`, so the compositor handles it
 and nothing triggers layout or per-frame repaint.
 
-- **Hero cursor spotlight** — a soft light tracking the mouse. A fixed-size element
-  moved with `translate3d`, never a re-rendered gradient. Hero geometry is measured
-  once on pointer-enter and cached, so there are no layout reads per frame.
-- **Grid parallax** — the background grid drifts up to 5px against the cursor.
+- **Hero cursor grid glow** — a brighter copy of the grid, masked to a circle
+  that follows the pointer via `--mx` / `--my`.
 - **Headline word lift** — each word is individually hoverable and rises 4px.
 - **Nav underline** — `scaleX` sweep, deliberately *not* an animated `width`.
 - **Scroll reveal**, **header scroll state**, **hamburger → X morph**, **back-to-top**.
@@ -81,6 +104,17 @@ the page renders fully visible instead of blank.
 
 ---
 
+## WhatsApp
+
+Primary call to action. Number **+92 332 1975505**, click-to-chat
+`https://wa.me/923321975505`.
+
+Every page has a floating button. The hero, each service, and each package card
+link to WhatsApp with a pre-filled message that names the page or the package.
+The email forms on `/consultation` and `/contact` are the backup.
+
+---
+
 ## Forms
 
 Both forms post to [FormSubmit.co](https://formsubmit.co) and are delivered to
@@ -90,6 +124,9 @@ than sitting in a `form action`, so scrapers that harvest form targets find noth
 > **Already activated.** FormSubmit's one-time email confirmation has been
 > completed. Changing the destination address requires activating the new one.
 
+Fields, on both forms: name, email, WhatsApp number (optional), service,
+budget in USD, message. There is no gender field.
+
 ### Validation
 
 Declared per field with `data-rule`, handled centrally in `theme.js`:
@@ -98,7 +135,7 @@ Declared per field with `data-rule`, handled centrally in `theme.js`:
 |------|-----------|
 | `required` | Must not be empty |
 | `email` | Any well-formed address, personal or business domain |
-| `phone` | 7–15 digits after stripping punctuation |
+| `phone` | If a value is present, 7–15 digits after stripping punctuation |
 
 ### Bot protection
 
@@ -134,21 +171,40 @@ cd "path/to/this/folder"
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>.
+Then open <http://localhost:8000>. Links such as `/about.html` resolve.
+Clean URLs such as `/about` do not, unless the server rewrites them the way
+Cloudflare Pages does.
 
 ---
 
 ## Deploying
 
-The repo root contains `index.html`, so GitHub Pages serves it with no
-configuration:
+The live site is **Cloudflare Pages**, deployed from the `main` branch. The
+project root is the site root. There is **no build command** and no framework
+preset — Pages publishes the HTML, CSS, and images as committed.
 
-**Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`**
+Pretty URLs are part of Pages: `about.html` is also served at `/about` (and
+likewise for the other pages). Canonical links and `sitemap.xml` use those
+clean URLs. `404.html` is the not-found page Pages serves automatically.
 
-Live within a minute or two. Netlify and Vercel work equally well — drag the folder
-in, no build command needed.
+`_headers` sets cache lifetimes. HTML is revalidated immediately. `tailwind.css`
+and `theme.js` cache for a day because their filenames are not hashed.
 
-Serving over https is what makes the forms functional.
+### www → apex
+
+A `_redirects` file **cannot** send `www.designbybaxit.com` to
+`designbybaxit.com`. Pages redirects are path-only, on the same host. Set the
+host redirect in Cloudflare:
+
+1. DNS: `www` as a proxied CNAME to the Pages hostname (or to the apex, if the
+   zone already flattens it).
+2. Redirect Rule (or Bulk Redirect): if hostname equals `www.designbybaxit.com`,
+   301 to `https://designbybaxit.com` plus the original path and query.
+
+Do not add a fake www rule to `_redirects`. It will not run.
+
+Serving over https is what makes the forms functional. WhatsApp links work
+either way.
 
 ---
 
@@ -156,24 +212,28 @@ Serving over https is what makes the forms functional.
 
 | Change | Where |
 |--------|-------|
-| Colours, spacing, radius | `:root` and `.light` in `theme.css` |
-| Spotlight intensity | `.hero .spotlight` gradient alpha (`0.10`) in `theme.css` |
-| Hero eyebrow emoji | The `.eyebrow-emoji` span in each page's hero |
+| Colours, spacing, radius | `:root` and `.light` in `theme.css`, then recompile `tailwind.css` |
+| New Tailwind classes | HTML, then recompile `tailwind.css` and commit it |
+| WhatsApp number or pre-filled text | The `wa.me` links in each page. Keep the message specific to the page or package |
+| Starting prices | `#packages` on `index.html`, the short cards on `consultation.html`, structured data, `llms.txt` |
 | Delivery address | `INBOX` in `theme.js` — **needs re-activation** |
 | Bot thresholds | `MIN_FILL_SECONDS`, `COOLDOWN_MS`, `MAX_LINKS` in `theme.js` |
-| Contact details | `contact.html` — the four cards below the hero |
+| Contact details | `contact.html` |
 | Logo mark | `favicon.svg`, plus the `AB` span in each header and footer |
+| Sitemap dates | `lastmod` in `sitemap.xml` when public copy changes |
 
-### Known placeholder
+### Prices
 
-The **Availability** card on `contact.html` reads *"Mon–Fri, 9am – 6pm. Weekend
-calls by arrangement."* Those hours are a placeholder and carry no timezone —
-worth setting to real hours in PKT.
+The USD figures on the site are **suggested starting prices** for Abdul to
+confirm. They are written as "Starting at" and the page says the real quote is
+confirmed on WhatsApp. See the pull request that introduced them for the
+reasoning, and update the pages, structured data, and `llms.txt` together if
+the numbers change.
 
 ---
 
 ## Contact
 
-**Abdul Basit** — Founder
+**Abdul Basit** — Founder & Web Developer, Design by Baxit
+· [WhatsApp +92 332 1975505](https://wa.me/923321975505)
 · [designbybaxit@gmail.com](mailto:designbybaxit@gmail.com)
-· [+92 332 1975505](tel:+923321975505)

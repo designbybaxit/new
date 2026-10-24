@@ -4,59 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Design by Baxit</title>
-<meta name="description" content="Get in touch with Design by Baxit. Tell us about your brand and we'll reply within one working day.">
-<link rel="canonical" href="https://designbybaxit.com/contact.html">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Message Design by Baxit on WhatsApp at +92 332 1975505. Abdul Basit is based in Pakistan (PKT) with flexible hours for US meetings. Email form as backup.">
+<link rel="canonical" href="https://designbybaxit.com/contact">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Design by Baxit">
-<meta property="og:url" content="https://designbybaxit.com/contact.html">
+<meta property="og:url" content="https://designbybaxit.com/contact">
 <meta property="og:title" content="Contact — Design by Baxit">
-<meta property="og:description" content="Get in touch with Design by Baxit. Tell us about your brand and we'll reply within one working day.">
+<meta property="og:description" content="Message Design by Baxit on WhatsApp at +92 332 1975505. Abdul Basit is based in Pakistan (PKT) with flexible hours for US meetings. Email form as backup.">
 <meta property="og:image" content="https://designbybaxit.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact — Design by Baxit">
-<meta name="twitter:description" content="Get in touch with Design by Baxit. Tell us about your brand and we'll reply within one working day.">
+<meta name="twitter:description" content="Message Design by Baxit on WhatsApp at +92 332 1975505. Abdul Basit is based in Pakistan (PKT) with flexible hours for US meetings. Email form as backup.">
 <meta name="twitter:image" content="https://designbybaxit.com/og-image.png">
 
-<link rel="stylesheet" href="tailwind.css">
-<script src="theme.js" defer></script>
+<link rel="stylesheet" href="/tailwind.css">
+<script src="/theme.js" defer></script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://designbybaxit.com/#organization",
       "name": "Design by Baxit",
       "url": "https://designbybaxit.com/",
       "logo": "https://designbybaxit.com/apple-touch-icon.png",
-      "email": "mailto:designbybaxit@gmail.com",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "email": "designbybaxit@gmail.com",
-          "availableLanguage": ["English"]
-        }
-      ]
+      "email": "designbybaxit@gmail.com",
+      "telephone": "+92-332-1975505",
+      "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+      "areaServed": ["United States", "International"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+92-332-1975505",
+        "email": "designbybaxit@gmail.com",
+        "availableLanguage": ["English"],
+        "areaServed": "US"
+      }
     },
     {
       "@type": "ContactPage",
-      "@id": "https://designbybaxit.com/contact.html",
+      "@id": "https://designbybaxit.com/contact",
       "name": "Contact — Design by Baxit",
-      "url": "https://designbybaxit.com/contact.html",
+      "url": "https://designbybaxit.com/contact",
       "about": { "@id": "https://designbybaxit.com/#organization" }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://designbybaxit.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://designbybaxit.com/contact.html" }
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://designbybaxit.com/contact" }
       ]
     }
   ]
@@ -65,28 +69,29 @@
 </head>
 <body class="min-h-screen bg-background text-foreground antialiased">
 
-<!-- ============================ HEADER ============================ -->
 <header class="site-header sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
-  <div class="container flex h-16 items-center justify-between gap-6">
-    <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+  <div class="container flex h-16 items-center justify-between gap-4">
+    <a href="/index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
       <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
       <span>Design by Baxit</span>
     </a>
-    <nav class="nav-links hidden md:flex items-center gap-8 text-sm">
-      <a href="index.html" class="text-muted-foreground hover:text-foreground transition-colors">Home</a>
-      <a href="about.html" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
-      <a href="consultation.html" class="text-muted-foreground hover:text-foreground transition-colors">Consultation</a>
-      <a href="contact.html" class="text-foreground transition-colors">Contact</a>
+    <nav class="nav-links hidden md:flex items-center gap-6 text-sm">
+      <a href="/index.html" class="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+      <a href="/about.html" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="/index.html#packages" class="text-muted-foreground hover:text-foreground transition-colors">Packages</a>
+      <a href="/consultation.html" class="text-muted-foreground hover:text-foreground transition-colors">Quote</a>
+      <a href="/contact.html" class="text-foreground transition-colors">Contact</a>
     </nav>
     <div class="flex items-center gap-2">
       <button data-theme-toggle aria-label="Toggle theme"
         class="grid h-9 w-9 place-items-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
-      <a href="consultation.html"
+      <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page."
+        target="_blank" rel="noopener noreferrer"
         class="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
-        Book a Call
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.12h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.87c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.61-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.15-1.53-1.15-2.92s.73-2.07 1-2.35c.24-.26.64-.38.86-.38.21 0 .42 0 .6.01.19.01.45-.07.7.53.26.64.89 2.2.97 2.36.08.16.13.35.03.55-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.19.31.83 1.37 1.78 2.22 1.22 1.09 2.25 1.43 2.57 1.59.32.16.5.13.69-.08.19-.21.8-.93 1.02-1.25.21-.32.42-.26.7-.16.29.1 1.82.86 2.13 1.01.32.16.53.24.6.37.08.13.08.76-.16 1.44z"/></svg>
+        WhatsApp
       </a>
       <button data-menu-toggle aria-expanded="false" aria-label="Menu"
         class="menu-toggle md:hidden h-9 w-9 rounded-full border border-border text-muted-foreground">
@@ -96,102 +101,99 @@
   </div>
   <div data-menu class="hidden md:hidden border-t border-border/40 bg-background">
     <nav class="container flex flex-col py-3 text-sm">
-      <a href="index.html" class="py-2.5 text-muted-foreground">Home</a>
-      <a href="about.html" class="py-2.5 text-muted-foreground">About</a>
-      <a href="consultation.html" class="py-2.5 text-muted-foreground">Consultation</a>
-      <a href="contact.html" class="py-2.5 text-foreground">Contact</a>
+      <a href="/index.html" class="py-2.5 text-muted-foreground">Home</a>
+      <a href="/about.html" class="py-2.5 text-muted-foreground">About</a>
+      <a href="/index.html#packages" class="py-2.5 text-muted-foreground">Packages</a>
+      <a href="/consultation.html" class="py-2.5 text-muted-foreground">Quote</a>
+      <a href="/contact.html" class="py-2.5 text-foreground">Contact</a>
+      <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page."
+        target="_blank" rel="noopener noreferrer"
+        class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground">
+        WhatsApp Abdul
+      </a>
     </nav>
   </div>
 </header>
 
 <main>
-<!-- ============================= HERO ============================= -->
 <section class="hero relative overflow-hidden border-b border-border/60">
   <div class="absolute inset-0 grid-bg"></div>
   <div class="absolute inset-0 glow"></div>
   <div class="absolute inset-0 grid-glow" aria-hidden="true"></div>
   <div class="container relative py-20 sm:py-28 text-center">
     <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
-      <span class="eyebrow-emoji" aria-hidden="true">💬</span>
+      <span class="eyebrow-emoji" aria-hidden="true">✦</span>
       Contact
     </div>
     <h1 class="mt-7 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl mx-auto">
-      Let's Start a <span class="accent">Conversation</span>
+      Message Abdul on <span class="accent">WhatsApp</span>
     </h1>
     <p class="mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-      A question, a project, or just curious whether we're a fit — send it over.
-      Everything reaches Abdul directly.
+      Quotes and projects are agreed there. The form on this page is the email backup, and it reaches Abdul directly.
     </p>
+    <div class="mt-9">
+      <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page."
+        target="_blank" rel="noopener noreferrer"
+        class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+        Open WhatsApp
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ========================= CONTACT CARDS ======================== -->
 <section class="container py-16 sm:py-20">
-  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-    <div class="reveal rounded-2xl border border-border bg-card/50 p-6">
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page."
+      target="_blank" rel="noopener noreferrer"
+      class="reveal rounded-2xl border border-border bg-card/50 p-6 hover:bg-card transition-colors">
       <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.12h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.87c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.61-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.15-1.53-1.15-2.92s.73-2.07 1-2.35c.24-.26.64-.38.86-.38.21 0 .42 0 .6.01.19.01.45-.07.7.53.26.64.89 2.2.97 2.36.08.16.13.35.03.55-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.19.31.83 1.37 1.78 2.22 1.22 1.09 2.25 1.43 2.57 1.59.32.16.5.13.69-.08.19-.21.8-.93 1.02-1.25.21-.32.42-.26.7-.16.29.1 1.82.86 2.13 1.01.32.16.53.24.6.37.08.13.08.76-.16 1.44z"/></svg>
       </div>
-      <h3 class="mt-5 font-semibold">Email</h3>
-      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">The fastest way to reach us.</p>
-      <a href="mailto:designbybaxit@gmail.com" class="mt-2.5 inline-block text-sm hover:text-muted-foreground transition-colors">designbybaxit@gmail.com</a>
-    </div>
+      <h2 class="mt-5 font-semibold">WhatsApp</h2>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">The primary way to reach Abdul and agree a project.</p>
+      <p class="mt-2.5 text-sm">+92 332 1975505</p>
+    </a>
     <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.06s">
       <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
       </div>
-      <h3 class="mt-5 font-semibold">Phone</h3>
-      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Prefer to talk it through?</p>
-      <a href="tel:+923321975505" class="mt-2.5 inline-block text-sm hover:text-muted-foreground transition-colors">+92 332 1975505</a>
+      <h2 class="mt-5 font-semibold">Email</h2>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Backup if WhatsApp is inconvenient. Same person.</p>
+      <a href="mailto:designbybaxit@gmail.com" class="mt-2.5 inline-block text-sm hover:text-muted-foreground transition-colors">designbybaxit@gmail.com</a>
     </div>
-    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.12s">
+    <div class="reveal rounded-2xl border border-border bg-card/50 p-6 sm:col-span-2 lg:col-span-1" style="transition-delay:.12s">
       <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
       </div>
-      <h3 class="mt-5 font-semibold">Response time</h3>
-      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Within one working day, usually sooner.</p>
-    </div>
-    <div class="reveal rounded-2xl border border-border bg-card/50 p-6" style="transition-delay:.18s">
-      <div class="grid h-10 w-10 place-items-center rounded-lg bg-secondary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-      </div>
-      <h3 class="mt-5 font-semibold">Availability</h3>
-      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Mon–Fri, 9am – 6pm. Weekend calls by arrangement.</p>
+      <h2 class="mt-5 font-semibold">Hours</h2>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Based in Pakistan (PKT). Hours are flexible so meetings can overlap US time zones.</p>
+      <p class="mt-2.5 text-sm text-muted-foreground leading-relaxed">Abdul usually replies within one working day.</p>
     </div>
   </div>
 </section>
 
-<!-- ============================= FORM ============================= -->
-<section class="container pb-24 sm:pb-28">
+<section id="form" class="container pb-24 sm:pb-28">
   <div class="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
     <div class="reveal">
       <h2 class="text-4xl sm:text-5xl font-bold leading-[1.08]">
-        Tell Us About Your <span class="accent">Brand</span>
+        Or Send It by <span class="accent">Email</span>
       </h2>
       <p class="mt-5 text-muted-foreground leading-relaxed">
-        The more we know up front, the more useful our first reply will be. There
-        are no wrong answers here — even "I'm not sure what I need yet" is a good
-        starting point.
+        Name, email, the service you have in mind, a budget in USD if you have one, and a short message. WhatsApp number is optional.
       </p>
       <p class="mt-4 text-muted-foreground leading-relaxed">
-        Looking for a structured session instead? The
-        <a href="consultation.html" class="text-foreground underline underline-offset-4 hover:no-underline">free consultation</a>
-        walks through your brand in 30 minutes and ends with a written plan.
+        For a quote that starts in chat, use the
+        <a href="/consultation.html" class="text-foreground underline underline-offset-4 hover:no-underline">free quote page</a>
+        or message
+        <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page." target="_blank" rel="noopener noreferrer" class="text-foreground underline underline-offset-4 hover:no-underline">WhatsApp</a>
+        directly.
       </p>
-
-      <div class="mt-9 rounded-2xl border border-border bg-card/50 p-6">
-        <p class="text-sm font-medium">Prefer email?</p>
-        <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">
-          Write to <a href="mailto:designbybaxit@gmail.com" class="text-foreground hover:text-muted-foreground transition-colors">designbybaxit@gmail.com</a>
-          and you'll get the same person, same day.
-        </p>
-      </div>
     </div>
 
     <form data-validate novalidate data-subject="New contact enquiry — Design by Baxit"
       class="reveal rounded-2xl border border-border bg-card/50 p-6 sm:p-8" style="transition-delay:.1s">
 
-      <!-- Honeypot: invisible to people, irresistible to bots. Never remove. -->
       <div class="hp-wrap" aria-hidden="true">
         <label for="f-honey">Leave this field empty</label>
         <input id="f-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
@@ -200,49 +202,50 @@
       <div class="grid gap-5 sm:grid-cols-2">
         <div data-field>
           <label for="f-name" class="mb-1.5 block text-sm font-medium">Name</label>
-          <input id="f-name" name="name" type="text" class="field" placeholder="Jane Doe"
+          <input id="f-name" name="name" type="text" class="field" placeholder="Jane Doe" autocomplete="name"
                  data-rule="required" data-label="Name">
           <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
         </div>
         <div data-field>
-          <label for="f-gender" class="mb-1.5 block text-sm font-medium">Gender</label>
-          <select id="f-gender" name="gender" class="field" data-rule="required" data-label="Gender">
-            <option value="" disabled selected>Select an option</option>
-            <option value="female">Female</option>
-            <option value="male">Male</option>
-            <option value="non-binary">Non-binary</option>
-            <option value="prefer-not-to-say">Prefer not to say</option>
+          <label for="f-email" class="mb-1.5 block text-sm font-medium">Email</label>
+          <input id="f-email" name="email" type="email" class="field" placeholder="you@company.com" autocomplete="email"
+                 data-rule="required|email" data-label="Email">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="f-whatsapp" class="mb-1.5 block text-sm font-medium">WhatsApp number <span class="font-normal text-muted-foreground">(optional)</span></label>
+          <input id="f-whatsapp" name="whatsapp" type="tel" inputmode="tel" class="field" placeholder="+1 202 555 0100" autocomplete="tel"
+                 data-rule="phone" data-label="WhatsApp number">
+          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
+        </div>
+        <div data-field>
+          <label for="f-service" class="mb-1.5 block text-sm font-medium">Service</label>
+          <select id="f-service" name="service" class="field" data-rule="required" data-label="Service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="Web development">Web development</option>
+            <option value="Graphic design">Graphic design</option>
+            <option value="Small-business automation">Small-business automation</option>
+            <option value="Complete package">Complete package (logo, website, automation)</option>
+            <option value="Not sure yet">Not sure yet</option>
           </select>
           <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
         </div>
-        <div data-field>
-          <label for="f-phone" class="mb-1.5 block text-sm font-medium">Phone number</label>
-          <input id="f-phone" name="phone" type="tel" class="field" placeholder="+92 300 1234567"
-                 data-rule="required|phone" data-label="Phone number">
-          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
-        </div>
-        <div data-field>
-          <label for="f-email" class="mb-1.5 block text-sm font-medium">Email address</label>
-          <input id="f-email" name="email" type="email" class="field" placeholder="you@company.com"
-                 data-rule="required|email" data-label="Email address">
-          <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
-        </div>
         <div data-field class="sm:col-span-2">
-          <label for="f-topic" class="mb-1.5 block text-sm font-medium">What's this about?</label>
-          <select id="f-topic" name="topic" class="field" data-rule="required" data-label="Topic">
-            <option value="" disabled selected>Select a topic</option>
-            <option value="new-project">Starting a new project</option>
-            <option value="redesign">Redesigning an existing brand or site</option>
-            <option value="marketing">Growth marketing help</option>
-            <option value="partnership">Partnership or collaboration</option>
-            <option value="other">Something else</option>
+          <label for="f-budget" class="mb-1.5 block text-sm font-medium">Budget in USD</label>
+          <select id="f-budget" name="budget" class="field" data-rule="required" data-label="Budget">
+            <option value="" disabled selected>Select a range</option>
+            <option value="Under $1,500">Under $1,500</option>
+            <option value="$1,500 – $3,500">$1,500 – $3,500</option>
+            <option value="$3,500 – $6,500">$3,500 – $6,500</option>
+            <option value="$6,500+">$6,500+</option>
+            <option value="Not sure yet">Not sure yet</option>
           </select>
           <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
         </div>
         <div data-field class="sm:col-span-2">
           <label for="f-message" class="mb-1.5 block text-sm font-medium">Message</label>
           <textarea id="f-message" name="message" rows="5" class="field resize-y"
-                    placeholder="Tell us a little about your business and what you're looking for..."
+                    placeholder="What you need, the platform if you have a preference, and a link to the current site if there is one."
                     data-rule="required" data-label="Message"></textarea>
           <p data-error class="hidden mt-1.5 text-sm text-destructive"></p>
         </div>
@@ -251,16 +254,17 @@
       <button type="submit"
         class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
         Send Message
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
 
       <p class="mt-3.5 text-center text-xs text-muted-foreground">
-        We reply within one working day. Your details are never shared.
+        Abdul usually replies within one working day. Your details are not shared.
       </p>
 
       <p data-success role="status"
          class="hidden mt-5 rounded-lg border border-border bg-secondary/60 px-4 py-3 text-center text-sm">
-        Thanks — your message has been received. We'll be in touch shortly.
+        Thanks. Your message is in. For a faster conversation,
+        <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page." target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">message Abdul on WhatsApp</a>.
       </p>
 
       <p data-formerror role="alert"
@@ -268,71 +272,55 @@
     </form>
   </div>
 </section>
-
-<!-- ============================= CTA ============================== -->
-<section class="border-t border-border/60">
-  <div class="container py-24 sm:py-28">
-    <div class="reveal relative overflow-hidden rounded-3xl border border-border bg-card/50 px-6 py-16 sm:px-14 text-center">
-      <div class="absolute inset-0 grid-bg opacity-60"></div>
-      <div class="relative">
-        <h2 class="text-4xl sm:text-5xl font-bold max-w-2xl mx-auto leading-[1.06]">
-          Rather Talk It <span class="accent">Through</span>?
-        </h2>
-        <p class="mt-5 mx-auto max-w-lg text-muted-foreground leading-relaxed">
-          Book a free 30-minute consultation and leave with a written 90-day plan — whether or not we end up working together.
-        </p>
-        <div class="mt-9">
-          <a href="consultation.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
-            Book a Free Consultation
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 </main>
 
-<!-- ============================ FOOTER ============================ -->
 <footer class="border-t border-border/60">
   <div class="container py-14">
     <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
       <div class="max-w-xs">
-        <a href="index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
+        <a href="/index.html" class="flex items-center gap-2.5 font-semibold tracking-tight">
           <span class="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-tight">AB</span>
           <span>Design by Baxit</span>
         </a>
         <p class="mt-4 text-sm text-muted-foreground leading-relaxed">
-          Brand design and growth marketing for businesses that want to be found, trusted and chosen.
+          Websites, graphic design, and simple automation for small businesses in the US and abroad.
         </p>
       </div>
       <div class="grid grid-cols-2 gap-10 sm:gap-16 text-sm">
         <div>
           <p class="font-medium">Pages</p>
           <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
-            <li><a href="index.html" class="hover:text-foreground transition-colors">Home</a></li>
-            <li><a href="about.html" class="hover:text-foreground transition-colors">About</a></li>
-            <li><a href="consultation.html" class="hover:text-foreground transition-colors">Consultation</a></li>
-            <li><a href="contact.html" class="hover:text-foreground transition-colors">Contact</a></li>
+            <li><a href="/index.html" class="hover:text-foreground transition-colors">Home</a></li>
+            <li><a href="/about.html" class="hover:text-foreground transition-colors">About</a></li>
+            <li><a href="/index.html#packages" class="hover:text-foreground transition-colors">Packages</a></li>
+            <li><a href="/consultation.html" class="hover:text-foreground transition-colors">Free quote</a></li>
+            <li><a href="/contact.html" class="hover:text-foreground transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
           <p class="font-medium">Services</p>
           <ul class="mt-3.5 space-y-2.5 text-muted-foreground">
-            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Brand identity</a></li>
-            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Websites</a></li>
-            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Growth marketing</a></li>
-            <li><a href="index.html#services" class="hover:text-foreground transition-colors">Optimisation</a></li>
+            <li><a href="/index.html#web" class="hover:text-foreground transition-colors">Web development</a></li>
+            <li><a href="/index.html#design" class="hover:text-foreground transition-colors">Graphic design</a></li>
+            <li><a href="/index.html#automation" class="hover:text-foreground transition-colors">Automation</a></li>
+            <li><a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page." target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">WhatsApp +92 332 1975505</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="mt-12 flex flex-col gap-3 border-t border-border/60 pt-7 sm:flex-row sm:items-center sm:justify-between text-sm text-muted-foreground">
       <p>&copy; 2026 Design by Baxit. All rights reserved.</p>
-      <p class="italic font-serif font-light">less noise more growth</p>
+      <p>Based in Pakistan (PKT) · Quotes in USD</p>
     </div>
   </div>
 </footer>
+
+<a class="wa-float" aria-label="Message Abdul on WhatsApp from the contact page"
+  href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20contact%20page."
+  target="_blank" rel="noopener noreferrer">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.12h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.87c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.61-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.15-1.53-1.15-2.92s.73-2.07 1-2.35c.24-.26.64-.38.86-.38.21 0 .42 0 .6.01.19.01.45-.07.7.53.26.64.89 2.2.97 2.36.08.16.13.35.03.55-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.19.31.83 1.37 1.78 2.22 1.22 1.09 2.25 1.43 2.57 1.59.32.16.5.13.69-.08.19-.21.8-.93 1.02-1.25.21-.32.42-.26.7-.16.29.1 1.82.86 2.13 1.01.32.16.53.24.6.37.08.13.08.76-.16 1.44z"/></svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
 
 <button data-back-to-top class="back-to-top" aria-label="Back to top">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>

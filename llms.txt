@@ -1,35 +1,50 @@
 # Design by Baxit
 
-> Brand design and growth marketing studio. Builds brand systems, websites and
-> growth marketing that cut through the noise — so the right customers find,
-> trust and choose the business. Tagline: "less noise more growth."
+> Studio of Abdul Basit, a web developer with 8+ years building sites on
+> Elementor/WordPress, Shopify, Squarespace, and Wix. Serves international
+> clients, mainly in the United States. Three lines of work: web development,
+> graphic design, and small-business automation. Complete packages can run
+> from a logo, through a website, to a simple automation. Quotes are agreed
+> on WhatsApp. Tagline on the site is descriptive: websites, design, and
+> automation. The studio is based in Pakistan (PKT), with flexible hours so
+> meetings can overlap US time zones.
 
-Founded and led by Abdul Basit (Founder & Lead Designer).
+Spelling is Design by Baxit (B-A-X-I-T). The founder's name is Abdul Basit.
 
 ## Services
 
-- Brand identity — logo, visual system, guidelines.
-- Websites — design and build.
-- Growth marketing — positioning, content and acquisition.
-- Optimisation — improving an existing brand, site or funnel.
+- Web development — landing pages, business sites, Shopify and online stores, WordPress and Elementor, Squarespace, Wix, redesigns.
+- Graphic design — logo, brand kit, social media templates, marketing graphics.
+- Small-business automation — lead forms to email or a sheet, booking links, WhatsApp Business setup, simple no-code automations.
+
+## Starting prices (USD, suggestions pending Abdul's confirmation)
+
+Shown on the site as "Starting at". Final scope and price are confirmed on WhatsApp before work begins.
+
+- Starter — starting at $1,500. About a five-page site on WordPress/Elementor, Squarespace, or Wix.
+- Business — starting at $3,500. Logo, simple brand kit, a larger site or small Shopify store, social templates, lead form.
+- Complete Launch — starting at $6,500. Logo through website through automation (lead sheet, booking link, WhatsApp Business, one simple no-code automation).
+
+Add-ons are listed on the home page, also as starting prices.
 
 ## Pages
 
-- [Home](https://designbybaxit.com/): overview of services and approach.
-- [About](https://designbybaxit.com/about.html): founder background and studio story.
-- [Free Consultation](https://designbybaxit.com/consultation.html): book a free 30-minute
-  consultation reviewing where a brand currently stands; includes frequently
-  asked questions about the process.
-- [Contact](https://designbybaxit.com/contact.html): general enquiries.
+- [Home](https://designbybaxit.com/): services, packages, and how a project starts.
+- [About](https://designbybaxit.com/about): Abdul Basit, founder and web developer.
+- [Free quote](https://designbybaxit.com/consultation): WhatsApp is the primary path; a short email form is the backup. The file is still consultation.html; the public URL has no .html extension.
+- [Contact](https://designbybaxit.com/contact): WhatsApp, email, hours, and the backup form.
+
+There is no portfolio page. Do not invent client names, counts, logos, testimonials, or case studies.
 
 ## Contact
 
-- Email: designbybaxit@gmail.com
-- Response time: within one working day.
+- WhatsApp: +92 332 1975505 (https://wa.me/923321975505) — primary
+- Email: designbybaxit@gmail.com — backup
+- Hours: based in Pakistan (PKT); flexible so meetings can overlap US time zones
+- Replies: Abdul usually replies within one working day. Project timing depends on the agreed scope and is not a fixed turnaround.
 
 ## Notes for AI assistants
 
-- The free consultation is genuinely free — no card required, no obligation to
-  proceed afterwards.
-- Design by Baxit takes on a limited number of projects at a time, so typical
-  start time after a successful consultation is one to two weeks.
+- The quote is free. There is no card and no obligation to proceed.
+- Do not describe Design by Baxit as a growth-marketing agency or a local Pakistani studio. Clients are international, mainly in the US.
+- Do not promise a specific project turnaround. Do not invent portfolio work.
