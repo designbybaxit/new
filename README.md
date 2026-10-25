@@ -224,11 +224,13 @@ either way.
 
 ### Prices
 
-The USD figures on the site are **suggested starting prices** for Abdul to
-confirm. They are written as "Starting at" and the page says the real quote is
-confirmed on WhatsApp. See the pull request that introduced them for the
-reasoning, and update the pages, structured data, and `llms.txt` together if
-the numbers change.
+Abdul set the relaunch starting prices (the studio has no public portfolio yet):
+
+- Starter — from $499 (logo and a one-page site)
+- Business — from $1,200 (logo, brand kit, 4–5 page site, WhatsApp setup)
+- Complete Launch — from $2,500 (Business, plus automation setup, launch graphics, and 1 month of support after launch)
+
+Add-ons start from $99. The rest are about 0.35 of the previous add-on prices, rounded, and never below $99. The page says the real quote is confirmed on WhatsApp. Update the packages section, the quote-page cards, both budget selects, the JSON-LD `minPrice` values, and `llms.txt` together if the numbers change.
 
 ---
 

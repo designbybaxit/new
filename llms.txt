@@ -17,15 +17,28 @@ Spelling is Design by Baxit (B-A-X-I-T). The founder's name is Abdul Basit.
 - Graphic design — logo, brand kit, social media templates, marketing graphics.
 - Small-business automation — lead forms to email or a sheet, booking links, WhatsApp Business setup, simple no-code automations.
 
-## Starting prices (USD, suggestions pending Abdul's confirmation)
+## Starting prices (USD)
 
-Shown on the site as "Starting at". Final scope and price are confirmed on WhatsApp before work begins.
+Shown on the site as "From". Final scope and price are confirmed on WhatsApp before work begins. These are the relaunch prices Abdul set: lower than the first draft, because the studio does not have a public portfolio yet.
 
-- Starter — starting at $1,500. About a five-page site on WordPress/Elementor, Squarespace, or Wix.
-- Business — starting at $3,500. Logo, simple brand kit, a larger site or small Shopify store, social templates, lead form.
-- Complete Launch — starting at $6,500. Logo through website through automation (lead sheet, booking link, WhatsApp Business, one simple no-code automation).
+- Starter — from $499. Logo and a one-page website.
+- Business — from $1,200. Logo, brand kit, a 4–5 page website, and WhatsApp setup.
+- Complete Launch — from $2,500. The Business package, plus automation setup, launch graphics, and 1 month of support after launch.
 
-Add-ons are listed on the home page, also as starting prices.
+Add-ons start from $99. Other add-ons were scaled to about 0.35 of the previous starting prices (the same cut as the packages), then rounded to a nearby price, with a floor of $99:
+
+- Extra website page — $99
+- Booking link — $99
+- WhatsApp Business setup — $99
+- Lead form to email and a sheet — $125
+- Marketing graphics — $149
+- Simple no-code automation — $149
+- Logo — $175
+- Social media templates — $175
+- Landing page — $299
+- Brand kit — $349
+- Website redesign — $699
+- Shopify store setup — $899
 
 ## Pages
 
