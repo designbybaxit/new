@@ -59,6 +59,8 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Clears the fixed WhatsApp button (and the back-to-top control above it). */
+  padding-bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
 }
 
 /* ---- The signature accent: serif italic inside a bold sans heading ---- */
@@ -107,12 +109,14 @@ h1, h2, h3 { letter-spacing: -0.025em; }
   background-color: hsl(var(--background));
   border: 1px solid hsl(var(--input));
   color: hsl(var(--foreground));
-  padding: 0.625rem 0.875rem;
+  padding: 0 1rem;
   font-size: 0.875rem;
+  line-height: calc(2.875rem - 2px);
+  text-align: center;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.field::placeholder { color: hsl(var(--muted-foreground)); }
+.field::placeholder { color: hsl(var(--muted-foreground)); text-align: center; }
 .field:focus {
   border-color: hsl(var(--ring));
   box-shadow: 0 0 0 3px hsl(var(--ring) / 0.25);
@@ -124,9 +128,12 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 
 select.field {
   appearance: none;
+  text-align: center;
+  text-align-last: center;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23a1a1a1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.75rem center;
+  background-position: right 0.85rem center;
+  padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
 
@@ -225,8 +232,8 @@ button.is-busy {
 /* ---- Back to top ---- */
 .back-to-top {
   position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
+  right: 1.25rem;
+  bottom: calc(5.35rem + env(safe-area-inset-bottom, 0px));
   z-index: 40;
   display: grid;
   place-items: center;
@@ -264,7 +271,63 @@ button[type="submit"]:active:not(.is-busy) { transform: translateY(1px); }
 @media (prefers-reduced-motion: reduce) {
   .nav-links a::after,
   .menu-toggle span,
-  .back-to-top { transition: none; }
+  .back-to-top,
+  .wa-float { transition: none; }
+}
+
+/* ---- WhatsApp click-to-chat ----
+   Primary action on every page. Sits in the corner; back-to-top stacks
+   above it. The label hides on small screens so the control stays a
+   tap target, and the link's aria-label carries the meaning. */
+.wa-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 3.25rem;
+  padding: 0 1.05rem 0 0.9rem;
+  border-radius: 9999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 12px 32px -16px rgb(0 0 0 / 0.75);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.wa-float:hover { opacity: 0.92; }
+.wa-float:focus-visible {
+  outline: 2px solid hsl(var(--foreground));
+  outline-offset: 3px;
+}
+.wa-float:active { transform: translateY(1px); }
+
+@media (max-width: 639px) {
+  .wa-float {
+    width: 3.25rem;
+    padding: 0;
+  }
+  .wa-float .wa-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+.package-card.is-featured {
+  border-color: hsl(var(--foreground) / 0.28);
+  background-color: hsl(var(--card));
 }
 
 /* ============================================================
@@ -303,14 +366,15 @@ button[type="submit"]:active:not(.is-busy) { transform: translateY(1px); }
   transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* CTA arrow nudge */
+/* CTA arrow nudge. The resting and hover transforms live unlayered in
+   tailwind-input.css so they win over utility padding and keep the
+   vertical centering (translateY(-50%)) when the arrow shifts. */
 .hero a > svg {
   transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .hero-word:hover { transform: translateY(-4px); }
-  .hero a:hover > svg { transform: translateX(3px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

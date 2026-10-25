@@ -11,6 +11,9 @@
 /theme.js
   Cache-Control: public, max-age=86400, must-revalidate
 
+/tailwind.css
+  Cache-Control: public, max-age=86400, must-revalidate
+
 /*.jpg
   Cache-Control: public, max-age=2592000
 
