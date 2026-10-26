@@ -17,6 +17,7 @@
 <meta property="og:image" content="https://designbybaxit.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Design by Baxit — websites, graphic design, and automation by Abdul Basit">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Design by Baxit — Websites, design, and automation">
@@ -24,7 +25,15 @@
 <meta name="twitter:image" content="https://designbybaxit.com/og-image.png">
 
 <link rel="stylesheet" href="/tailwind.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/fx.css">
+<meta name="theme-color" content="#05060d">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <script src="/theme.js" defer></script>
+<script src="/fx.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -139,6 +148,7 @@
     <nav class="nav-links hidden md:flex items-center gap-6 text-sm">
       <a href="/index.html" class="text-foreground transition-colors">Home</a>
       <a href="/about.html" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="/index.html#work" class="text-muted-foreground hover:text-foreground transition-colors">Work</a>
       <a href="/index.html#packages" class="text-muted-foreground hover:text-foreground transition-colors">Packages</a>
       <a href="/consultation.html" class="text-muted-foreground hover:text-foreground transition-colors">Quote</a>
       <a href="/contact.html" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
@@ -166,6 +176,7 @@
     <nav class="container flex flex-col py-3 text-sm">
       <a href="/index.html" class="py-2.5 text-foreground">Home</a>
       <a href="/about.html" class="py-2.5 text-muted-foreground">About</a>
+      <a href="/index.html#work" class="py-2.5 text-muted-foreground">Work</a>
       <a href="/index.html#packages" class="py-2.5 text-muted-foreground">Packages</a>
       <a href="/consultation.html" class="py-2.5 text-muted-foreground">Quote</a>
       <a href="/contact.html" class="py-2.5 text-muted-foreground">Contact</a>
@@ -179,72 +190,75 @@
 </header>
 
 <main>
-<section class="hero relative overflow-hidden">
+<section class="hero hero-home relative overflow-hidden" aria-labelledby="hero-title">
   <div class="absolute inset-0 grid-bg"></div>
-  <div class="absolute inset-0 glow"></div>
   <div class="absolute inset-0 grid-glow" aria-hidden="true"></div>
+  <div class="fx-orb" aria-hidden="true"></div>
+  <div class="hero3d" data-hero3d="home" aria-hidden="true"></div>
 
-  <div class="container relative py-24 sm:py-32 lg:py-40 text-center">
-    <div class="reveal is-visible mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
-      <span class="eyebrow-emoji" aria-hidden="true">✦</span>
-      Abdul Basit · 8+ years · US &amp; international clients
+  <div class="container relative hero-inner">
+    <div class="hero-copy">
+      <div class="reveal is-visible inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3.5 py-1.5 text-xs text-muted-foreground">
+        <span class="hero-status"><span class="dot" aria-hidden="true"></span></span>
+        Abdul Basit · 8+ years · US &amp; international clients
+      </div>
+
+      <h1 id="hero-title" class="mt-7 font-bold max-w-4xl mx-auto lg:mx-0">
+        A Website, a Brand, and Simple <span class="accent">Automation</span>
+      </h1>
+
+      <p class="lead mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+        Design by Baxit builds websites, graphics, and the small automations that connect them.
+        You work directly with Abdul, on WordPress, Shopify, Squarespace, or Wix.
+      </p>
+
+      <div class="hero-cta mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20home%20page%20and%20I%27d%20like%20to%20talk%20about%20a%20project."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">
+          Message on WhatsApp
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#packages"
+          class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium">
+          See packages
+        </a>
+      </div>
+
+      <div class="hero-chips" aria-label="Highlights">
+        <span>8+ years building websites</span>
+        <span>WordPress, Shopify, Squarespace, Wix</span>
+        <span>Based in Pakistan, hours overlap the US</span>
+      </div>
     </div>
-
-    <h1 class="mt-7 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl mx-auto">
-      A Website, a Brand, and Simple <span class="accent">Automation</span>
-    </h1>
-
-    <p class="mt-6 mx-auto max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-      Design by Baxit builds websites, graphics, and the small automations that connect them.
-      You work directly with Abdul, on WordPress, Shopify, Squarespace, or Wix.
-    </p>
-
-    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-      <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27m%20on%20the%20Design%20by%20Baxit%20home%20page%20and%20I%27d%20like%20to%20talk%20about%20a%20project."
-        target="_blank" rel="noopener noreferrer"
-        class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity">
-        Message on WhatsApp
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#packages"
-        class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium hover:bg-secondary transition-colors">
-        See packages
-      </a>
-    </div>
-
-    <div class="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
-      <span class="inline-flex items-center gap-2">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        8+ years building websites
-      </span>
-      <span class="inline-flex items-center gap-2">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        WordPress, Shopify, Squarespace, Wix
-      </span>
-      <span class="inline-flex items-center gap-2">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        Based in Pakistan, hours overlap the US
-      </span>
-    </div>
+    <div class="hero-space" aria-hidden="true"></div>
   </div>
+  <a href="#services" class="scroll-cue" aria-label="Scroll to services"></a>
 </section>
+
+<div class="fx-marquee" aria-label="Platforms and services">
+  <div class="fx-marquee-track">
+    <span>WordPress</span><span>Elementor</span><span>Shopify</span><span>Squarespace</span><span>Wix</span><span>Logo design</span><span>Brand kits</span><span>Social templates</span><span>Lead forms</span><span>WhatsApp Business</span><span>No-code automation</span>
+    <span class="dup" aria-hidden="true">WordPress</span><span class="dup" aria-hidden="true">Elementor</span><span class="dup" aria-hidden="true">Shopify</span><span class="dup" aria-hidden="true">Squarespace</span><span class="dup" aria-hidden="true">Wix</span><span class="dup" aria-hidden="true">Logo design</span><span class="dup" aria-hidden="true">Brand kits</span><span class="dup" aria-hidden="true">Social templates</span><span class="dup" aria-hidden="true">Lead forms</span><span class="dup" aria-hidden="true">WhatsApp Business</span><span class="dup" aria-hidden="true">No-code automation</span>
+  </div>
+</div>
 
 <section class="border-y border-border/60">
   <div class="container grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-border/60">
     <div class="reveal p-7 text-center">
-      <div class="text-3xl font-bold">8+</div>
+      <div class="fx-stat-num text-3xl font-bold"><span data-count="8" data-suffix="+">8+</span></div>
       <div class="mt-1.5 text-sm text-muted-foreground">Years building websites</div>
     </div>
     <div class="reveal p-7 text-center" style="transition-delay:.08s">
-      <div class="text-3xl font-bold">1:1</div>
+      <div class="fx-stat-num text-3xl font-bold">1:1</div>
       <div class="mt-1.5 text-sm text-muted-foreground">You work with Abdul</div>
     </div>
     <div class="reveal p-7 text-center" style="transition-delay:.16s">
-      <div class="text-3xl font-bold">3</div>
+      <div class="fx-stat-num text-3xl font-bold"><span data-count="3">3</span></div>
       <div class="mt-1.5 text-sm text-muted-foreground">Web, design, automation</div>
     </div>
     <div class="reveal p-7 text-center" style="transition-delay:.24s">
-      <div class="text-3xl font-bold">USD</div>
+      <div class="fx-stat-num text-3xl font-bold">USD</div>
       <div class="mt-1.5 text-sm text-muted-foreground">Starting prices, confirmed on WhatsApp</div>
     </div>
   </div>
@@ -325,6 +339,37 @@
         Ask on WhatsApp
       </a>
     </article>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PORTFOLIO — PLACEHOLDERS ONLY.
+     Abdul will supply real projects. Replace each .work-card's
+     thumbnail (add an <img>), title, platform and one-line result.
+     Do not publish invented client names or results.
+     ============================================================ -->
+<section id="work" class="border-t border-border/60">
+  <div class="container fx-section">
+    <div class="reveal fx-head">
+      <p class="fx-label">Selected work</p>
+      <h2>Recent <span class="accent">Projects</span></h2>
+      <p>Case studies are being prepared. Ask on WhatsApp and Abdul will share examples relevant to your business.</p>
+    </div>
+    <div class="fx-grid cols-3">
+      <article class="reveal fx-box work-card" data-placeholder="portfolio-1">
+        <div class="work-thumb"><div class="ph"><div>Project 01<b>Your project here</b></div></div></div>
+        <div class="work-meta"><h3>[Project name]</h3><p>[Platform] · [What was built]</p><span class="ph-tag">Placeholder</span></div>
+      </article>
+      <article class="reveal fx-box work-card" data-placeholder="portfolio-2">
+        <div class="work-thumb"><div class="ph"><div>Project 02<b>Your project here</b></div></div></div>
+        <div class="work-meta"><h3>[Project name]</h3><p>[Platform] · [What was built]</p><span class="ph-tag">Placeholder</span></div>
+      </article>
+      <article class="reveal fx-box work-card" data-placeholder="portfolio-3">
+        <div class="work-thumb"><div class="ph"><div>Project 03<b>Your project here</b></div></div></div>
+        <div class="work-meta"><h3>[Project name]</h3><p>[Platform] · [What was built]</p><span class="ph-tag">Placeholder</span></div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -435,6 +480,35 @@
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="care" class="border-t border-border/60">
+  <div class="container fx-section">
+    <div class="reveal fx-head">
+      <p class="fx-label">After launch</p>
+      <h2>Monthly <span class="accent">Care Plans</span></h2>
+      <p>Keep the site current without hiring again for every small change. Edit hours cover updates, fixes, new sections, and content changes.</p>
+    </div>
+    <div class="fx-grid cols-2">
+      <article class="reveal fx-box care-card">
+        <p class="text-sm font-medium text-muted-foreground">Care 2</p>
+        <p class="price">$99<small>/mo</small></p>
+        <ul><li>2 edit hours every month</li><li>Updates and small fixes</li><li>Requests by WhatsApp</li></ul>
+        <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27d%20like%20the%20%2499%2Fmo%20care%20plan%20%282%20edit%20hours%29.%20I%27m%20coming%20from%20the%20Design%20by%20Baxit%20home%20page."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-medium">Ask about Care 2</a>
+      </article>
+      <article class="reveal fx-box care-card">
+        <p class="text-sm font-medium text-muted-foreground">Care 4</p>
+        <p class="price">$149<small>/mo</small></p>
+        <ul><li>4 edit hours every month</li><li>Room for new sections and pages</li><li>Requests by WhatsApp</li></ul>
+        <a href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%27d%20like%20the%20%24149%2Fmo%20care%20plan%20%284%20edit%20hours%29.%20I%27m%20coming%20from%20the%20Design%20by%20Baxit%20home%20page."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground">Ask about Care 4</a>
+      </article>
     </div>
   </div>
 </section>
