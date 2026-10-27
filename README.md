@@ -234,21 +234,23 @@ Add-ons start from $99. The rest are about 0.35 of the previous add-on prices, r
 
 ---
 
-## Redesign: "Neon 3D" (branch `redesign-3d`, preview only)
+## Redesign: "Clean Light" (branch `redesign-light`, preview only)
 
-A dark, techy layer on top of the existing pages. Still static, still no build step.
+One of three alternative styles (the others are `redesign-3d`, dark neon, and
+`redesign-bold`, bright and playful). Same pages, same copy, same prices.
+Still static, still no build step. Preview: https://redesign-light.new-ck7.pages.dev
 
 | File | Purpose |
 |------|---------|
-| `fx.css` | Neon palette (overrides the tokens), glass cards, glow borders, animated gradient buttons, reveal blur-in, marquee, care plans, portfolio placeholders, custom cursor, reduced-motion rules |
-| `fx.js` | Aurora background, scroll progress bar, card tilt + pointer-tracked glow, magnetic buttons, custom cursor, count-up stats, lazy-loads `hero3d.js` only when WebGL is available and Save-Data is off |
-| `hero3d.js` | Three.js (r160 from jsDelivr, ES module) hero: noise-morphing neon core with fresnel shader, wireframe shell, orbit rings, particle field. Follows the pointer, reacts to scroll, pauses off-screen / hidden tab, one still frame under `prefers-reduced-motion` |
+| `fx.css` | Off-white palette with one deep-indigo accent (overrides the tokens), soft layered shadows, white cards with refined hover lifts, serif-italic indigo accent words, smooth fade/slide reveals, marquee, care plans, portfolio placeholders, reduced-motion rules |
+| `fx.js` | Scroll progress line, very gentle card tilt + soft spotlight, count-up stats, reveal stagger, lazy-loads `hero3d.js` only when WebGL is available and Save-Data is off |
+| `hero3d.js` | Three.js (r160 from jsDelivr, ES module) hero: glossy clay-like pastel shapes (sphere, torus, capsule, coin, indigo bead) floating gently over a soft contact shadow, lit by an in-code studio environment. Leans toward the pointer, hovered shape swells, pauses off-screen / hidden tab, one still frame under `prefers-reduced-motion` |
 
-- If WebGL is unavailable the CSS `.fx-orb` stays as a fallback.
-- The light theme toggle is hidden in this design (dark only).
+- If WebGL is unavailable, the CSS `.fx-orb` (a clay sphere and torus drawn in CSS) stays as a fallback.
+- Light only in this design (the theme toggle is hidden).
 - `#work` on the home page is **placeholder only** — replace the three `.work-card` blocks with real projects (`data-placeholder` marks them).
 - `#care` lists the monthly care plans ($99/mo for 2 edit hours, $149/mo for 4 edit hours).
-- Fonts: Inter, Space Grotesk, JetBrains Mono from Google Fonts (`display=swap`).
+- Fonts: Inter, Inter Tight, Instrument Serif from Google Fonts (`display=swap`).
 
 ---
 
