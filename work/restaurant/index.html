@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Vine — Concept restaurant website by Design by Baxit</title>
+<meta name="description" content="Concept website for a wood-fired restaurant and wine bar, designed by Design by Baxit. Fictional brand, not a real business.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://designbybaxit.com/work/restaurant/">
+<meta property="og:title" content="Restaurant website — concept by Design by Baxit">
+<meta property="og:description" content="Menu, reservations, gallery and reviews for a modern restaurant. A Design by Baxit concept project.">
+<meta property="og:image" content="https://designbybaxit.com/work/thumbs/restaurant.jpg">
+<meta name="theme-color" content="#120e0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23120e0b'/%3E%3Cpath d='M16 6c3 4 6 6.5 6 11a6 6 0 0 1-12 0c0-3 1.6-4.6 3-6 0 2 1 3 2 3.4C14.6 11 15 8.6 16 6z' fill='%23ff7a3d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<!--
+  BRAND SWAP: the restaurant name is "Ember &amp; Vine" (written "Ember &amp; Vine" in HTML).
+  Colours live in :root in style.css. The logo is the inline SVG with class "logo-mark".
+  See /README.md, "Concept demos", for the full re-skin checklist.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" id="top">
+  <div class="wrap header-in">
+    <nav class="nav nav-l" aria-label="Main">
+      <a href="#menu">Menu</a><a href="#story">Story</a><a href="#gallery">Gallery</a>
+    </nav>
+    <a href="#top" class="brand" aria-label="Ember and Vine home">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3.4 4.6 7 7.4 7 12.6a7 7 0 0 1-14 0c0-3.4 1.8-5.3 3.4-6.9 0 2.3 1.2 3.4 2.3 3.9C14.4 9.9 14.8 7.2 16 4z" fill="var(--ember)"/><path d="M16 15c1.4 1.9 3 3 3 5.2a3 3 0 0 1-6 0c0-1.5.9-2.4 1.6-3 .1 1 .6 1.4 1 1.6-.2-1.6 0-2.8.4-3.8z" fill="var(--gold)"/></svg>
+      <span>Ember <i>&amp;</i> Vine</span>
+    </a>
+    <nav class="nav nav-r" aria-label="Secondary">
+      <a href="#events">Private dining</a><a href="#visit">Visit</a>
+      <a class="btn btn-ember" href="#reserve">Reserve</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#menu">Menu</a><a href="#story">Story</a><a href="#gallery">Gallery</a><a href="#events">Private dining</a><a href="#visit">Visit</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-media" data-parallax="0.25"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=65&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=70&auto=format&fit=crop 1800w" sizes="100vw" alt="Plated dishes and wine glasses on a candlelit table" fetchpriority="high" width="1800" height="1200"></div>
+  <canvas class="embers" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="kicker reveal">Wood-fired kitchen &middot; Natural wine &middot; Est. 2014</p>
+    <h1 class="reveal"><span>Cooked over</span> <em>open flame,</em> <span>shared at the table.</span></h1>
+    <p class="hero-sub reveal">Seasonal plates from a 900° hearth, a cellar of small-grower wines, and a dining room built for long evenings.</p>
+    <form class="quick-res reveal" data-demo-form aria-label="Find a table">
+      <label><span>Guests</span><select><option>2 guests</option><option>3 guests</option><option selected>4 guests</option><option>5 guests</option><option>6+ guests</option></select></label>
+      <label><span>Date</span><select data-dates></select></label>
+      <label><span>Time</span><select><option>6:00 PM</option><option>6:30 PM</option><option selected>7:00 PM</option><option>7:30 PM</option><option>8:30 PM</option><option>9:00 PM</option></select></label>
+      <button class="btn btn-ember" type="submit">Find a table</button>
+    </form>
+  </div>
+  <a class="scroll-cue" href="#story" aria-label="Scroll to our story"><span></span></a>
+</section>
+
+<div class="band" aria-hidden="true"><div class="band-track">
+  <span>Wood-fired</span><i>✦</i><span>Seasonal menu</span><i>✦</i><span>Natural wine</span><i>✦</i><span>Open late</span><i>✦</i><span>Chef's counter</span><i>✦</i><span>Wood-fired</span><i>✦</i><span>Seasonal menu</span><i>✦</i><span>Natural wine</span><i>✦</i><span>Open late</span><i>✦</i><span>Chef's counter</span><i>✦</i>
+</div></div>
+
+<section id="story" class="section story">
+  <div class="wrap story-grid">
+    <div class="story-media">
+      <div class="sm-a reveal"><img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=900&q=70&auto=format&fit=crop" alt="Chef cooking over a burst of open flame" loading="lazy" width="900" height="1100"></div>
+      <div class="sm-b reveal" data-parallax="-0.08"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700&q=70&auto=format&fit=crop" alt="Friends raising glasses of red wine" loading="lazy" width="700" height="700"></div>
+      <div class="seal" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c">· SINCE 2014 · FIRE · FRIENDS · FOOD </textPath></text></svg><b>E&amp;V</b></div>
+    </div>
+    <div class="story-copy">
+      <p class="kicker reveal">Our story</p>
+      <h2 class="reveal">A neighbourhood table, <em>lit by fire.</em></h2>
+      <p class="reveal">We cook almost everything over oak and almond wood. The menu follows the farms we buy from, so it changes with the weather, and the wine list leans toward small producers who farm the way we cook: simply, and with care.</p>
+      <div class="sig reveal"><svg viewBox="0 0 200 50" aria-hidden="true"><path d="M5 35c15-25 25-25 22-6-2 12 10-20 20-14 8 5-4 18 6 16s14-20 24-14c7 5-2 14 6 12 12-3 18-16 30-10 8 4 0 12 10 9 14-4 30-10 70-12"/></svg><span>Head chef &amp; founder</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section signature">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div><p class="kicker">From the hearth</p><h2>Signature <em>plates</em></h2></div>
+      <a class="link-arrow" href="#menu">See the full menu →</a>
+    </div>
+  </div>
+  <div class="dish-rail">
+    <article class="dish reveal"><div class="dish-img"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&q=70&auto=format&fit=crop" alt="Wood-fired pizza with fresh toppings" loading="lazy" width="700" height="875"></div><div class="dish-meta"><h3>Hearth flatbread</h3><p>Fior di latte, charred tomato, wild oregano</p><b>$19</b></div></article>
+    <article class="dish reveal"><div class="dish-img"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=700&q=70&auto=format&fit=crop" alt="Grilled steak with rosemary fries" loading="lazy" width="700" height="875"></div><div class="dish-meta"><h3>Steak frites</h3><p>Oak-grilled hanger, rosemary fries</p><b>$36</b></div></article>
+    <article class="dish reveal"><div class="dish-img"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=700&q=70&auto=format&fit=crop" alt="Bright seasonal salad" loading="lazy" width="700" height="875"></div><div class="dish-meta"><h3>Garden plate</h3><p>Market greens, citrus, toasted seeds</p><b>$15</b></div></article>
+    <article class="dish reveal"><div class="dish-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=70&auto=format&fit=crop" alt="Smoked ribs on a wooden board" loading="lazy" width="700" height="875"></div><div class="dish-meta"><h3>Smoked short rib</h3><p>Twelve-hour smoke, pickles, flatbread</p><b>$34</b></div></article>
+  </div>
+</section>
+
+<section id="menu" class="section menu-sec">
+  <div class="wrap">
+    <div class="head-c reveal"><p class="kicker">The menu</p><h2>Tonight at <em>Ember &amp; Vine</em></h2><p>Changes with the season. Vegetarian and gluten-free options marked.</p></div>
+    <div class="tabs reveal" role="tablist" aria-label="Menu sections">
+      <button role="tab" aria-selected="true" aria-controls="m-small" id="t-small">Small plates</button>
+      <button role="tab" aria-selected="false" aria-controls="m-hearth" id="t-hearth" tabindex="-1">From the hearth</button>
+      <button role="tab" aria-selected="false" aria-controls="m-sweet" id="t-sweet" tabindex="-1">Sweet</button>
+      <button role="tab" aria-selected="false" aria-controls="m-drink" id="t-drink" tabindex="-1">Wine &amp; cocktails</button>
+    </div>
+    <div class="panels">
+      <div class="panel is-on" role="tabpanel" id="m-small" aria-labelledby="t-small">
+        <div class="item"><h4>Charred sourdough <small>V</small></h4><i></i><b>$9</b><p>Cultured butter, smoked sea salt</p></div>
+        <div class="item"><h4>Ember-roast carrots <small>V · GF</small></h4><i></i><b>$14</b><p>Whipped feta, hot honey, dukkah</p></div>
+        <div class="item"><h4>Grilled octopus <small>GF</small></h4><i></i><b>$21</b><p>Romesco, crispy potatoes, lemon</p></div>
+        <div class="item"><h4>Burrata &amp; stone fruit <small>V</small></h4><i></i><b>$17</b><p>Basil oil, black pepper, grilled bread</p></div>
+        <div class="item"><h4>Wood-fired wings <small>GF</small></h4><i></i><b>$15</b><p>Smoked chilli glaze, herb yoghurt</p></div>
+        <div class="item"><h4>Market crudo <small>GF</small></h4><i></i><b>$19</b><p>Today's catch, citrus, green chilli</p></div>
+      </div>
+      <div class="panel" role="tabpanel" id="m-hearth" aria-labelledby="t-hearth" hidden>
+        <div class="item"><h4>Oak-grilled ribeye <small>GF</small></h4><i></i><b>$46</b><p>Bone marrow butter, ember potatoes</p></div>
+        <div class="item"><h4>Half chicken <small>GF</small></h4><i></i><b>$29</b><p>Brined 24 hours, salsa verde, charred lemon</p></div>
+        <div class="item"><h4>Whole roasted fish <small>GF</small></h4><i></i><b>$38</b><p>Fennel, capers, brown butter</p></div>
+        <div class="item"><h4>Hearth flatbread <small>V</small></h4><i></i><b>$19</b><p>Fior di latte, charred tomato, oregano</p></div>
+        <div class="item"><h4>Mushroom &amp; farro <small>V</small></h4><i></i><b>$24</b><p>Roasted wild mushrooms, aged parmesan</p></div>
+        <div class="item"><h4>Short rib for two</h4><i></i><b>$68</b><p>Twelve-hour smoke, pickles, warm flatbread</p></div>
+      </div>
+      <div class="panel" role="tabpanel" id="m-sweet" aria-labelledby="t-sweet" hidden>
+        <div class="item"><h4>Burnt Basque cheesecake <small>V</small></h4><i></i><b>$12</b><p>Roasted cherries</p></div>
+        <div class="item"><h4>Ember s'mores <small>V</small></h4><i></i><b>$11</b><p>Toasted at your table</p></div>
+        <div class="item"><h4>Olive oil cake <small>V</small></h4><i></i><b>$10</b><p>Citrus curd, crème fraîche</p></div>
+        <div class="item"><h4>Affogato <small>V · GF</small></h4><i></i><b>$9</b><p>Vanilla gelato, espresso</p></div>
+      </div>
+      <div class="panel" role="tabpanel" id="m-drink" aria-labelledby="t-drink" hidden>
+        <div class="item"><h4>Smoked old fashioned</h4><i></i><b>$16</b><p>Bourbon, demerara, orange, oak smoke</p></div>
+        <div class="item"><h4>Garden spritz</h4><i></i><b>$14</b><p>Bitter aperitivo, prosecco, grapefruit</p></div>
+        <div class="item"><h4>Skin-contact white</h4><i></i><b>$15 / 58</b><p>Small grower, by the glass or bottle</p></div>
+        <div class="item"><h4>Chilled light red</h4><i></i><b>$14 / 54</b><p>Juicy, bright, made for the grill</p></div>
+        <div class="item"><h4>Zero-proof sour</h4><i></i><b>$10</b><p>Yuzu, aquafaba, smoked salt</p></div>
+      </div>
+    </div>
+    <p class="menu-note reveal">Prices and dishes are illustrative. <a href="#reserve">Reserve a table</a> to taste them.</p>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery-sec">
+  <div class="wrap">
+    <div class="head-row reveal"><div><p class="kicker">The room</p><h2>Made for <em>long evenings</em></h2></div></div>
+    <div class="gallery">
+      <figure class="g g1 reveal"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1000&q=70&auto=format&fit=crop" alt="Industrial-style dining room with pendant lights" loading="lazy" width="1000" height="700"></figure>
+      <figure class="g g2 reveal"><img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=700&q=70&auto=format&fit=crop" alt="Friends laughing over shared plates" loading="lazy" width="700" height="700"></figure>
+      <figure class="g g3 reveal"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=700&q=70&auto=format&fit=crop" alt="Bartender pouring a cocktail over ice" loading="lazy" width="700" height="700"></figure>
+      <figure class="g g4 reveal"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=70&auto=format&fit=crop" alt="Warm, busy bar with shelves of bottles" loading="lazy" width="1000" height="700"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section press">
+  <div class="wrap">
+    <div class="quotes">
+      <figure class="q reveal"><blockquote>“The best thing to happen to the neighbourhood in years. Order the flatbread, then order another.”</blockquote><figcaption>★★★★★ · Local food guide</figcaption></figure>
+      <figure class="q reveal"><blockquote>“Smoky, generous cooking and a wine list full of surprises.”</blockquote><figcaption>★★★★★ · Weekend dining column</figcaption></figure>
+      <figure class="q reveal"><blockquote>“Booked for a birthday. The team made it unforgettable.”</blockquote><figcaption>★★★★★ · Guest review</figcaption></figure>
+    </div>
+    <div class="ratings reveal"><span><b>4.8</b> Google</span><span><b>4.9</b> Reservations app</span><span><b>1,900+</b> reviews</span></div>
+  </div>
+</section>
+
+<section id="events" class="events">
+  <div class="events-media" data-parallax="0.12"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=65&auto=format&fit=crop" alt="" loading="lazy" width="1600" height="900"></div>
+  <div class="wrap events-in reveal">
+    <p class="kicker">Private dining</p>
+    <h2>Celebrations for <em>12 to 60</em> guests</h2>
+    <p>Birthdays, rehearsal dinners and team nights, with set menus from $65 per person and a dedicated host.</p>
+    <a class="btn btn-ember" href="#reserve">Enquire about an event</a>
+  </div>
+</section>
+
+<section id="reserve" class="section reserve">
+  <div class="wrap reserve-grid">
+    <div class="reveal">
+      <p class="kicker">Reservations</p>
+      <h2>Save your <em>seat by the fire.</em></h2>
+      <p class="muted">Tables are released 30 days ahead. Walk-ins welcome at the bar and chef's counter.</p>
+      <div id="visit" class="visit">
+        <div><h4>Hours</h4><p>Tue – Thu · 5 – 10 PM<br>Fri – Sat · 5 – 11:30 PM<br>Sun · 11 AM – 3 PM brunch</p></div>
+        <div><h4>Find us</h4><p>88 Market Lane<br>Springfield<br><a href="tel:+15550104488">(555) 010-4488</a></p></div>
+      </div>
+    </div>
+    <form class="res-card reveal" data-demo-form aria-label="Reserve a table">
+      <div class="res-row">
+        <label><span>Party size</span><div class="stepper"><button type="button" data-step="-1" aria-label="Fewer guests">−</button><output data-guests>2</output><button type="button" data-step="1" aria-label="More guests">+</button></div></label>
+        <label><span>Date</span><select data-dates></select></label>
+      </div>
+      <fieldset><legend>Available times</legend>
+        <div class="times"><button type="button">5:30</button><button type="button">6:00</button><button type="button" class="is-on">7:00</button><button type="button" disabled>7:30</button><button type="button">8:15</button><button type="button">9:00</button></div>
+      </fieldset>
+      <label><span>Occasion (optional)</span><select><option>None</option><option>Birthday</option><option>Anniversary</option><option>Business dinner</option></select></label>
+      <button class="btn btn-ember btn-block" type="submit">Reserve now</button>
+      <p class="fine">Demo form: nothing is sent. This is a concept website.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <a href="#top" class="brand"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3.4 4.6 7 7.4 7 12.6a7 7 0 0 1-14 0c0-3.4 1.8-5.3 3.4-6.9 0 2.3 1.2 3.4 2.3 3.9C14.4 9.9 14.8 7.2 16 4z" fill="var(--ember)"/></svg><span>Ember <i>&amp;</i> Vine</span></a>
+    <p>88 Market Lane, Springfield · (555) 010-4488</p>
+    <p class="concept-line">Concept project by <a href="https://designbybaxit.com/" target="_blank" rel="noopener">Design by Baxit</a>. Ember &amp; Vine is a fictional restaurant; photos, menu and reviews are placeholders.</p>
+  </div>
+</footer>
+
+<div class="mbar"><a href="tel:+15550104488">Call</a><a href="#reserve" class="btn btn-ember">Reserve a table</a></div>
+<a class="concept-badge" href="https://designbybaxit.com/#work" target="_blank" rel="noopener"><span>Concept</span> project by Design by Baxit ↗</a>
+
+<div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="dm-title" hidden>
+  <div class="dm-card">
+    <button class="dm-x" type="button" aria-label="Close">×</button>
+    <p class="kicker">Concept website</p>
+    <h3 id="dm-title">This reservation is a demo.</h3>
+    <p>No table was booked. Want a site like this for your restaurant, with a real menu, online reservations and Google reviews? Design by Baxit builds it.</p>
+    <div class="dm-actions">
+      <a class="btn btn-ember" href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%20saw%20the%20restaurant%20concept%20website%20and%20I%27d%20like%20one%20for%20my%20restaurant." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-line" href="https://designbybaxit.com/" target="_blank" rel="noopener">designbybaxit.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

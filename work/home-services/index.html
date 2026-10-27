@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northpoint Home Services — Concept website by Design by Baxit</title>
+<meta name="description" content="Concept website for a plumbing, heating, cooling and electrical company, designed by Design by Baxit. Fictional brand, not a real business.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://designbybaxit.com/work/home-services/">
+<meta property="og:title" content="Home services website — concept by Design by Baxit">
+<meta property="og:description" content="Instant quotes, online booking, flat-rate pricing and reviews for a home-services company. A Design by Baxit concept project.">
+<meta property="og:image" content="https://designbybaxit.com/work/thumbs/home-services.jpg">
+<meta name="theme-color" content="#0b1f3a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1f3a'/%3E%3Cpath d='M6 16 16 7l10 9v9H6z' fill='none' stroke='%23ffc21a' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='m17 12-4 7h4l-2 5 5-7h-4z' fill='%23ffc21a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<!--
+  BRAND SWAP: the company name is "Northpoint" (full: "Northpoint Home Services").
+  Colours live in :root in style.css. The logo is the inline SVG with class "logo-mark".
+  Services, prices and the service-area towns are plain text in this file.
+  See /README.md, "Concept demos", for the full re-skin checklist.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="alert">
+  <div class="wrap alert-in">
+    <span class="pulse" aria-hidden="true"></span>
+    <p><b>24/7 emergency service.</b> <span class="hide-sm">Burst pipe, no heat or a power fault? A technician can be at your door in about 60 minutes.</span></p>
+    <a href="tel:+15550107700">Call (555) 010-7700</a>
+  </div>
+</div>
+
+<header class="header" id="top">
+  <div class="wrap header-in">
+    <a href="#top" class="brand" aria-label="Northpoint Home Services home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="var(--navy)"/><path d="M8 20 20 9l12 11v11H8z" fill="none" stroke="var(--yellow)" stroke-width="3" stroke-linejoin="round"/><path d="m21.5 14.5-5 8.5h4.6l-2.4 6.5 6.3-9h-4.6z" fill="var(--yellow)"/></svg>
+      <span><b>NORTHPOINT</b><small>Home Services</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#area">Service area</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a class="phone hide-md" href="tel:+15550107700"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><small>Call 24/7</small>(555) 010-7700</span></a>
+      <a class="btn btn-yellow" href="#quote">Book online</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#area">Service area</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-stripes" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="tag reveal"><span>★ 4.9</span> 2,300+ verified reviews · Licensed &amp; insured</p>
+      <h1 class="reveal">Home repairs done <mark>right,</mark> <br class="hide-sm">today.</h1>
+      <p class="lead reveal">Plumbing, heating, cooling and electrical. Upfront flat-rate prices, background-checked technicians, and a workmanship guarantee on every job.</p>
+      <ul class="ticks reveal">
+        <li>Same-day appointments</li><li>No overtime charges</li><li>1-year guarantee</li>
+      </ul>
+      <div class="hero-actions reveal">
+        <a class="btn btn-yellow btn-lg" href="#quote">Get my instant quote</a>
+        <a class="btn btn-outline btn-lg" href="tel:+15550107700">Call (555) 010-7700</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hv-img"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1000&q=70&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=560&q=70&auto=format&fit=crop 560w, https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1000&q=70&auto=format&fit=crop 1000w" sizes="(max-width: 900px) 92vw, 44vw" alt="Technician in a hard hat working on an electrical panel" width="1000" height="1100" fetchpriority="high"></div>
+      <div class="eta" aria-hidden="true"><span class="truck"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7h11v9H2zM13 10h4l4 3v3h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><div><small>Tech on the way</small><b>ETA <span data-eta>42</span> min</b></div><div class="bar"><i></i></div></div>
+      <div class="rating-card" aria-hidden="true"><b>4.9</b><div><span class="stars">★★★★★</span><small>2,300+ reviews</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Why homeowners trust us">
+  <div class="wrap trust-grid">
+    <div class="t reveal"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Licensed &amp; insured</b><span>Fully covered, every job</span></div></div>
+    <div class="t reveal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>On-time promise</b><span>Late? Your diagnostic is free</span></div></div>
+    <div class="t reveal"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4zM4 11h16"/><path d="M8 15h3"/></svg><div><b>Upfront pricing</b><span>Approve the price before work</span></div></div>
+    <div class="t reveal"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21c1-4 4-6 7-6s6 2 7 6"/></svg><div><b>Vetted technicians</b><span>Background-checked &amp; trained</span></div></div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="over">What we fix</p><h2>One call for the <mark>whole house.</mark></h2></div>
+      <p>Most repairs are finished in a single visit. Our vans carry over 1,000 common parts.</p>
+    </div>
+    <div class="svc-grid">
+      <a class="svc reveal" href="#quote" data-tilt><img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="520"><div class="svc-body"><span class="num">01</span><h3>Plumbing</h3><p>Leaks, clogs, fixtures, water heaters and burst pipes.</p><span class="go">Book plumbing →</span></div></a>
+      <a class="svc reveal" href="#quote" data-tilt><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="520"><div class="svc-body"><span class="num">02</span><h3>Heating &amp; cooling</h3><p>AC and furnace repair, tune-ups and new systems.</p><span class="go">Book HVAC →</span></div></a>
+      <a class="svc reveal" href="#quote" data-tilt><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="520"><div class="svc-body"><span class="num">03</span><h3>Electrical</h3><p>Panels, outlets, lighting, EV chargers and safety checks.</p><span class="go">Book an electrician →</span></div></a>
+      <a class="svc reveal" href="#quote" data-tilt><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="520"><div class="svc-body"><span class="num">04</span><h3>Drains &amp; sewer</h3><p>Camera inspections, hydro-jetting and line repair.</p><span class="go">Clear my drain →</span></div></a>
+      <a class="svc reveal" href="#quote" data-tilt><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="520"><div class="svc-body"><span class="num">05</span><h3>Bath &amp; kitchen</h3><p>Fixture swaps, upgrades and full remodels.</p><span class="go">Plan my remodel →</span></div></a>
+      <a class="svc reveal" href="#quote" data-tilt><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="520"><div class="svc-body"><span class="num">06</span><h3>Handyman</h3><p>The to-do list: mounting, doors, drywall and more.</p><span class="go">Book a handyman →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="section quote-sec">
+  <div class="wrap quote-grid">
+    <div class="quote-copy reveal">
+      <p class="over light">Instant quote</p>
+      <h2>Know the price <mark>before</mark> we arrive.</h2>
+      <p>Tell us what's wrong and where you are. You'll see a price range and the next open arrival windows in seconds.</p>
+      <ol class="how">
+        <li><b>1</b><div><h3>Pick your service</h3><p>Choose the job and your ZIP code.</p></div></li>
+        <li><b>2</b><div><h3>Choose a time</h3><p>Two-hour arrival windows, 7 days a week.</p></div></li>
+        <li><b>3</b><div><h3>We fix it</h3><p>Approve the flat-rate price, then we get to work.</p></div></li>
+      </ol>
+    </div>
+    <form class="quote-card reveal" data-quote novalidate>
+      <div class="qc-head"><b>Get a quote</b><span>Step <i data-step-n>1</i> of 2</span></div>
+      <div class="qc-progress"><i data-progress></i></div>
+      <div class="qc-step" data-step="1">
+        <p class="qlabel">What do you need help with?</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="svc" value="Plumbing" data-range="$129 – $389" checked><span><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v4H8v3a4 4 0 0 0 8 0V9h4v2a8 8 0 0 1-16 0z"/><path d="M12 19v2"/></svg><b>Plumbing</b></span></label>
+          <label class="opt"><input type="radio" name="svc" value="Heating & cooling" data-range="$89 – $449"><span><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M4 6l16 12M20 6 4 18M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><b>AC / Heat</b></span></label>
+          <label class="opt"><input type="radio" name="svc" value="Electrical" data-range="$149 – $499"><span><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>Electrical</b></span></label>
+          <label class="opt"><input type="radio" name="svc" value="Drains" data-range="$129 – $299"><span><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7a5 5 0 1 0 5 5"/><circle cx="12" cy="12" r="1.5"/></svg><b>Drains</b></span></label>
+        </div>
+        <label class="field">ZIP code<input name="zip" inputmode="numeric" maxlength="5" placeholder="e.g. 62704" autocomplete="off"></label>
+        <button class="btn btn-yellow btn-block" type="button" data-next>See price &amp; times →</button>
+      </div>
+      <div class="qc-step" data-step="2" hidden>
+        <div class="estimate"><small>Typical price for <span data-svc>Plumbing</span></small><b data-range>$129 – $389</b><span>Final price confirmed on site, before any work.</span></div>
+        <p class="qlabel">Next available arrival windows</p>
+        <div class="windows">
+          <button type="button" class="win is-on"><small>Today</small>2 – 4 PM</button>
+          <button type="button" class="win"><small>Today</small>4 – 6 PM</button>
+          <button type="button" class="win"><small>Tomorrow</small>8 – 10 AM</button>
+          <button type="button" class="win"><small>Tomorrow</small>12 – 2 PM</button>
+        </div>
+        <div class="qc-actions"><button class="btn btn-ghost" type="button" data-back>← Back</button><button class="btn btn-yellow" type="submit">Book this window</button></div>
+      </div>
+      <p class="fine">Demo form: nothing is sent. This is a concept website.</p>
+    </form>
+  </div>
+</section>
+
+<section id="pricing" class="section">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="over">Flat-rate pricing</p><h2>Honest prices, <mark>no surprises.</mark></h2></div>
+      <p>The price we quote is the price you pay, however long the job takes. Starting prices shown.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price reveal"><h3>Diagnostic visit</h3><p class="amt"><small>$</small>49</p><p>Waived when you go ahead with the repair.</p><ul><li>Full system check</li><li>Written options &amp; prices</li><li>No obligation</li></ul><a class="btn btn-ghost btn-block" href="#quote">Book a visit</a></div>
+      <div class="price featured reveal"><span class="ribbon">Most popular</span><h3>Northpoint Club</h3><p class="amt"><small>$</small>14<small>/mo</small></p><p>Membership that pays for itself in one visit.</p><ul><li>2 tune-ups a year (AC &amp; heat)</li><li>15% off every repair</li><li>Priority, no-wait scheduling</li><li>No after-hours fees</li></ul><a class="btn btn-yellow btn-block" href="#quote">Join the Club</a></div>
+      <div class="price reveal"><h3>Water heater swap</h3><p class="amt"><small>from $</small>1,190</p><p>Installed in a day, old unit hauled away.</p><ul><li>Same or next-day install</li><li>6-year parts warranty</li><li>Financing available</li></ul><a class="btn btn-ghost btn-block" href="#quote">Get a quote</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-band">
+  <div class="wrap stats">
+    <div class="reveal"><b data-count="18">0</b><span>years in business</span></div>
+    <div class="reveal"><b data-count="42000" data-suffix="+">0</b><span>jobs completed</span></div>
+    <div class="reveal"><b data-count="60" data-suffix=" min">0</b><span>typical emergency arrival</span></div>
+    <div class="reveal"><b data-count="98" data-suffix="%">0</b><span>fixed on the first visit</span></div>
+  </div>
+</section>
+
+<section id="area" class="section">
+  <div class="wrap area-grid">
+    <div class="map reveal" aria-hidden="true">
+      <svg viewBox="0 0 520 420">
+        <defs><pattern id="g" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0v26" fill="none" stroke="#dfe6f0" stroke-width="1"/></pattern></defs>
+        <rect width="520" height="420" fill="url(#g)"/>
+        <path class="river" d="M-10 300C80 260 120 330 210 290s140-120 230-90 100 40 120 30"/>
+        <path class="road" d="M40 60 480 360M60 380 460 40M0 200h520"/>
+        <path class="zone" d="M120 90c80-40 220-50 290 10s60 190-20 240-230 40-290-30-60-180 20-220z"/>
+        <g class="pins">
+          <g transform="translate(260 210)"><circle r="30" class="ring"/><circle r="10" class="hq"/></g>
+          <g transform="translate(170 140)"><circle r="18" class="ring d1"/><circle r="6"/></g>
+          <g transform="translate(360 130)"><circle r="18" class="ring d2"/><circle r="6"/></g>
+          <g transform="translate(380 290)"><circle r="18" class="ring d3"/><circle r="6"/></g>
+          <g transform="translate(160 290)"><circle r="18" class="ring d4"/><circle r="6"/></g>
+          <g transform="translate(300 330)"><circle r="18" class="ring d2"/><circle r="6"/></g>
+        </g>
+      </svg>
+      <div class="map-label"><b>Northpoint HQ</b><span>Vans across 6 neighbourhoods</span></div>
+    </div>
+    <div class="area-copy">
+      <p class="over reveal">Service area</p>
+      <h2 class="reveal">Local techs, <mark>minutes away.</mark></h2>
+      <p class="reveal">Our vans are spread across the metro area, so the closest available technician comes to you.</p>
+      <ul class="towns reveal"><li>Springfield</li><li>Oak Ridge</li><li>Riverside</li><li>Maple Heights</li><li>Lakeview</li><li>Westfield</li></ul>
+      <a class="btn btn-navy reveal" href="#quote">Check my ZIP code</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section reviews">
+  <div class="wrap rev-grid">
+    <div class="rev-summary reveal">
+      <p class="over light">Reviews</p>
+      <div class="big"><b>4.9</b><div><span class="stars">★★★★★</span><small>2,300+ verified reviews</small></div></div>
+      <div class="bars">
+        <div><span>5★</span><i style="--w:92%"></i><em>92%</em></div>
+        <div><span>4★</span><i style="--w:6%"></i><em>6%</em></div>
+        <div><span>3★</span><i style="--w:1%"></i><em>1%</em></div>
+        <div><span>2★</span><i style="--w:.5%"></i><em>&lt;1%</em></div>
+        <div><span>1★</span><i style="--w:.5%"></i><em>&lt;1%</em></div>
+      </div>
+    </div>
+    <div class="rev-cards">
+      <figure class="rc reveal"><span class="stars">★★★★★</span><blockquote>“Water heater died on a Sunday. They had a new one in by 3 PM, and the price matched the quote exactly.”</blockquote><figcaption><b>Melissa K.</b> · Water heater install</figcaption></figure>
+      <figure class="rc reveal"><span class="stars">★★★★★</span><blockquote>“Booked online in two minutes. The tech texted when he was on the way, wore shoe covers, and explained everything.”</blockquote><figcaption><b>David R.</b> · AC repair</figcaption></figure>
+      <figure class="rc reveal"><span class="stars">★★★★★</span><blockquote>“Fair price for a panel upgrade, clean work, and they handled the permit. Highly recommend.”</blockquote><figcaption><b>Angela P.</b> · Electrical panel</figcaption></figure>
+      <figure class="rc reveal"><span class="stars">★★★★★</span><blockquote>“The Club membership already paid for itself. Priority booking is a lifesaver in July.”</blockquote><figcaption><b>Tom W.</b> · Club member</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee">
+  <div class="wrap g-in reveal">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><h2>The Northpoint guarantee</h2><p>If anything we fixed fails within a year, we come back and make it right. Free.</p></div>
+    <a class="btn btn-yellow btn-lg" href="#quote">Book with confidence</a>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="wrap faq-grid">
+    <div class="reveal"><p class="over">FAQ</p><h2>Questions homeowners <mark>ask us.</mark></h2></div>
+    <div class="faq">
+      <details class="reveal" open><summary>Do you charge extra for evenings or weekends?</summary><p>No. Our prices are the same 7 days a week. Club members also skip emergency fees.</p></details>
+      <details class="reveal"><summary>How do I know what it will cost?</summary><p>You'll see a typical range when you book online. On site, the technician confirms a flat-rate price, and you approve it before any work begins.</p></details>
+      <details class="reveal"><summary>Do you offer financing?</summary><p>Yes. Larger jobs such as water heaters and HVAC systems can be paid monthly, subject to approval.</p></details>
+      <details class="reveal"><summary>Are your technicians employees?</summary><p>Yes. Every technician is a licensed, background-checked, drug-tested employee. Never a subcontractor.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div><a href="#top" class="brand light"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="var(--yellow)"/><path d="M8 20 20 9l12 11v11H8z" fill="none" stroke="var(--navy)" stroke-width="3" stroke-linejoin="round"/><path d="m21.5 14.5-5 8.5h4.6l-2.4 6.5 6.3-9h-4.6z" fill="var(--navy)"/></svg><span><b>NORTHPOINT</b><small>Home Services</small></span></a>
+    <p>Licence #000000 · (555) 010-7700 · Open 24/7</p></div>
+    <p class="concept-line">Concept project by <a href="https://designbybaxit.com/" target="_blank" rel="noopener">Design by Baxit</a>. Northpoint Home Services is a fictional company; photos, prices and reviews are placeholders.</p>
+  </div>
+</footer>
+
+<div class="mbar"><a href="tel:+15550107700" class="btn btn-outline-dark">Call now</a><a href="#quote" class="btn btn-yellow">Book online</a></div>
+<a class="concept-badge" href="https://designbybaxit.com/#work" target="_blank" rel="noopener"><span>Concept</span> project by Design by Baxit ↗</a>
+
+<div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="dm-title" hidden>
+  <div class="dm-card">
+    <button class="dm-x" type="button" aria-label="Close">×</button>
+    <p class="over">Concept website</p>
+    <h3 id="dm-title">This booking is a demo.</h3>
+    <p>Nothing was sent. Want a website like this for your home-services business, with instant quotes, online booking and review automation? Design by Baxit builds it.</p>
+    <div class="dm-actions">
+      <a class="btn btn-yellow" href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%20saw%20the%20home-services%20concept%20website%20and%20I%27d%20like%20one%20for%20my%20business." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://designbybaxit.com/" target="_blank" rel="noopener">designbybaxit.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

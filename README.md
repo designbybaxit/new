@@ -24,7 +24,9 @@ folder on any web server and it runs.
 | `contact.html` | `/contact` | WhatsApp, email, hours (PKT, flexible for US meetings), backup form |
 | `404.html` | (Cloudflare Pages) | Not-found page. Not listed in the sitemap |
 
-There is no portfolio page. Do not add one until Abdul supplies real work.
+The home page `#work` section shows three **concept demos** (fictional brands,
+clearly labelled "Concept"). They live under `/work/` — see "Concept demos" below.
+Do not present them as client work; add real client projects alongside them when they exist.
 
 Internal links use the `.html` file names so a local static server can resolve
 them. Canonical URLs, Open Graph URLs, structured data, and `sitemap.xml` use
@@ -249,10 +251,57 @@ Still static, still no build step. Preview: https://redesign-bold.new-ck7.pages.
 - If WebGL is unavailable, the CSS `.fx-orb` (a morphing blob and bouncing ball drawn in CSS) stays as a fallback.
 - The rotating "Free quote on WhatsApp" sticker in the home hero (`.fx-spin-badge`) links to WhatsApp; hidden below 1024px.
 - Light only in this design (the theme toggle is hidden).
-- `#work` on the home page is **placeholder only** and is **hidden for launch**. The section is still in `index.html` with a `hidden` attribute (`<section id="work" ... hidden>`), and the "Work" nav links (desktop and mobile menus on every page) are wrapped in `<!-- Work link hidden until real projects exist: ... -->` comments. To restore it: replace the three `.work-card` blocks with real projects (`data-placeholder="portfolio-1/2/3"` marks them), remove `hidden` from the section, and uncomment the two Work links in each HTML file (`grep -n "Work link hidden" *.html`).
+- `#work` on the home page is **live** and shows the three concept demos (see "Concept demos" below). The section's `hidden` attribute was removed and the "Work" nav links (desktop and mobile menus on every page) were restored. The old placeholder card styles (`.ph`, `.ph-tag`) are still in `fx.css` if needed later.
 - Mobile (<640px): the home hero is tightened and the WhatsApp float is a 48px sticker 1rem from the corner, so it does not cover the hero CTAs on a 390×844 first screen.
 - `#care` lists the monthly care plans ($99/mo for 2 edit hours, $149/mo for 4 edit hours).
 - Fonts: Bricolage Grotesque and DM Sans from Google Fonts (`display=swap`).
+
+---
+
+## Concept demos (`/work/`)
+
+Three self-contained concept websites, one per common outreach industry. Each
+doubles as a cold-outreach pitch piece ("a conceptual design we made for
+businesses like yours"). Brands, people, prices and reviews are fictional.
+
+| URL | Industry | Fictional brand | Highlights |
+|-----|----------|-----------------|------------|
+| `/work/clinic/` | Dental / medical clinic | Lumen Dental Studio | Online booking widget (day + time chips), treatments, new-patient offer, team, reviews marquee, FAQ, hours |
+| `/work/restaurant/` | Restaurant / cafe | Ember & Vine | Hero reservation bar, ember particles + parallax, tabbed menu with prices, signature dishes, gallery, private dining, reservation card |
+| `/work/home-services/` | Plumbing / HVAC / electrical | Northpoint Home Services | 24/7 emergency bar, two-step instant-quote + booking windows, flat-rate pricing and membership, service-area map, review breakdown, guarantee |
+
+Each folder has its own `index.html`, `style.css` and `app.js`. No build step,
+no framework, no shared dependency. Images are Unsplash CDN URLs (free licence);
+fonts are Google Fonts. Card thumbnails are in `/work/thumbs/`.
+
+Rules every demo follows:
+
+- A fixed **"Concept project by Design by Baxit"** badge and a footer line linking to designbybaxit.com.
+- `<meta name="robots" content="noindex, follow">` so the fictional businesses do not show up in search.
+- **Forms never submit.** Booking / reservation / quote forms call `preventDefault()` and open a
+  modal that says it's a demo and links to Abdul's WhatsApp and designbybaxit.com.
+- Scroll reveals are scoped to a `.js` class; everything is visible without JS and
+  all motion is disabled under `prefers-reduced-motion`.
+
+### Re-skinning a demo for a specific prospect
+
+Copy the folder (e.g. `work/clinic/` → `work/smile-dental-austin/`) so the original stays intact, then:
+
+1. **Name.** Find-and-replace the brand in that folder's `index.html`:
+   - clinic: `Lumen Dental Studio`, then the short form `<b>Lumen</b>` (header and footer)
+   - restaurant: `Ember &amp; Vine` / `Ember <i>&amp;</i> Vine` (the header and footer logo text), plus `E&amp;V` in the rotating seal
+   - home services: `Northpoint Home Services`, then `NORTHPOINT` (logo text) and `Northpoint` (Club, guarantee)
+   Example: `sed -i 's/Lumen Dental Studio/Smile Dental Austin/g; s/<b>Lumen<\/b>/<b>Smile<\/b>/g' work/smile-dental-austin/index.html`
+2. **Colours.** Edit the tokens at the top of that folder's `style.css` (`:root`). Each file
+   has 2–3 brand tokens (clinic `--ink` / `--mint`; restaurant `--ember` / `--gold` / `--bg`;
+   home services `--navy` / `--yellow`). Everything else derives from them.
+3. **Logo.** Replace the inline `<svg class="logo-mark">` in the header and footer
+   (paste the prospect's SVG, or an `<img class="logo-mark" src="logo.svg" alt="">`),
+   and the data-URI favicon in `<head>`.
+4. **Details.** Phone (`tel:` links), address, hours, town names, prices and services are
+   plain text in `index.html`. Swap photos by changing the Unsplash URLs (keep `w=`/`q=` params).
+5. **Keep the concept badge and footer line** when sharing as a pitch, and keep forms non-submitting.
+6. Retake the thumbnail if the demo is shown on the home page (`/work/thumbs/<slug>.jpg`, 960×600).
 
 ---
 

@@ -61,3 +61,4 @@ There is no portfolio page. Do not invent client names, counts, logos, testimoni
 - The quote is free. There is no card and no obligation to proceed.
 - Do not describe Design by Baxit as a growth-marketing agency or a local Pakistani studio. Clients are international, mainly in the US.
 - Do not promise a specific project turnaround. Do not invent portfolio work.
+- The home page Work section shows three concept websites with fictional brands (a dental clinic, a restaurant and a home-services company) at /work/clinic/, /work/restaurant/ and /work/home-services/. They are design concepts, not client projects.
