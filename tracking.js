@@ -1,7 +1,7 @@
 /* Design by Baxit — ad tracking. Paste IDs below; leave empty to load nothing.
    META_PIXEL_ID: Events Manager > Data sources > your Pixel ID (digits only)
    GA4_ID:        GA4 Admin > Data streams > Measurement ID (G-XXXXXXXXXX) */
-var META_PIXEL_ID = '';
+var META_PIXEL_ID = '1767297954545010';
 var GA4_ID = '';
 
 (function () {
