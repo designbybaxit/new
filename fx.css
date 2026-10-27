@@ -309,6 +309,7 @@ main .reveal > p.text-sm.font-medium.text-muted-foreground + h2 { margin-top: 1.
 .work-thumb::before { content: ""; position: absolute; inset: -20%;
   background-image: repeating-linear-gradient(45deg, rgb(23 20 31 / 0.12) 0 12px, transparent 12px 24px); transition: transform 1s var(--spring); }
 .work-card:hover .work-thumb::before { transform: translateX(34px) rotate(4deg); }
+.work-thumb:has(img)::before { display: none; }
 .work-thumb .ph { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; font: 800 12px/1.4 var(--font-display); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
 .work-thumb .ph > div { text-align: center; background: #fff; border: var(--bw) solid var(--ink); border-radius: 16px; padding: .7rem 1.1rem; box-shadow: 4px 4px 0 var(--ink); transform: rotate(-3deg); transition: transform 500ms var(--spring); }
 .work-card:hover .work-thumb .ph > div { transform: rotate(3deg) scale(1.06); }
