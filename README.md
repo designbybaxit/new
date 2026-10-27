@@ -249,7 +249,8 @@ Still static, still no build step. Preview: https://redesign-bold.new-ck7.pages.
 - If WebGL is unavailable, the CSS `.fx-orb` (a morphing blob and bouncing ball drawn in CSS) stays as a fallback.
 - The rotating "Free quote on WhatsApp" sticker in the home hero (`.fx-spin-badge`) links to WhatsApp; hidden below 1024px.
 - Light only in this design (the theme toggle is hidden).
-- `#work` on the home page is **placeholder only** — replace the three `.work-card` blocks with real projects (`data-placeholder` marks them).
+- `#work` on the home page is **placeholder only** and is **hidden for launch**. The section is still in `index.html` with a `hidden` attribute (`<section id="work" ... hidden>`), and the "Work" nav links (desktop and mobile menus on every page) are wrapped in `<!-- Work link hidden until real projects exist: ... -->` comments. To restore it: replace the three `.work-card` blocks with real projects (`data-placeholder="portfolio-1/2/3"` marks them), remove `hidden` from the section, and uncomment the two Work links in each HTML file (`grep -n "Work link hidden" *.html`).
+- Mobile (<640px): the home hero is tightened and the WhatsApp float is a 48px sticker 1rem from the corner, so it does not cover the hero CTAs on a 390×844 first screen.
 - `#care` lists the monthly care plans ($99/mo for 2 edit hours, $149/mo for 4 edit hours).
 - Fonts: Bricolage Grotesque and DM Sans from Google Fonts (`display=swap`).
 

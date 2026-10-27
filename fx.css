@@ -303,6 +303,7 @@ section.border-y .text-muted-foreground { color: rgb(23 20 31 / 0.78) !important
 main .reveal > p.text-sm.font-medium.text-muted-foreground + h2 { margin-top: 1.1rem; }
 
 /* Portfolio placeholders: bold pattern thumbs, clearly marked */
+#work[hidden] { display: none !important; }
 .work-card { padding: 0; overflow: hidden; text-align: left; }
 .work-thumb { position: relative; aspect-ratio: 16/10; overflow: hidden; border-bottom: var(--bw) solid var(--ink); background: var(--c); }
 .work-thumb::before { content: ""; position: absolute; inset: -20%;
@@ -371,7 +372,12 @@ main img.rounded-2xl, main img.rounded-3xl, main .rounded-2xl > img { border: va
   :root { --bw: 2px; }
   .fx-section { padding: 4.75rem 0; }
   .fx-card { box-shadow: 4px 4px 0 var(--ink); }
-  .hero-space { height: 205px; }
+  .hero-space { height: 160px; }
+  /* Keep the floating WhatsApp sticker clear of the hero CTAs on the first screen */
+  .hero-home .hero-inner { padding-block: .25rem 6rem; }
+  .hero-home h1 { margin-top: 1.25rem !important; }
+  .hero-home .hero-cta { margin-top: 1.75rem !important; }
+  .wa-float { right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); width: 3rem !important; height: 3rem !important; }
   section.border-y > .container { grid-template-columns: 1fr 1fr; }
   .fx-stat-num { font-size: 2.2rem !important; }
 }
