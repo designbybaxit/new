@@ -1,12 +1,16 @@
 /* ============================================================
-   Design by Baxit — "Neon 3D" behaviour layer (redesign-3d)
-   Card tilt + glow, custom cursor, scroll progress, counters,
-   staggered reveals, and lazy loading of the Three.js hero.
-   Works alongside theme.js (which still owns menu, reveal, forms).
+   Design by Baxit — "Bold Colour" behaviour layer (redesign-bold)
+   Gives every card its own colour, springy staggered reveals,
+   rainbow scroll progress, bouncy count-up stats, a playful card
+   lean toward the pointer, and lazy loading of the Three.js hero.
+   Works alongside theme.js (menu, reveal, forms).
    ============================================================ */
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var COLOURS = ['#ffd23f', '#ff4f8b', '#1fc98a', '#9fb0ff', '#ff7a2f', '#b89bff'];
+
+  document.documentElement.classList.add('light');
 
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
@@ -14,16 +18,10 @@
   }
 
   ready(function () {
-    /* Ambient aurora + progress bar */
-    var aurora = document.createElement('div');
-    aurora.className = 'fx-aurora'; aurora.setAttribute('aria-hidden', 'true');
-    aurora.innerHTML = '<i></i><i></i><i></i>';
-    document.body.prepend(aurora);
     var bar = document.createElement('div');
     bar.className = 'fx-progress'; bar.setAttribute('aria-hidden', 'true');
     document.body.appendChild(bar);
 
-    /* Cards become glass + tilt targets */
     var cards = document.querySelectorAll('.card-center, .package-card, main article.rounded-2xl, .fx-box, main .rounded-2xl.border.bg-card\\/50');
     cards.forEach(function (c) {
       c.classList.add('fx-card');
@@ -31,18 +29,18 @@
         if (e.propertyName === 'opacity' && c.classList.contains('is-visible')) c.classList.add('settled');
       });
     });
-    document.querySelectorAll('.package-card.is-featured').forEach(function (c) {
-      var ring = document.createElement('span'); ring.className = 'fx-ring'; ring.setAttribute('aria-hidden', 'true');
-      c.prepend(ring);
-    });
 
-    /* Stagger reveals inside grids */
+    /* Colour + stagger per grid */
+    var offset = 0;
     document.querySelectorAll('.grid, .fx-grid').forEach(function (g) {
-      var kids = g.querySelectorAll(':scope > .reveal');
-      kids.forEach(function (k, i) { k.style.setProperty('--d', (i * 0.09).toFixed(2) + 's'); k.style.transitionDelay = ''; });
+      var kids = g.querySelectorAll(':scope > .fx-card, :scope > .reveal');
+      kids.forEach(function (k, i) {
+        k.style.setProperty('--c', COLOURS[(i + offset) % COLOURS.length]);
+        if (k.classList.contains('reveal')) { k.style.setProperty('--d', (i * 0.09).toFixed(2) + 's'); k.style.transitionDelay = ''; }
+      });
+      if (kids.length) offset += 1;
     });
 
-    /* Scroll progress */
     var queued = false;
     function onScroll() {
       queued = false;
@@ -52,7 +50,7 @@
     addEventListener('scroll', function () { if (!queued) { queued = true; requestAnimationFrame(onScroll); } }, { passive: true });
     onScroll();
 
-    /* Count-up numbers */
+    /* Count-up with a little overshoot */
     var counters = document.querySelectorAll('[data-count]');
     if (counters.length && 'IntersectionObserver' in window) {
       var co = new IntersectionObserver(function (es) {
@@ -63,9 +61,10 @@
           if (reduced) { el.textContent = end + suffix; return; }
           var t0 = performance.now();
           (function tick(t) {
-            var p = Math.min(1, (t - t0) / 1400), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
-            el.textContent = v + suffix;
-            if (p < 1) requestAnimationFrame(tick);
+            var p = Math.min(1, (t - t0) / 1200);
+            var c1 = 1.70158, c3 = c1 + 1, ease = 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2);
+            el.textContent = Math.max(0, Math.round(end * ease)) + suffix;
+            if (p < 1) requestAnimationFrame(tick); else el.textContent = end + suffix;
           })(t0);
         });
       }, { threshold: 0.6 });
@@ -73,58 +72,13 @@
     }
 
     if (!reduced && finePointer) {
-      /* Tilt + glow tracking */
       cards.forEach(function (card) {
-        var rect = null;
-        card.addEventListener('pointerenter', function () { rect = card.getBoundingClientRect(); card.classList.add('is-hot'); });
-        card.addEventListener('pointermove', function (e) {
-          if (!rect) rect = card.getBoundingClientRect();
-          var x = (e.clientX - rect.left) / rect.width, y = (e.clientY - rect.top) / rect.height;
-          card.style.setProperty('--gx', (x * 100).toFixed(1) + '%');
-          card.style.setProperty('--gy', (y * 100).toFixed(1) + '%');
-          card.style.setProperty('--ry', ((x - 0.5) * 9).toFixed(2) + 'deg');
-          card.style.setProperty('--rx', ((0.5 - y) * 7).toFixed(2) + 'deg');
-        });
-        card.addEventListener('pointerleave', function () {
-          rect = null; card.classList.remove('is-hot');
-          card.style.setProperty('--rx', '0deg'); card.style.setProperty('--ry', '0deg');
-        });
+        card.addEventListener('pointerenter', function () { card.classList.add('is-hot'); });
+        card.addEventListener('pointerleave', function () { card.classList.remove('is-hot'); });
       });
-
-      /* Magnetic primary buttons */
-      document.querySelectorAll('main a.bg-primary').forEach(function (b) {
-        b.addEventListener('pointermove', function (e) {
-          var r = b.getBoundingClientRect();
-          b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * 0.15).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * 0.25 - 2).toFixed(1) + 'px)';
-        });
-        b.addEventListener('pointerleave', function () { b.style.transform = ''; });
-      });
-
-      /* Custom cursor */
-      var dot = document.createElement('div'), ring = document.createElement('div');
-      dot.className = 'fx-cursor'; ring.className = 'fx-cursor-ring';
-      dot.setAttribute('aria-hidden', 'true'); ring.setAttribute('aria-hidden', 'true');
-      document.body.append(dot, ring);
-      var mx = -100, my = -100, rx = -100, ry = -100, running = false;
-      function loop() {
-        rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
-        dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
-        ring.style.transform = 'translate(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px)';
-        if (Math.abs(mx - rx) + Math.abs(my - ry) > 0.2) requestAnimationFrame(loop); else running = false;
-      }
-      addEventListener('pointermove', function (e) {
-        if (e.pointerType !== 'mouse') return;
-        mx = e.clientX; my = e.clientY;
-        document.documentElement.classList.add('fx-cursor-on');
-        var t = e.target.closest && e.target.closest('a, button, select, input, textarea, label');
-        ring.classList.toggle('is-link', !!t);
-        if (!running) { running = true; requestAnimationFrame(loop); }
-      }, { passive: true });
-      document.addEventListener('pointerleave', function () { document.documentElement.classList.remove('fx-cursor-on'); });
     }
 
-    /* Three.js hero: only if there's a mount, WebGL works, and the
-       visitor hasn't asked to save data. Loaded as a module on demand. */
+    /* Three.js hero: only with a mount, working WebGL, and no Save-Data. */
     var mount = document.querySelector('[data-hero3d]');
     if (!mount) return;
     var conn = navigator.connection || {};

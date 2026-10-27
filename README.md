@@ -234,21 +234,24 @@ Add-ons start from $99. The rest are about 0.35 of the previous add-on prices, r
 
 ---
 
-## Redesign: "Neon 3D" (branch `redesign-3d`, preview only)
+## Redesign: "Bold Colour" (branch `redesign-bold`, preview only)
 
-A dark, techy layer on top of the existing pages. Still static, still no build step.
+One of three alternative styles (the others are `redesign-3d`, dark neon, and
+`redesign-light`, clean and light). Same pages, same copy, same prices.
+Still static, still no build step. Preview: https://redesign-bold.new-ck7.pages.dev
 
 | File | Purpose |
 |------|---------|
-| `fx.css` | Neon palette (overrides the tokens), glass cards, glow borders, animated gradient buttons, reveal blur-in, marquee, care plans, portfolio placeholders, custom cursor, reduced-motion rules |
-| `fx.js` | Aurora background, scroll progress bar, card tilt + pointer-tracked glow, magnetic buttons, custom cursor, count-up stats, lazy-loads `hero3d.js` only when WebGL is available and Save-Data is off |
-| `hero3d.js` | Three.js (r160 from jsDelivr, ES module) hero: noise-morphing neon core with fresnel shader, wireframe shell, orbit rings, particle field. Follows the pointer, reacts to scroll, pauses off-screen / hidden tab, one still frame under `prefers-reduced-motion` |
+| `fx.css` | Cream + ink base with a bright multi-colour palette (overrides the tokens), chunky Bricolage Grotesque type, sticker-style accent words, cards and buttons with thick ink borders and hard offset shadows, springy reveals, hover wobbles/jelly icons, tilted marquee band, colour stat tiles, care plans, portfolio placeholders, reduced-motion rules |
+| `fx.js` | Gives each card its own colour, rainbow scroll progress, staggered springy reveals, count-up stats with overshoot, lazy-loads `hero3d.js` only when WebGL is available and Save-Data is off |
+| `hero3d.js` | Three.js (r160 from jsDelivr, ES module) hero: glossy candy blobs that wobble (GPU vertex displacement), donut, star, squiggle and a bouncing ball. Spring toward the pointer with overshoot, hovered pieces jiggle and swell, click/tap the hero to make them all bounce. Pauses off-screen / hidden tab, one still frame under `prefers-reduced-motion` |
 
-- If WebGL is unavailable the CSS `.fx-orb` stays as a fallback.
-- The light theme toggle is hidden in this design (dark only).
+- If WebGL is unavailable, the CSS `.fx-orb` (a morphing blob and bouncing ball drawn in CSS) stays as a fallback.
+- The rotating "Free quote on WhatsApp" sticker in the home hero (`.fx-spin-badge`) links to WhatsApp; hidden below 1024px.
+- Light only in this design (the theme toggle is hidden).
 - `#work` on the home page is **placeholder only** — replace the three `.work-card` blocks with real projects (`data-placeholder` marks them).
 - `#care` lists the monthly care plans ($99/mo for 2 edit hours, $149/mo for 4 edit hours).
-- Fonts: Inter, Space Grotesk, JetBrains Mono from Google Fonts (`display=swap`).
+- Fonts: Bricolage Grotesque and DM Sans from Google Fonts (`display=swap`).
 
 ---
 
