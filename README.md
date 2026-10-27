@@ -330,7 +330,7 @@ Paid-ads funnel added on branch `ads-ready`:
 | Path | What it is |
 |------|------------|
 | `/mockup/<industry>/` | Landing pages (home-services, salon, restaurant, clinic, real-estate, law-firm), generated from one template. Offer: free website mockup. Each has its own `og.jpg` (1200x630) |
-| `/functions/api/lead.js` | Cloudflare Pages Function behind the lead form (`POST /api/lead`). Validates, honeypot (`company_url`), sends a notification + auto-reply via Resend, falls back to FormSubmit if `RESEND_API_KEY` is missing or Resend fails. Redirects to `/thanks/` |
+| `/functions/api/lead.js` | Cloudflare Pages Function behind the lead form (`POST /api/lead`). Validates, honeypot (`company_url`), sends a notification + auto-reply via Resend, falls back to FormSubmit if `RESEND_API_KEY` is missing or Resend fails (server-side first; FormSubmit rate-limits Cloudflare IPs with HTTP 429, so it then relays the lead through the visitor's browser to FormSubmit, which redirects to `/thanks/`). Redirects to `/thanks/` |
 | `/thanks/` | Confirmation page; `tracking.js` fires Meta `Lead` and GA4 `generate_lead` here with the industry |
 | `/tracking.js` | Loads Meta Pixel and GA4 only when IDs are set at the top of the file |
 | `/privacy/`, `/terms/` | Plain-English policies, linked in every footer and under every form |

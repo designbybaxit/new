@@ -49,8 +49,10 @@ export async function onRequestPost({ request, env }) {
   }
   if (!sent) {
     // Last resort: the lead stays readable in Cloudflare Pages > Functions > Real-time logs.
-    console.error('LEAD_NOT_DELIVERED', fs, JSON.stringify(lead));
-    return back(origin, `${retry}?error=2&d=${encodeURIComponent(fs).slice(0, 40)}#get-mockup`);
+    // FormSubmit often rate-limits Cloudflare's shared egress IPs (HTTP 429), so hand the
+    // lead to the visitor's browser and let it post to FormSubmit directly instead.
+    console.error('LEAD_SERVER_DELIVERY_FAILED', fs, JSON.stringify(lead));
+    return browserRelay(lead, origin);
   }
   return back(origin, `/thanks/?industry=${industry}`);
 }
@@ -119,4 +121,16 @@ async function sendFormSubmit(lead, origin) {
   // activation notice (an email with an "Activate Form" link) and does NOT deliver the lead.
   if (String(j.success) === 'true') return 'ok';
   return /activat/i.test(j.message || '') ? 'needs-activation' : 'rejected';
+}
+
+function browserRelay(lead, origin) {
+  const fields = { ...Object.fromEntries(rows(lead)),
+    _subject: `New mockup lead: ${lead.business} (${lead.industry})`, _replyto: lead.email,
+    _template: 'table', _captcha: 'false', _next: `${origin}/thanks/?industry=${lead.industry}` };
+  const inputs = Object.entries(fields).map(([k, v]) => `<input type="hidden" name="${esc(k)}" value="${esc(String(v))}">`).join('');
+  const page = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Sending…</title></head>
+<body style="font-family:system-ui,sans-serif;background:#fff6e9;color:#17141f;padding:40px;text-align:center">
+<form id="r" method="POST" action="https://formsubmit.co/${FORMSUBMIT_INBOX}">${inputs}<p>Sending your request…</p><noscript><button type="submit">Tap to finish sending</button></noscript></form>
+<script>document.getElementById('r').submit()</script></body></html>`;
+  return new Response(page, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
 }
