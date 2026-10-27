@@ -43,10 +43,15 @@ export async function onRequestPost({ request, env }) {
   if (env.RESEND_API_KEY) {
     try { sent = await sendResend(env, lead); } catch { sent = false; }
   }
+  let fs = '';
   if (!sent) {
-    try { sent = await sendFormSubmit(lead, origin); } catch { sent = false; }
+    try { fs = await sendFormSubmit(lead, origin); sent = fs === 'ok'; } catch (e) { fs = 'exception'; }
   }
-  if (!sent) return back(origin, `${retry}?error=2#get-mockup`);
+  if (!sent) {
+    // Last resort: the lead stays readable in Cloudflare Pages > Functions > Real-time logs.
+    console.error('LEAD_NOT_DELIVERED', fs, JSON.stringify(lead));
+    return back(origin, `${retry}?error=2&d=${encodeURIComponent(fs).slice(0, 40)}#get-mockup`);
+  }
   return back(origin, `/thanks/?industry=${industry}`);
 }
 
@@ -108,8 +113,10 @@ async function sendFormSubmit(lead, origin) {
     headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: origin, Referer: `${origin}/` },
     body: JSON.stringify(payload),
   });
-  if (!r.ok) return false;
+  if (!r.ok) return `http-${r.status}`;
   const j = await r.json().catch(() => ({}));
-  // FormSubmit answers success:"true"/"false"; first-time use returns an activation notice.
-  return String(j.success) === 'true' || /activat/i.test(j.message || '');
+  // FormSubmit answers success:"true"/"false". First use from a new domain returns an
+  // activation notice (an email with an "Activate Form" link) and does NOT deliver the lead.
+  if (String(j.success) === 'true') return 'ok';
+  return /activat/i.test(j.message || '') ? 'needs-activation' : 'rejected';
 }
