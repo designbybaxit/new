@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harbor &amp; Oak Realty — Concept real estate website by Design by Baxit</title>
+<meta name="description" content="Concept website for a boutique real estate agency, designed by Design by Baxit. Fictional brand, not a real business.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://designbybaxit.com/work/real-estate/">
+<meta property="og:title" content="Real estate agency website — concept by Design by Baxit">
+<meta property="og:description" content="Property search, listings, home valuation and a mortgage calculator for a real estate agency. A Design by Baxit concept project.">
+<meta property="og:image" content="https://designbybaxit.com/work/thumbs/real-estate.jpg">
+<meta name="theme-color" content="#1d3b2f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231d3b2f'/%3E%3Cpath d='M7 25V14l9-7 9 7v11' fill='none' stroke='%23c9a46a' stroke-width='2.4'/%3E%3Cpath d='M13 25v-6h6v6' fill='none' stroke='%23c9a46a' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<!--
+  BRAND SWAP: the agency name is "Harbor &amp; Oak Realty" (logo text: Harbor <em>&amp;</em> Oak).
+  Colours live in :root in style.css. The logo is the inline SVG with class "logo-mark".
+  Listings are plain <article class="listing"> blocks; data-tags drives the filter chips.
+  See /README.md, "Concept demos", for the full re-skin checklist.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" id="top">
+  <div class="wrap header-in">
+    <a href="#top" class="brand" aria-label="Harbor and Oak Realty home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="var(--forest)"/><path d="M9 31V17l11-8.5L31 17v14" fill="none" stroke="var(--brass)" stroke-width="2.6"/><path d="M16 31v-7.5h8V31" fill="none" stroke="var(--brass)" stroke-width="2.6"/></svg>
+      <span>Harbor <em>&amp;</em> Oak<small>Realty</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#listings">Buy</a><a href="#listings">Rent</a><a href="#sell">Sell</a><a href="#calc">Mortgage</a><a href="#agents">Agents</a>
+    </nav>
+    <div class="header-cta">
+      <a class="hide-md tel" href="tel:+15550103030">(555) 010-3030</a>
+      <a class="btn btn-forest" href="#sell">Free valuation</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile"><a href="#listings">Buy</a><a href="#listings">Rent</a><a href="#sell">Sell</a><a href="#calc">Mortgage</a><a href="#agents">Agents</a></nav>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-frame">
+    <div class="hero-img" data-parallax="0.18"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=72&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=68&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=72&auto=format&fit=crop 1800w" sizes="100vw" alt="Modern family home with large windows at dusk" width="1800" height="1100" fetchpriority="high"></div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="eyebrow light reveal">Boutique real estate · Springfield &amp; the coast</p>
+      <h1 class="reveal">Find the place<br>you'll <em>call home.</em></h1>
+    </div>
+  </div>
+  <div class="wrap">
+    <form class="search reveal" data-search aria-label="Search homes">
+      <div class="s-tabs" role="group" aria-label="Search type">
+        <button type="button" class="is-on" data-mode="sale">Buy</button>
+        <button type="button" data-mode="rent">Rent</button>
+        <button type="button" data-mode="sell">Sell</button>
+      </div>
+      <div class="s-fields">
+        <label><span>Location</span><input placeholder="City, neighbourhood or ZIP" autocomplete="off"></label>
+        <label><span>Property type</span><select><option>Any type</option><option>House</option><option>Townhome</option><option>Condo</option></select></label>
+        <label><span>Price</span><select><option>Any price</option><option>Up to $750k</option><option>$750k – $1.5M</option><option>$1.5M+</option></select></label>
+        <button class="btn btn-brass" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="stats" aria-label="Agency results">
+  <div class="wrap stats-in">
+    <div class="reveal"><b data-count="1200" data-suffix="+">0</b><span>homes sold</span></div>
+    <div class="reveal"><b data-count="102" data-suffix="%">0</b><span>average sale-to-list price</span></div>
+    <div class="reveal"><b data-count="18">0</b><span>median days on market</span></div>
+    <div class="reveal"><b data-count="4.9" data-dec="1">0</b><span>client rating</span></div>
+  </div>
+</section>
+
+<section id="listings" class="section">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">Featured properties</p><h2>Homes we <em>love</em> right now</h2></div>
+      <div class="chips" role="group" aria-label="Filter listings">
+        <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="sale" aria-pressed="false">For sale</button>
+        <button type="button" class="chip" data-filter="rent" aria-pressed="false">For rent</button>
+        <button type="button" class="chip" data-filter="new" aria-pressed="false">New</button>
+        <button type="button" class="chip" data-filter="luxury" aria-pressed="false">Luxury</button>
+      </div>
+    </div>
+    <div class="listings">
+      <article class="listing reveal" data-tags="sale luxury"><div class="l-img"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=70&auto=format&fit=crop" alt="Modern white home with a pool" loading="lazy" width="800" height="560"><span class="l-flag">Luxury</span><button class="fav" type="button" aria-label="Save this home" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button></div><div class="l-body"><p class="l-price">$2,450,000</p><h3>The Glass House</h3><p class="l-addr">14 Cliffside Drive, Bayview</p><ul class="l-specs"><li><b>5</b> beds</li><li><b>4.5</b> baths</li><li><b>4,820</b> sq ft</li></ul></div></article>
+      <article class="listing reveal" data-tags="sale new"><div class="l-img"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=70&auto=format&fit=crop" alt="Contemporary villa beside a pool" loading="lazy" width="800" height="560"><span class="l-flag">New listing</span><button class="fav" type="button" aria-label="Save this home" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button></div><div class="l-body"><p class="l-price">$1,180,000</p><h3>Poolside Contemporary</h3><p class="l-addr">208 Palm Court, Westshore</p><ul class="l-specs"><li><b>4</b> beds</li><li><b>3</b> baths</li><li><b>3,150</b> sq ft</li></ul></div></article>
+      <article class="listing reveal" data-tags="rent"><div class="l-img"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=70&auto=format&fit=crop" alt="Modern two-storey house with timber cladding" loading="lazy" width="800" height="560"><span class="l-flag">For rent</span><button class="fav" type="button" aria-label="Save this home" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button></div><div class="l-body"><p class="l-price">$4,200<small>/mo</small></p><h3>Cedar Townhome</h3><p class="l-addr">9 Larch Lane, Oak Ridge</p><ul class="l-specs"><li><b>3</b> beds</li><li><b>2.5</b> baths</li><li><b>2,040</b> sq ft</li></ul></div></article>
+      <article class="listing reveal" data-tags="sale"><div class="l-img"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=70&auto=format&fit=crop" alt="Craftsman house lit up at dusk" loading="lazy" width="800" height="560"><span class="l-flag">Open house Sat</span><button class="fav" type="button" aria-label="Save this home" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button></div><div class="l-body"><p class="l-price">$865,000</p><h3>Lakeside Craftsman</h3><p class="l-addr">51 Heron Way, Lakeview</p><ul class="l-specs"><li><b>4</b> beds</li><li><b>3</b> baths</li><li><b>2,760</b> sq ft</li></ul></div></article>
+      <article class="listing reveal" data-tags="sale new luxury"><div class="l-img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=70&auto=format&fit=crop" alt="Modern home with an infinity pool" loading="lazy" width="800" height="560"><span class="l-flag">New listing</span><button class="fav" type="button" aria-label="Save this home" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button></div><div class="l-body"><p class="l-price">$3,100,000</p><h3>Hillcrest Modern</h3><p class="l-addr">3 Summit Ridge, Bayview</p><ul class="l-specs"><li><b>6</b> beds</li><li><b>5</b> baths</li><li><b>5,400</b> sq ft</li></ul></div></article>
+      <article class="listing reveal" data-tags="rent"><div class="l-img"><img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800&q=70&auto=format&fit=crop" alt="White cottage with a porch and trees" loading="lazy" width="800" height="560"><span class="l-flag">For rent</span><button class="fav" type="button" aria-label="Save this home" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button></div><div class="l-body"><p class="l-price">$2,650<small>/mo</small></p><h3>Porch Cottage</h3><p class="l-addr">120 Maple Street, Springfield</p><ul class="l-specs"><li><b>2</b> beds</li><li><b>1</b> baths</li><li><b>1,180</b> sq ft</li></ul></div></article>
+    </div>
+    <p class="note reveal">Listings, prices and addresses are illustrative. <a href="#agents">Talk to an agent</a> about homes that aren't online yet.</p>
+  </div>
+</section>
+
+<section id="sell" class="section sell">
+  <div class="wrap sell-grid">
+    <div class="sell-media reveal"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1000&q=70&auto=format&fit=crop" alt="Bright, styled living room ready for photos" loading="lazy" width="1000" height="800"><div class="sold"><b>SOLD</b><span>in 9 days · 6 offers</span></div></div>
+    <div class="sell-copy">
+      <p class="eyebrow light reveal">Thinking of selling?</p>
+      <h2 class="reveal">What's your home <em>worth today?</em></h2>
+      <p class="reveal">Get a free, no-obligation valuation from a local agent within 24 hours, backed by recent sales on your street. Not an algorithm's guess.</p>
+      <form class="val reveal" data-demo-form aria-label="Home valuation">
+        <input placeholder="Enter your home address" autocomplete="off" aria-label="Home address">
+        <button class="btn btn-brass" type="submit">Get my valuation</button>
+      </form>
+      <ul class="sell-points reveal"><li>Professional photos &amp; 3D tour</li><li>Staging advice included</li><li>Weekly progress reports</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="calc" class="section">
+  <div class="wrap calc-grid">
+    <div class="reveal">
+      <p class="eyebrow">Mortgage calculator</p>
+      <h2>Plan your <em>monthly payment</em></h2>
+      <p class="muted">Move the sliders to see an estimate. Your agent can connect you with trusted local lenders for a real pre-approval.</p>
+    </div>
+    <div class="calc reveal" data-calc>
+      <label><span>Home price <output data-o="price"></output></span><input type="range" min="200000" max="3000000" step="10000" value="865000" data-i="price"></label>
+      <label><span>Down payment <output data-o="down"></output></span><input type="range" min="3" max="50" step="1" value="20" data-i="down"></label>
+      <label><span>Interest rate <output data-o="rate"></output></span><input type="range" min="3" max="9" step="0.05" value="6.25" data-i="rate"></label>
+      <div class="terms" role="group" aria-label="Loan term"><button type="button" data-term="15">15 years</button><button type="button" data-term="30" class="is-on">30 years</button></div>
+      <div class="result"><span>Estimated principal &amp; interest</span><b data-o="monthly">$0</b><small>per month · <span data-o="loan"></span> loan · illustrative only</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section areas">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">Neighbourhood guides</p><h2>Know the area <em>before</em> you move</h2></div></div>
+    <div class="area-rail">
+      <a class="area reveal" href="#listings"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="900"><div><h3>Bayview</h3><p>Coastal homes · Top schools · Median $1.4M</p></div></a>
+      <a class="area reveal" href="#listings"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="900"><div><h3>Oak Ridge</h3><p>New builds · Parks · Median $780k</p></div></a>
+      <a class="area reveal" href="#listings"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy" width="700" height="900"><div><h3>Westshore</h3><p>Walkable · Cafés · Median $950k</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="agents" class="section agents-sec">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">Our agents</p><h2>Local experts on <em>your side</em></h2></div></div>
+    <div class="agents">
+      <figure class="agent reveal"><div class="a-img"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of a smiling agent" loading="lazy" width="600" height="700"></div><figcaption><b>Claire Bennett</b><span>Founder · Luxury &amp; coastal</span><a href="#sell">Contact Claire →</a></figcaption></figure>
+      <figure class="agent reveal"><div class="a-img"><img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of an agent in a blazer" loading="lazy" width="600" height="700"></div><figcaption><b>Marcus Hale</b><span>First-time buyers · Relocation</span><a href="#sell">Contact Marcus →</a></figcaption></figure>
+      <figure class="agent reveal"><div class="a-img"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of an agent" loading="lazy" width="600" height="700"></div><figcaption><b>Daniel Ortiz</b><span>Rentals · Investment property</span><a href="#sell">Contact Daniel →</a></figcaption></figure>
+      <blockquote class="quote reveal"><span aria-hidden="true">“</span><p>Claire sold our house in nine days, over asking, and found us the next one before we'd even packed.</p><cite>The Morgans · Sold in Bayview · ★★★★★</cite></blockquote>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div><a href="#top" class="brand light"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="var(--brass)"/><path d="M9 31V17l11-8.5L31 17v14" fill="none" stroke="var(--forest)" stroke-width="2.6"/><path d="M16 31v-7.5h8V31" fill="none" stroke="var(--forest)" stroke-width="2.6"/></svg><span>Harbor <em>&amp;</em> Oak<small>Realty</small></span></a>
+    <p>40 Harbor Street, Springfield · (555) 010-3030 · Equal housing opportunity</p></div>
+    <p class="concept-line">Concept project by <a href="https://designbybaxit.com/" target="_blank" rel="noopener">Design by Baxit</a>. Harbor &amp; Oak Realty is a fictional agency; listings, people and figures are placeholders.</p>
+  </div>
+</footer>
+
+<a class="concept-badge" href="https://designbybaxit.com/#work" target="_blank" rel="noopener"><span>Concept</span> project by Design by Baxit ↗</a>
+
+<div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="dm-title" hidden>
+  <div class="dm-card">
+    <button class="dm-x" type="button" aria-label="Close">×</button>
+    <p class="eyebrow">Concept website</p>
+    <h3 id="dm-title">This form is a demo.</h3>
+    <p>Nothing was sent. Want a website like this for your agency, with live listings, lead capture and instant valuation requests? Design by Baxit builds it.</p>
+    <div class="dm-actions">
+      <a class="btn btn-forest" href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%20saw%20the%20real%20estate%20concept%20website%20and%20I%27d%20like%20one%20for%20my%20agency." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-line" href="https://designbybaxit.com/" target="_blank" rel="noopener">designbybaxit.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

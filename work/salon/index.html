@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velour Salon &amp; Spa — Concept website by Design by Baxit</title>
+<meta name="description" content="Concept website for a hair salon and day spa, designed by Design by Baxit. Fictional brand, not a real business.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://designbybaxit.com/work/salon/">
+<meta property="og:title" content="Salon &amp; spa website — concept by Design by Baxit">
+<meta property="og:description" content="Service menu with prices, a build-your-booking cart, stylists and online booking for a salon and spa. A Design by Baxit concept project.">
+<meta property="og:image" content="https://designbybaxit.com/work/thumbs/salon.jpg">
+<meta name="theme-color" content="#f5e9e4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%233b1d2c'/%3E%3Cpath d='M9 9l7 15 7-15' fill='none' stroke='%23e8b9a8' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<!--
+  BRAND SWAP: the salon name is "Velour" (full: "Velour Salon &amp; Spa").
+  Colours live in :root in style.css. The logo is the inline SVG with class "logo-mark".
+  Services and prices are the <li class="svc"> rows; data-price / data-mins drive the booking total.
+  See /README.md, "Concept demos", for the full re-skin checklist.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" id="top">
+  <div class="wrap header-in">
+    <a href="#top" class="brand" aria-label="Velour Salon and Spa home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M12 12l8 17 8-17" fill="none" stroke="var(--rose)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Velour<small>Salon &amp; Spa</small></span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="#menu">Services</a><a href="#team">Stylists</a><a href="#gallery">Gallery</a><a href="#gifts">Gift cards</a><a href="#visit">Visit</a></nav>
+    <div class="header-cta">
+      <a class="btn btn-plum" href="#book">Book now</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile"><a href="#menu">Services</a><a href="#team">Stylists</a><a href="#gallery">Gallery</a><a href="#gifts">Gift cards</a><a href="#visit">Visit</a></nav>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">Hair · Colour · Nails · Skin</p>
+      <h1 class="reveal">Leave feeling like <em>yourself,</em> only more so.</h1>
+      <p class="lead reveal">A calm, light-filled studio for cuts, colour, nails and skin. Unhurried appointments, honest advice, and products that are kind to your hair.</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-plum btn-lg" href="#menu">Build your appointment</a>
+        <a class="link-u" href="#team">Meet the stylists</a>
+      </div>
+      <div class="hero-proof reveal"><b>4.9</b><span class="stars">★★★★★</span><span>from 850+ guest reviews</span></div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="arch" data-float="1"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&q=72&auto=format&fit=crop" alt="Stylist blow-drying a client's hair in a bright salon" width="900" height="1150" fetchpriority="high"></div>
+      <div class="circle" data-float="-1.6"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=420&q=70&auto=format&fit=crop" alt="Client relaxing during a facial" width="420" height="420"></div>
+      <a class="spin" href="#book" aria-label="Book online, open 7 days">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text><textPath href="#cp">BOOK ONLINE · OPEN 7 DAYS · BOOK ONLINE · </textPath></text></svg>
+        <span aria-hidden="true">↘</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon-wrap" aria-hidden="true"><div class="ribbon"><div class="ribbon-track"><span>Balayage</span><i>✦</i><span>Glow facials</span><i>✦</i><span>Gel manicures</span><i>✦</i><span>Bridal styling</span><i>✦</i><span>Lash lifts</span><i>✦</i><span>Balayage</span><i>✦</i><span>Glow facials</span><i>✦</i><span>Gel manicures</span><i>✦</i><span>Bridal styling</span><i>✦</i><span>Lash lifts</span><i>✦</i></div></div></div>
+
+<section id="menu" class="section">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">Service menu</p><h2>Choose your <em>treatments</em></h2><p>Tap + to add services. We'll total the time and price, then you pick a stylist and a slot.</p></div>
+    <div class="menu-grid">
+      <div class="menu-main reveal">
+        <div class="tabs" role="tablist" aria-label="Service categories">
+          <button role="tab" id="t-hair" aria-controls="m-hair" aria-selected="true"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=120&h=120&q=60&auto=format&fit=crop" alt="" width="40" height="40">Hair</button>
+          <button role="tab" id="t-colour" aria-controls="m-colour" aria-selected="false" tabindex="-1"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=120&h=120&q=60&auto=format&fit=crop" alt="" width="40" height="40">Colour</button>
+          <button role="tab" id="t-nails" aria-controls="m-nails" aria-selected="false" tabindex="-1"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=120&h=120&q=60&auto=format&fit=crop" alt="" width="40" height="40">Nails</button>
+          <button role="tab" id="t-spa" aria-controls="m-spa" aria-selected="false" tabindex="-1"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=120&h=120&q=60&auto=format&fit=crop" alt="" width="40" height="40">Spa &amp; skin</button>
+        </div>
+<ul class="menu-list is-on" id="m-hair" role="tabpanel" aria-labelledby="t-hair"><li class="svc"><div><h4>Signature cut &amp; style</h4><p>Consultation, wash, precision cut, blow-dry</p></div><span class="dur">60 min</span><b class="price">$85</b><button type="button" class="add" data-name="Signature cut &amp; style" data-price="85" data-mins="60" aria-pressed="false" aria-label="Add Signature cut &amp; style to booking"><span>+</span></button></li><li class="svc"><div><h4>Blow-dry &amp; style</h4><p>Smooth, bouncy or beach waves</p></div><span class="dur">45 min</span><b class="price">$55</b><button type="button" class="add" data-name="Blow-dry &amp; style" data-price="55" data-mins="45" aria-pressed="false" aria-label="Add Blow-dry &amp; style to booking"><span>+</span></button></li><li class="svc"><div><h4>Restorative treatment</h4><p>Bond repair mask with scalp massage</p></div><span class="dur">30 min</span><b class="price">$45</b><button type="button" class="add" data-name="Restorative treatment" data-price="45" data-mins="30" aria-pressed="false" aria-label="Add Restorative treatment to booking"><span>+</span></button></li><li class="svc"><div><h4>Bridal &amp; event styling</h4><p>Trial included, updos and braids</p></div><span class="dur">90 min</span><b class="price">$160</b><button type="button" class="add" data-name="Bridal &amp; event styling" data-price="160" data-mins="90" aria-pressed="false" aria-label="Add Bridal &amp; event styling to booking"><span>+</span></button></li></ul>
+<ul class="menu-list" id="m-colour" role="tabpanel" aria-labelledby="t-colour" hidden><li class="svc"><div><h4>Balayage</h4><p>Hand-painted, sun-kissed dimension</p></div><span class="dur">180 min</span><b class="price">$240</b><button type="button" class="add" data-name="Balayage" data-price="240" data-mins="180" aria-pressed="false" aria-label="Add Balayage to booking"><span>+</span></button></li><li class="svc"><div><h4>Full colour</h4><p>Root to tip, gloss included</p></div><span class="dur">120 min</span><b class="price">$140</b><button type="button" class="add" data-name="Full colour" data-price="140" data-mins="120" aria-pressed="false" aria-label="Add Full colour to booking"><span>+</span></button></li><li class="svc"><div><h4>Gloss &amp; tone</h4><p>Shine and refresh between colours</p></div><span class="dur">45 min</span><b class="price">$65</b><button type="button" class="add" data-name="Gloss &amp; tone" data-price="65" data-mins="45" aria-pressed="false" aria-label="Add Gloss &amp; tone to booking"><span>+</span></button></li><li class="svc"><div><h4>Root touch-up</h4><p>Grey coverage or regrowth</p></div><span class="dur">75 min</span><b class="price">$95</b><button type="button" class="add" data-name="Root touch-up" data-price="95" data-mins="75" aria-pressed="false" aria-label="Add Root touch-up to booking"><span>+</span></button></li></ul>
+<ul class="menu-list" id="m-nails" role="tabpanel" aria-labelledby="t-nails" hidden><li class="svc"><div><h4>Gel manicure</h4><p>Shape, cuticle care, long-wear gel</p></div><span class="dur">45 min</span><b class="price">$48</b><button type="button" class="add" data-name="Gel manicure" data-price="48" data-mins="45" aria-pressed="false" aria-label="Add Gel manicure to booking"><span>+</span></button></li><li class="svc"><div><h4>Spa pedicure</h4><p>Soak, scrub, massage, polish</p></div><span class="dur">60 min</span><b class="price">$62</b><button type="button" class="add" data-name="Spa pedicure" data-price="62" data-mins="60" aria-pressed="false" aria-label="Add Spa pedicure to booking"><span>+</span></button></li><li class="svc"><div><h4>Nail art</h4><p>Per set, from minimal to statement</p></div><span class="dur">30 min</span><b class="price">$25</b><button type="button" class="add" data-name="Nail art" data-price="25" data-mins="30" aria-pressed="false" aria-label="Add Nail art to booking"><span>+</span></button></li><li class="svc"><div><h4>BIAB overlay</h4><p>Strengthening builder gel</p></div><span class="dur">60 min</span><b class="price">$68</b><button type="button" class="add" data-name="BIAB overlay" data-price="68" data-mins="60" aria-pressed="false" aria-label="Add BIAB overlay to booking"><span>+</span></button></li></ul>
+<ul class="menu-list" id="m-spa" role="tabpanel" aria-labelledby="t-spa" hidden><li class="svc"><div><h4>Glow facial</h4><p>Cleanse, enzyme peel, LED, hydration</p></div><span class="dur">60 min</span><b class="price">$120</b><button type="button" class="add" data-name="Glow facial" data-price="120" data-mins="60" aria-pressed="false" aria-label="Add Glow facial to booking"><span>+</span></button></li><li class="svc"><div><h4>Hot stone massage</h4><p>Full body, deeply relaxing</p></div><span class="dur">75 min</span><b class="price">$135</b><button type="button" class="add" data-name="Hot stone massage" data-price="135" data-mins="75" aria-pressed="false" aria-label="Add Hot stone massage to booking"><span>+</span></button></li><li class="svc"><div><h4>Brow lamination &amp; tint</h4><p>Shape and set for 6 weeks</p></div><span class="dur">45 min</span><b class="price">$70</b><button type="button" class="add" data-name="Brow lamination &amp; tint" data-price="70" data-mins="45" aria-pressed="false" aria-label="Add Brow lamination &amp; tint to booking"><span>+</span></button></li><li class="svc"><div><h4>Lash lift</h4><p>Natural curl, no extensions</p></div><span class="dur">45 min</span><b class="price">$75</b><button type="button" class="add" data-name="Lash lift" data-price="75" data-mins="45" aria-pressed="false" aria-label="Add Lash lift to booking"><span>+</span></button></li></ul>
+
+      </div>
+      <aside class="basket reveal" aria-live="polite">
+        <p class="eyebrow">Your appointment</p>
+        <ul class="b-items" data-items><li class="b-empty">No services yet. Tap + to add one.</li></ul>
+        <div class="b-total"><span>Total time <b data-total-mins>0 min</b></span><span>Estimate <b data-total>$0</b></span></div>
+        <a class="btn btn-plum btn-block" href="#book">Choose stylist &amp; time</a>
+        <p class="fine">Prices are starting prices and may vary with hair length.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section team-sec">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">The team</p><h2>Stylists with <em>a point of view</em></h2></div>
+    <div class="team">
+      <figure class="st reveal"><div class="st-img"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of a smiling stylist" loading="lazy" width="600" height="760"></div><figcaption><b>Sofia</b><span>Creative director · Colour</span></figcaption></figure>
+      <figure class="st reveal"><div class="st-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of a smiling stylist" loading="lazy" width="600" height="760"></div><figcaption><b>Andre</b><span>Senior stylist · Precision cuts</span></figcaption></figure>
+      <figure class="st reveal"><div class="st-img"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of a therapist" loading="lazy" width="600" height="760"></div><figcaption><b>Nora</b><span>Skin therapist · Facials &amp; lashes</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section book-sec">
+  <div class="wrap book-grid">
+    <div class="book-copy reveal">
+      <p class="eyebrow">Book online</p>
+      <h2>Pick your stylist and a <em>time that suits.</em></h2>
+      <p>Confirmations and reminders by text. Free changes up to 24 hours before.</p>
+      <img class="book-img" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=900&q=70&auto=format&fit=crop" alt="Salon interior with pink chairs and mirrors" loading="lazy" width="900" height="600">
+    </div>
+    <form class="book-card reveal" data-demo-form aria-label="Book an appointment">
+      <fieldset><legend>Stylist</legend>
+        <div class="who">
+          <button type="button" class="is-on"><span class="any">✦</span>Anyone</button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&q=60&auto=format&fit=crop&crop=faces" alt="" width="36" height="36">Sofia</button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&q=60&auto=format&fit=crop&crop=faces" alt="" width="36" height="36">Andre</button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&q=60&auto=format&fit=crop&crop=faces" alt="" width="36" height="36">Nora</button>
+        </div>
+      </fieldset>
+      <fieldset><legend>Day</legend><div class="days" data-days></div></fieldset>
+      <fieldset><legend>Time</legend>
+        <div class="slots"><button type="button">9:30</button><button type="button" disabled>10:45</button><button type="button" class="is-on">12:00</button><button type="button">1:15</button><button type="button">3:00</button><button type="button">5:30</button></div>
+      </fieldset>
+      <p class="sum" data-summary>Signature cut &amp; style · 60 min · $85</p>
+      <button class="btn btn-plum btn-block btn-lg" type="submit">Confirm booking</button>
+      <p class="fine">Demo form: nothing is sent. This is a concept website.</p>
+    </form>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">Recent work</p><h2>Fresh from the <em>chair</em></h2></div>
+    <div class="gal">
+      <figure class="ga ga1 reveal"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=70&auto=format&fit=crop" alt="Long glossy waves from behind" loading="lazy" width="700" height="900"></figure>
+      <figure class="ga ga2 reveal"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=700&q=70&auto=format&fit=crop" alt="Soft glam makeup being applied" loading="lazy" width="700" height="700"></figure>
+      <figure class="ga ga3 reveal"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=70&auto=format&fit=crop" alt="Dark glossy gel manicure" loading="lazy" width="700" height="700"></figure>
+      <figure class="ga ga4 reveal"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=70&auto=format&fit=crop" alt="Minimal salon interior with styling chairs" loading="lazy" width="900" height="600"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="gifts" class="section gifts">
+  <div class="wrap gifts-grid">
+    <div class="gift-card reveal" aria-hidden="true"><div class="gc"><span>Velour</span><b>$100</b><small>Gift card · Salon &amp; Spa</small></div></div>
+    <div class="reveal">
+      <p class="eyebrow">Gift cards &amp; membership</p>
+      <h2>Give the gift of <em>an hour off.</em></h2>
+      <p>Digital gift cards are sent instantly by email or text. Or join <b>Velour Club</b> for $49 a month: one blow-dry or gloss monthly, 10% off everything else, and priority weekend booking.</p>
+      <div class="gift-actions"><button class="btn btn-plum" type="button" data-demo-open>Buy a gift card</button><button class="btn btn-ghost" type="button" data-demo-open>Join Velour Club</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="wrap">
+    <div class="rev">
+      <figure class="reveal"><blockquote>“Sofia listened, then gave me the colour I didn't know I wanted. Best balayage I've ever had.”</blockquote><figcaption>Hannah L. · ★★★★★</figcaption></figure>
+      <figure class="reveal"><blockquote>“Booked at midnight, in the chair the next morning. The scalp massage alone is worth it.”</blockquote><figcaption>Rachel M. · ★★★★★</figcaption></figure>
+      <figure class="reveal"><blockquote>“My gel manicure lasted three full weeks. Calm, spotless and genuinely friendly.”</blockquote><figcaption>Priya K. · ★★★★★</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit">
+  <div class="wrap visit-grid reveal">
+    <div><p class="eyebrow">Visit</p><h2>12 Linden Row, <em>Springfield</em></h2></div>
+    <ul class="hours"><li><span>Mon – Fri</span><b>9 AM – 8 PM</b></li><li><span>Saturday</span><b>8 AM – 6 PM</b></li><li><span>Sunday</span><b>10 AM – 4 PM</b></li><li><span>Phone</span><b><a href="tel:+15550105151">(555) 010-5151</a></b></li></ul>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <a href="#top" class="brand"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M12 12l8 17 8-17" fill="none" stroke="var(--rose)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Velour<small>Salon &amp; Spa</small></span></a>
+    <p class="concept-line">Concept project by <a href="https://designbybaxit.com/" target="_blank" rel="noopener">Design by Baxit</a>. Velour Salon &amp; Spa is a fictional business; people, prices and reviews are placeholders.</p>
+  </div>
+</footer>
+
+<a class="concept-badge" href="https://designbybaxit.com/#work" target="_blank" rel="noopener"><span>Concept</span> project by Design by Baxit ↗</a>
+
+<div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="dm-title" hidden>
+  <div class="dm-card">
+    <button class="dm-x" type="button" aria-label="Close">×</button>
+    <p class="eyebrow">Concept website</p>
+    <h3 id="dm-title">This booking is a demo.</h3>
+    <p>Nothing was sent. Want a website like this for your salon or spa, with online booking, reminders and gift cards? Design by Baxit builds it.</p>
+    <div class="dm-actions">
+      <a class="btn btn-plum" href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%20saw%20the%20salon%20and%20spa%20concept%20website%20and%20I%27d%20like%20one%20for%20my%20business." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://designbybaxit.com/" target="_blank" rel="noopener">designbybaxit.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

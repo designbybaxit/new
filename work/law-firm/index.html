@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitmore &amp; Hale — Concept law firm website by Design by Baxit</title>
+<meta name="description" content="Concept website for a personal injury law firm, designed by Design by Baxit. Fictional firm, not a real business.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://designbybaxit.com/work/law-firm/">
+<meta property="og:title" content="Law firm website — concept by Design by Baxit">
+<meta property="og:description" content="Free case evaluation, practice areas, case results and attorney profiles for a law firm. A Design by Baxit concept project.">
+<meta property="og:image" content="https://designbybaxit.com/work/thumbs/law-firm.jpg">
+<meta name="theme-color" content="#151515">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151515'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23c2a36b' text-anchor='middle'%3EW%26H%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<!--
+  BRAND SWAP: the firm name is "Whitmore &amp; Hale" (full: "Whitmore &amp; Hale, Injury Lawyers"; monogram "W&amp;H").
+  Colours live in :root in style.css. The logo is the inline SVG with class "logo-mark".
+  Case results, practice areas and attorneys are plain text in this file.
+  See /README.md, "Concept demos", for the full re-skin checklist.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topline"><div class="wrap topline-in"><span>Free consultation · Available 24/7 · Se habla español</span><a href="tel:+15550109090">(555) 010-9090</a></div></div>
+
+<header class="header" id="top">
+  <div class="wrap header-in">
+    <a href="#top" class="brand" aria-label="Whitmore and Hale home">
+      <svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" fill="none" stroke="var(--gold)" stroke-width="1.5"/><text x="22" y="28.5" text-anchor="middle" font-family="Libre Caslon Display, Georgia, serif" font-size="17" fill="currentColor">W&amp;H</text></svg>
+      <span>Whitmore <i>&amp;</i> Hale<small>Injury Lawyers</small></span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="#practice">Practice areas</a><a href="#results">Results</a><a href="#attorneys">Attorneys</a><a href="#process">How it works</a><a href="#faq">FAQ</a></nav>
+    <div class="header-cta">
+      <a class="btn btn-ox" href="#evaluate">Free case review</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile"><a href="#practice">Practice areas</a><a href="#results">Results</a><a href="#attorneys">Attorneys</a><a href="#process">How it works</a><a href="#faq">FAQ</a></nav>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-bg" data-parallax="0.2" aria-hidden="true"><img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?w=1800&q=65&auto=format&fit=crop" alt="" width="1800" height="1200" fetchpriority="high"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker reveal"><span></span>Personal injury attorneys · Springfield</p>
+      <h1 class="reveal">Hurt by someone else's mistake? <em>We fight</em> for every dollar you're owed.</h1>
+      <p class="lead reveal">Car crashes, truck accidents, workplace injuries and medical negligence. Talk to a trial lawyer today. You pay nothing unless we win.</p>
+      <div class="pledges reveal">
+        <div><b data-count="350" data-prefix="$" data-suffix="M+">0</b><span>recovered for clients</span></div>
+        <div><b>$0</b><span>fees unless we win</span></div>
+        <div><b data-count="30" data-suffix="+">0</b><span>years in the courtroom</span></div>
+      </div>
+    </div>
+    <form id="evaluate" class="eval reveal" data-demo-form aria-label="Free case evaluation">
+      <p class="eval-tag">Free · Confidential · No obligation</p>
+      <h2>Get your free case evaluation</h2>
+      <label>Type of case<select><option>Car accident</option><option>Truck accident</option><option>Motorcycle accident</option><option>Slip &amp; fall</option><option>Workplace injury</option><option>Medical malpractice</option><option>Other injury</option></select></label>
+      <div class="row2"><label>Full name<input autocomplete="off" placeholder="Jane Doe"></label><label>Phone<input autocomplete="off" placeholder="(555) 000-0000"></label></div>
+      <label>What happened?<textarea rows="3" placeholder="A few words about the accident and your injuries"></textarea></label>
+      <button class="btn btn-ox btn-block btn-lg" type="submit">Review my case now</button>
+      <p class="fine">Demo form: nothing is sent. This is a concept website.</p>
+    </form>
+  </div>
+</section>
+
+<section class="awards" aria-label="Recognition">
+  <div class="wrap awards-in reveal">
+    <span>Board-certified trial attorneys</span><i>◆</i><span>Million-dollar verdicts</span><i>◆</i><span>5.0 client rating</span><i>◆</i><span>Top-rated injury firm</span><i>◆</i><span>Free hospital visits</span>
+  </div>
+</section>
+
+<section id="practice" class="section">
+  <div class="wrap">
+    <div class="head reveal"><p class="kicker"><span></span>Practice areas</p><h2>Serious injuries need <em>serious</em> representation.</h2></div>
+    <div class="areas">
+      <a class="area reveal" href="#evaluate"><span class="n">01</span><h3>Car accidents</h3><p>Rear-end, T-bone, rideshare and hit-and-run collisions.</p><span class="arr">→</span></a>
+      <a class="area reveal" href="#evaluate"><span class="n">02</span><h3>Truck accidents</h3><p>Commercial carriers, fatigued drivers and cargo failures.</p><span class="arr">→</span></a>
+      <a class="area reveal" href="#evaluate"><span class="n">03</span><h3>Workplace injuries</h3><p>Construction, falls, machinery and third-party claims.</p><span class="arr">→</span></a>
+      <a class="area reveal" href="#evaluate"><span class="n">04</span><h3>Slip &amp; fall</h3><p>Unsafe stores, rental properties and public spaces.</p><span class="arr">→</span></a>
+      <a class="area reveal" href="#evaluate"><span class="n">05</span><h3>Medical malpractice</h3><p>Misdiagnosis, surgical errors and birth injuries.</p><span class="arr">→</span></a>
+      <a class="area reveal" href="#evaluate"><span class="n">06</span><h3>Wrongful death</h3><p>Compassionate, determined advocacy for families.</p><span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="results" class="section results">
+  <div class="wrap">
+    <div class="head light reveal"><p class="kicker"><span></span>Case results</p><h2>Results that <em>change lives.</em></h2></div>
+    <div class="res-grid">
+      <article class="res reveal"><b data-count="4.2" data-dec="1" data-prefix="$" data-suffix="M">0</b><h3>Truck accident</h3><p>Settlement for a driver struck by a commercial truck that ran a red light.</p></article>
+      <article class="res reveal"><b data-count="2.8" data-dec="1" data-prefix="$" data-suffix="M">0</b><h3>Medical malpractice</h3><p>Verdict for a delayed diagnosis that led to permanent injury.</p></article>
+      <article class="res reveal"><b data-count="1.5" data-dec="1" data-prefix="$" data-suffix="M">0</b><h3>Workplace injury</h3><p>Third-party claim after a scaffolding collapse on a building site.</p></article>
+      <article class="res reveal"><b data-count="975" data-prefix="$" data-suffix="K">0</b><h3>Car accident</h3><p>Settlement after the insurer's first offer was just $40,000.</p></article>
+    </div>
+    <p class="disclaim reveal">Illustrative figures for a fictional firm. Prior results do not guarantee a similar outcome.</p>
+  </div>
+</section>
+
+<section id="process" class="section">
+  <div class="wrap proc-grid">
+    <div class="proc-media reveal"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=70&auto=format&fit=crop" alt="Attorney reviewing and signing documents" loading="lazy" width="900" height="1000"><div class="seal"><b>No fee</b><span>unless we win</span></div></div>
+    <div>
+      <p class="kicker reveal"><span></span>How it works</p>
+      <h2 class="reveal">From first call to <em>fair compensation.</em></h2>
+      <ol class="steps">
+        <li class="reveal"><b>1</b><div><h3>Free consultation</h3><p>Tell us what happened. We'll explain your rights and options, with no pressure.</p></div></li>
+        <li class="reveal"><b>2</b><div><h3>We investigate</h3><p>Police reports, medical records, expert witnesses and evidence, handled for you.</p></div></li>
+        <li class="reveal"><b>3</b><div><h3>We negotiate</h3><p>We deal with the insurance company so you can focus on recovering.</p></div></li>
+        <li class="reveal"><b>4</b><div><h3>We win</h3><p>Most cases settle. If they won't pay fairly, we're ready for trial.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="attorneys" class="section attorneys">
+  <div class="wrap">
+    <div class="head reveal"><p class="kicker"><span></span>Our attorneys</p><h2>Trial lawyers who <em>take your call.</em></h2></div>
+    <div class="atty-grid">
+      <figure class="atty reveal"><div class="atty-img"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of a senior attorney" loading="lazy" width="600" height="720"></div><figcaption><b>Robert Whitmore</b><span>Founding partner · 30 years at trial</span></figcaption></figure>
+      <figure class="atty reveal"><div class="atty-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of an attorney in a blazer" loading="lazy" width="600" height="720"></div><figcaption><b>Elena Hale</b><span>Managing partner · Medical malpractice</span></figcaption></figure>
+      <figure class="atty reveal"><div class="atty-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of an attorney in a suit" loading="lazy" width="600" height="720"></div><figcaption><b>James Carter</b><span>Partner · Truck &amp; workplace injury</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section testimonial">
+  <div class="wrap">
+    <figure class="big-quote reveal">
+      <span aria-hidden="true">“</span>
+      <blockquote>After my accident I couldn't work and the insurer wouldn't call back. Elena's team took every call, explained every step, and got me twenty times their first offer.</blockquote>
+      <figcaption><b>Michael T.</b> · Car accident client · ★★★★★</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="faq" class="section faq-sec">
+  <div class="wrap faq-grid">
+    <div class="reveal"><p class="kicker"><span></span>Questions</p><h2>What injured clients <em>ask first.</em></h2><a class="btn btn-ox" href="#evaluate">Start my free review</a></div>
+    <div class="faq">
+      <details class="reveal" open><summary>How much does it cost to hire you?</summary><p>Nothing up front. We work on a contingency fee, so we're only paid if we recover money for you.</p></details>
+      <details class="reveal"><summary>How long do I have to file a claim?</summary><p>Deadlines vary by state and case type, and some are short. Call us as soon as possible so evidence is preserved.</p></details>
+      <details class="reveal"><summary>Should I talk to the other driver's insurance?</summary><p>It's best not to give a recorded statement before speaking with a lawyer. We can handle all communication for you.</p></details>
+      <details class="reveal"><summary>What is my case worth?</summary><p>It depends on your injuries, lost income and long-term impact. We'll give you an honest assessment at your free consultation.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-in reveal">
+    <h2>Talk to a lawyer <em>today.</em> It's free.</h2>
+    <div><a class="btn btn-gold btn-lg" href="tel:+15550109090">Call (555) 010-9090</a><a class="btn btn-line btn-lg" href="#evaluate">Request a callback</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div><a href="#top" class="brand light"><svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" fill="none" stroke="var(--gold)" stroke-width="1.5"/><text x="22" y="28.5" text-anchor="middle" font-family="Libre Caslon Display, Georgia, serif" font-size="17" fill="currentColor">W&amp;H</text></svg><span>Whitmore <i>&amp;</i> Hale<small>Injury Lawyers</small></span></a>
+    <p>500 Court Street, Suite 12, Springfield · (555) 010-9090</p>
+    <p class="legal">Attorney advertising. This website is for illustration only and is not legal advice.</p></div>
+    <p class="concept-line">Concept project by <a href="https://designbybaxit.com/" target="_blank" rel="noopener">Design by Baxit</a>. Whitmore &amp; Hale is a fictional firm; people, results and reviews are placeholders.</p>
+  </div>
+</footer>
+
+<div class="mbar"><a href="tel:+15550109090" class="btn btn-line">Call 24/7</a><a href="#evaluate" class="btn btn-ox">Free case review</a></div>
+<a class="concept-badge" href="https://designbybaxit.com/#work" target="_blank" rel="noopener"><span>Concept</span> project by Design by Baxit ↗</a>
+
+<div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="dm-title" hidden>
+  <div class="dm-card">
+    <button class="dm-x" type="button" aria-label="Close">×</button>
+    <p class="kicker"><span></span>Concept website</p>
+    <h3 id="dm-title">This form is a demo.</h3>
+    <p>Nothing was sent. Want a website like this for your firm, with a case-evaluation funnel that sends qualified leads straight to your phone? Design by Baxit builds it.</p>
+    <div class="dm-actions">
+      <a class="btn btn-ox" href="https://wa.me/923321975505?text=Hi%20Abdul%2C%20I%20saw%20the%20law%20firm%20concept%20website%20and%20I%27d%20like%20one%20for%20my%20firm." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-dark-line" href="https://designbybaxit.com/" target="_blank" rel="noopener">designbybaxit.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

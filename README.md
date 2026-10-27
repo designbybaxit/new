@@ -24,7 +24,7 @@ folder on any web server and it runs.
 | `contact.html` | `/contact` | WhatsApp, email, hours (PKT, flexible for US meetings), backup form |
 | `404.html` | (Cloudflare Pages) | Not-found page. Not listed in the sitemap |
 
-The home page `#work` section shows three **concept demos** (fictional brands,
+The home page `#work` section shows six **concept demos** (fictional brands,
 clearly labelled "Concept"). They live under `/work/` — see "Concept demos" below.
 Do not present them as client work; add real client projects alongside them when they exist.
 
@@ -251,7 +251,7 @@ Still static, still no build step. Preview: https://redesign-bold.new-ck7.pages.
 - If WebGL is unavailable, the CSS `.fx-orb` (a morphing blob and bouncing ball drawn in CSS) stays as a fallback.
 - The rotating "Free quote on WhatsApp" sticker in the home hero (`.fx-spin-badge`) links to WhatsApp; hidden below 1024px.
 - Light only in this design (the theme toggle is hidden).
-- `#work` on the home page is **live** and shows the three concept demos (see "Concept demos" below). The section's `hidden` attribute was removed and the "Work" nav links (desktop and mobile menus on every page) were restored. The old placeholder card styles (`.ph`, `.ph-tag`) are still in `fx.css` if needed later.
+- `#work` on the home page is **live** and shows the six concept demos (see "Concept demos" below). The section's `hidden` attribute was removed and the "Work" nav links (desktop and mobile menus on every page) were restored. The old placeholder card styles (`.ph`, `.ph-tag`) are still in `fx.css` if needed later.
 - Mobile (<640px): the home hero is tightened and the WhatsApp float is a 48px sticker 1rem from the corner, so it does not cover the hero CTAs on a 390×844 first screen.
 - `#care` lists the monthly care plans ($99/mo for 2 edit hours, $149/mo for 4 edit hours).
 - Fonts: Bricolage Grotesque and DM Sans from Google Fonts (`display=swap`).
@@ -260,7 +260,7 @@ Still static, still no build step. Preview: https://redesign-bold.new-ck7.pages.
 
 ## Concept demos (`/work/`)
 
-Three self-contained concept websites, one per common outreach industry. Each
+Six self-contained concept websites, one per common outreach industry. Each
 doubles as a cold-outreach pitch piece ("a conceptual design we made for
 businesses like yours"). Brands, people, prices and reviews are fictional.
 
@@ -269,6 +269,9 @@ businesses like yours"). Brands, people, prices and reviews are fictional.
 | `/work/clinic/` | Dental / medical clinic | Lumen Dental Studio | Online booking widget (day + time chips), treatments, new-patient offer, team, reviews marquee, FAQ, hours |
 | `/work/restaurant/` | Restaurant / cafe | Ember & Vine | Hero reservation bar, ember particles + parallax, tabbed menu with prices, signature dishes, gallery, private dining, reservation card |
 | `/work/home-services/` | Plumbing / HVAC / electrical | Northpoint Home Services | 24/7 emergency bar, two-step instant-quote + booking windows, flat-rate pricing and membership, service-area map, review breakdown, guarantee |
+| `/work/real-estate/` | Real estate agency | Harbor & Oak Realty | Buy/Rent/Sell search (filters listings, no submit), filterable listing cards with save hearts, home-valuation lead form, live mortgage calculator, neighbourhood guides, agents |
+| `/work/salon/` | Hair salon & day spa | Velour Salon & Spa | Arched editorial hero, tabbed service menu with durations and prices, build-your-booking basket (live total), stylist/day/time booking, gallery, gift cards and membership |
+| `/work/law-firm/` | Personal injury law firm | Whitmore & Hale | Free case evaluation form in the hero, practice areas, counting case results with disclaimer, process steps, attorneys, FAQ, mobile call bar, attorney-advertising note |
 
 Each folder has its own `index.html`, `style.css` and `app.js`. No build step,
 no framework, no shared dependency. Images are Unsplash CDN URLs (free licence);
@@ -278,8 +281,11 @@ Rules every demo follows:
 
 - A fixed **"Concept project by Design by Baxit"** badge and a footer line linking to designbybaxit.com.
 - `<meta name="robots" content="noindex, follow">` so the fictional businesses do not show up in search.
-- **Forms never submit.** Booking / reservation / quote forms call `preventDefault()` and open a
-  modal that says it's a demo and links to Abdul's WhatsApp and designbybaxit.com.
+- **Forms never submit.** Booking / reservation / quote / valuation / case-evaluation forms call
+  `preventDefault()` and open a modal that says it's a demo and links to Abdul's WhatsApp and
+  designbybaxit.com. (The real-estate property search only filters the listings on the page.)
+- Lists that a prospect will want changed are plain HTML: listings (`<article class="listing" data-tags>`),
+  salon services (`<li class="svc">` with `data-price` / `data-mins`), case results, practice areas.
 - Scroll reveals are scoped to a `.js` class; everything is visible without JS and
   all motion is disabled under `prefers-reduced-motion`.
 
@@ -291,10 +297,14 @@ Copy the folder (e.g. `work/clinic/` → `work/smile-dental-austin/`) so the ori
    - clinic: `Lumen Dental Studio`, then the short form `<b>Lumen</b>` (header and footer)
    - restaurant: `Ember &amp; Vine` / `Ember <i>&amp;</i> Vine` (the header and footer logo text), plus `E&amp;V` in the rotating seal
    - home services: `Northpoint Home Services`, then `NORTHPOINT` (logo text) and `Northpoint` (Club, guarantee)
+   - real estate: `Harbor &amp; Oak Realty`, then the logo text `Harbor <em>&amp;</em> Oak`
+   - salon: `Velour Salon &amp; Spa`, then `Velour` (logo, gift card, Club)
+   - law firm: `Whitmore &amp; Hale`, the logo text `Whitmore <i>&amp;</i> Hale`, and the `W&amp;H` monogram in the logo SVG and favicon
    Example: `sed -i 's/Lumen Dental Studio/Smile Dental Austin/g; s/<b>Lumen<\/b>/<b>Smile<\/b>/g' work/smile-dental-austin/index.html`
 2. **Colours.** Edit the tokens at the top of that folder's `style.css` (`:root`). Each file
    has 2–3 brand tokens (clinic `--ink` / `--mint`; restaurant `--ember` / `--gold` / `--bg`;
-   home services `--navy` / `--yellow`). Everything else derives from them.
+   home services `--navy` / `--yellow`; real estate `--forest` / `--brass`; salon `--plum` /
+   `--rose` / `--blush`; law firm `--ox` / `--gold` / `--char`). Everything else derives from them.
 3. **Logo.** Replace the inline `<svg class="logo-mark">` in the header and footer
    (paste the prospect's SVG, or an `<img class="logo-mark" src="logo.svg" alt="">`),
    and the data-URI favicon in `<head>`.
