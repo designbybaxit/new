@@ -21,7 +21,7 @@ folder on any web server and it runs.
 | `index.html` | `/` | Home — services, packages (starting prices in USD), how a project starts |
 | `about.html` | `/about` | Abdul Basit, platforms, how the work is approached |
 | `consultation.html` | `/consultation` | Free quote — WhatsApp first, short email form as backup, FAQ |
-| `contact.html` | `/contact` | WhatsApp, email, hours (PKT, flexible for US meetings), backup form |
+| `contact.html` | `/contact` | WhatsApp, email, hours (PKT, flexible for US clients), backup form |
 | `404.html` | (Cloudflare Pages) | Not-found page. Not listed in the sitemap |
 
 The home page `#work` section shows six **concept demos** (fictional brands,
@@ -320,3 +320,34 @@ Copy the folder (e.g. `work/clinic/` → `work/smile-dental-austin/`) so the ori
 **Abdul Basit** — Founder & Web Developer, Design by Baxit
 · [WhatsApp +92 332 1975505](https://wa.me/923321975505)
 · [designbybaxit@gmail.com](mailto:designbybaxit@gmail.com)
+
+---
+
+## Ads setup
+
+Paid-ads funnel added on branch `ads-ready`:
+
+| Path | What it is |
+|------|------------|
+| `/mockup/<industry>/` | Landing pages (home-services, salon, restaurant, clinic, real-estate, law-firm), generated from one template. Offer: free website mockup. Each has its own `og.jpg` (1200x630) |
+| `/functions/api/lead.js` | Cloudflare Pages Function behind the lead form (`POST /api/lead`). Validates, honeypot (`company_url`), sends a notification + auto-reply via Resend, falls back to FormSubmit if `RESEND_API_KEY` is missing or Resend fails. Redirects to `/thanks/` |
+| `/thanks/` | Confirmation page; `tracking.js` fires Meta `Lead` and GA4 `generate_lead` here with the industry |
+| `/tracking.js` | Loads Meta Pixel and GA4 only when IDs are set at the top of the file |
+| `/privacy/`, `/terms/` | Plain-English policies, linked in every footer and under every form |
+| `lp.css` | Styles for the pages above |
+
+Use ad links like `/mockup/salon/?utm_source=meta&utm_campaign=salon-mockup&utm_content=ad1`; the UTM values are saved with each lead.
+
+### What Abdul must do before ads go live
+
+1. **Resend:** create a free account at resend.com, add the domain `designbybaxit.com`, add the DNS records it shows (SPF/DKIM, optional DMARC) in Cloudflare DNS, and wait for "Verified". Create an API key.
+2. **Cloudflare Pages env vars** (project `new` > Settings > Variables and Secrets, Production *and* Preview), then redeploy:
+   - `RESEND_API_KEY` = the Resend key (as a secret)
+   - `LEAD_TO_EMAIL` = `designbybaxit@gmail.com`
+   - `FROM_EMAIL` = `Design by Baxit <hello@designbybaxit.com>` (any address on the verified domain)
+3. **Postal address:** replace `POSTAL_ADDRESS` in `functions/api/lead.js` with a real mailing address (CAN-SPAM).
+4. **Tracking IDs:** paste the Meta Pixel ID into `META_PIXEL_ID` and the GA4 Measurement ID into `GA4_ID` at the top of `tracking.js`. Then mark `Lead` / `generate_lead` as conversions (Meta Events Manager, GA4 Key events).
+5. **Meta domain verification:** Business Settings > Brand safety > Domains > add `designbybaxit.com` > DNS TXT option; add that TXT record in Cloudflare DNS and click Verify.
+6. **Fix www:** in Cloudflare Pages > Custom domains add `www.designbybaxit.com` (it creates the CNAME), then add a Redirect Rule `www.designbybaxit.com/*` → `https://designbybaxit.com/${1}` (301) so there is one canonical host.
+7. **FormSubmit fallback:** if FormSubmit sends an activation email to designbybaxit@gmail.com, click it once.
+8. Merge `ads-ready` into `main`.

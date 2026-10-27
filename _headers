@@ -37,3 +37,12 @@
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/lp.css
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/tracking.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/thanks/*
+  X-Robots-Tag: noindex
