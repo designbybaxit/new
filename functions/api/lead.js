@@ -1,17 +1,21 @@
 /* Cloudflare Pages Function: POST /api/lead
-   Env vars: RESEND_API_KEY, LEAD_TO_EMAIL, FROM_EMAIL.
-   Without RESEND_API_KEY (or if Resend fails) the lead is forwarded to FormSubmit. */
+   Env vars: RESEND_API_KEY (secret, required for Resend), LEAD_TO_EMAIL, FROM_EMAIL (optional).
+   With RESEND_API_KEY: emails the lead notification to designbybaxit@gmail.com and an instant
+   plain-text thank-you to the lead (reply-to designbybaxit@gmail.com), then redirects to /thanks/.
+   Without RESEND_API_KEY (or if the Resend notification fails) the lead is forwarded to FormSubmit. */
 
 const FORMSUBMIT_INBOX = 'designbybaxit@gmail.com';
 const INDUSTRIES = ['home-services', 'salon', 'restaurant', 'clinic', 'real-estate', 'law-firm'];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const REPLY_TO = 'designbybaxit@gmail.com';
+// CAN-SPAM: replace with a real mailing address (street address or PO box) before launch.
 const POSTAL_ADDRESS = '[POSTAL ADDRESS PLACEHOLDER — add a mailing address before launch]';
 
 const clean = (v, max = 500) => String(v || '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max);
 const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const back = (origin, path) => Response.redirect(new URL(path, origin).toString(), 303);
 
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost({ request, env, waitUntil }) {
   const origin = new URL(request.url).origin;
   let form;
   try { form = await request.formData(); } catch { return back(origin, '/'); }
@@ -41,7 +45,7 @@ export async function onRequestPost({ request, env }) {
 
   let sent = false;
   if (env.RESEND_API_KEY) {
-    try { sent = await sendResend(env, lead); } catch { sent = false; }
+    try { sent = await sendResend(env, lead, { waitUntil }); } catch (e) { console.error('RESEND_EXCEPTION', String(e)); sent = false; }
   }
   let fs = '';
   if (!sent) {
@@ -73,11 +77,17 @@ async function resend(env, body) {
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
+  if (!r.ok) {
+    // Logged without the key. 403 "domain is not verified" means Resend domain setup is unfinished.
+    const detail = await r.text().catch(() => '');
+    console.error('RESEND_SEND_FAILED', r.status, detail.slice(0, 300));
+  }
   return r.ok;
 }
 
-async function sendResend(env, lead) {
-  const from = env.FROM_EMAIL || 'Design by Baxit <hello@designbybaxit.com>';
+async function sendResend(env, lead, ctx) {
+  // Notification and auto-reply both come from an address on the Resend-verified domain.
+  const from = env.FROM_EMAIL || 'Abdul at Design by Baxit <hello@designbybaxit.com>';
   const to = env.LEAD_TO_EMAIL || FORMSUBMIT_INBOX;
   const table = rows(lead).map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0"><b>${k}</b></td><td>${esc(v)}</td></tr>`).join('');
 
@@ -89,19 +99,37 @@ async function sendResend(env, lead) {
   });
   if (!notified) return false;
 
-  // Auto-reply. A failure here should not lose the lead (notification already sent).
-  const first = esc(lead.business);
-  await resend(env, {
-    from, to: [lead.email], reply_to: to,
-    subject: 'Your free website mockup is on the way',
-    html: `<p>Hi ${first} team,</p>
-<p>Thanks for asking for a free website mockup. I've got your details and I'm on it.</p>
-<p>You'll get your mockup by email within <b>2 to 3 business days</b>. There's nothing to pay and nothing you need to do in the meantime. If you want to add anything (photos, a logo, sites you like), just reply to this email.</p>
-<p>Abdul Basit<br>Design by Baxit · <a href="https://designbybaxit.com">designbybaxit.com</a></p>
-<hr><p style="font-size:12px;color:#666">You're receiving this because you requested a mockup at designbybaxit.com.<br>Design by Baxit, ${POSTAL_ADDRESS}<br>Don't want more emails? Reply with "unsubscribe" and you won't hear from us again.</p>`,
-    text: `Hi ${lead.business} team,\n\nThanks for asking for a free website mockup. I've got your details and I'm on it.\n\nYou'll get your mockup by email within 2 to 3 business days. Nothing to pay. Reply to this email to add anything (photos, logo, sites you like).\n\nAbdul Basit\nDesign by Baxit · https://designbybaxit.com\n\n--\nYou're receiving this because you requested a mockup at designbybaxit.com.\nDesign by Baxit, ${POSTAL_ADDRESS}\nDon't want more emails? Reply "unsubscribe".`,
-  });
+  // Instant plain-text thank-you to the lead. Runs after the redirect is returned
+  // (waitUntil), and a failure here never loses the lead: the notification is already sent.
+  const reply = resend(env, {
+    from, to: [lead.email], reply_to: REPLY_TO,
+    subject: 'Thanks! Your free homepage mockup is on the way',
+    text: thankYouText(lead),
+  }).catch(() => false);
+  if (ctx && typeof ctx.waitUntil === 'function') ctx.waitUntil(reply); else await reply;
   return true;
+}
+
+function thankYouText(lead) {
+  return [
+    `Hi ${lead.business} team,`,
+    '',
+    'Thanks for requesting a free homepage mockup from Design by Baxit. I have your details and I am on it.',
+    '',
+    'Your mockup will arrive by email in 2 to 3 business days.',
+    '',
+    'If you have a logo and brand colours, just reply to this email with them and I will use them in your mockup. No logo yet? No problem, I will design around your business name.',
+    '',
+    'Thanks,',
+    'Abdul',
+    'Design by Baxit',
+    'https://designbybaxit.com',
+    '',
+    '--',
+    'You are receiving this one-time email because you requested a free mockup at designbybaxit.com.',
+    `Design by Baxit, ${POSTAL_ADDRESS}`,
+    'To stop hearing from us, reply with "unsubscribe" and we will not email you again.',
+  ].join('\n');
 }
 
 async function sendFormSubmit(lead, origin) {

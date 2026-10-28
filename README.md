@@ -330,7 +330,7 @@ Paid-ads funnel added on branch `ads-ready`:
 | Path | What it is |
 |------|------------|
 | `/mockup/<industry>/` | Landing pages (home-services, salon, restaurant, clinic, real-estate, law-firm), generated from one template. Offer: free website mockup. Each has its own `og.jpg` (1200x630) |
-| `/functions/api/lead.js` | Cloudflare Pages Function behind the lead form (`POST /api/lead`). Validates, honeypot (`company_url`), sends a notification + auto-reply via Resend, falls back to FormSubmit if `RESEND_API_KEY` is missing or Resend fails (server-side first; FormSubmit rate-limits Cloudflare IPs with HTTP 429, so it then relays the lead through the visitor's browser to FormSubmit, which redirects to `/thanks/`). Redirects to `/thanks/` |
+| `/functions/api/lead.js` | Cloudflare Pages Function behind the lead form (`POST /api/lead`). Validates, honeypot (`company_url`), sends a notification to designbybaxit@gmail.com + an instant plain-text thank-you to the lead (reply-to designbybaxit@gmail.com) via Resend, falls back to FormSubmit if `RESEND_API_KEY` is missing or Resend fails (server-side first; FormSubmit rate-limits Cloudflare IPs with HTTP 429, so it then relays the lead through the visitor's browser to FormSubmit, which redirects to `/thanks/`). Redirects to `/thanks/` |
 | `/thanks/` | Confirmation page; `tracking.js` fires Meta `Lead` and GA4 `generate_lead` here with the industry |
 | `/tracking.js` | Loads Meta Pixel and GA4 only when IDs are set at the top of the file |
 | `/privacy/`, `/terms/` | Plain-English policies, linked in every footer and under every form |
@@ -344,7 +344,8 @@ Use ad links like `/mockup/salon/?utm_source=meta&utm_campaign=salon-mockup&utm_
 2. **Cloudflare Pages env vars** (project `new` > Settings > Variables and Secrets, Production *and* Preview), then redeploy:
    - `RESEND_API_KEY` = the Resend key (as a secret)
    - `LEAD_TO_EMAIL` = `designbybaxit@gmail.com`
-   - `FROM_EMAIL` = `Design by Baxit <hello@designbybaxit.com>` (any address on the verified domain)
+   - `FROM_EMAIL` = `Abdul at Design by Baxit <hello@designbybaxit.com>` (optional; this is the default, any address on the verified domain works)
+   - Until the domain shows "Verified", Resend rejects sends (403) and the function falls back to FormSubmit, so leads still arrive but no thank-you goes out.
 3. **Postal address:** replace `POSTAL_ADDRESS` in `functions/api/lead.js` with a real mailing address (CAN-SPAM).
 4. **Tracking IDs:** paste the Meta Pixel ID into `META_PIXEL_ID` and the GA4 Measurement ID into `GA4_ID` at the top of `tracking.js`. Then mark `Lead` / `generate_lead` as conversions (Meta Events Manager, GA4 Key events).
 5. **Meta domain verification:** Business Settings > Brand safety > Domains > add `designbybaxit.com` > DNS TXT option; add that TXT record in Cloudflare DNS and click Verify.
